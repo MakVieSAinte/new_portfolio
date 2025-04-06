@@ -812,36 +812,6 @@
 
         <dl class="flex flex-col sm:flex-row gap-1">
           <dt class="min-w-40">
-            <span class="block text-md font-medium text-gray-800 dark:text-slate-300">Design Expertise:</span>
-          </dt>
-          <dd>
-            <ul>
-              <li
-                class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300">
-                UI Design
-              </li>
-              <li
-                class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300">
-                Design Systems
-              </li>
-              <li
-                class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300">
-                Visual design
-              </li>
-              <li
-                class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300">
-                Prototyping
-              </li>
-              <li
-                class="me-4 mb-6 after:content-['.'] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300">
-                Responsive design
-              </li>
-            </ul>
-          </dd>
-        </dl>
-
-        <dl class="flex flex-col sm:flex-row gap-1">
-          <dt class="min-w-40">
             <span class="block text-md font-medium text-gray-800 dark:text-slate-300">Soft Skills:</span>
           </dt>
           <dd>
