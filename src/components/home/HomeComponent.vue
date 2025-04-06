@@ -30,6 +30,10 @@
           <!-- End Works -->
 
           <!-- Articles -->
+          <ArticlesDetailsComponent slug="this-video-is-made-with-react"></ArticlesDetailsComponent>
+          <!-- End Articles -->
+
+          <!-- Articles -->
           <ArticlesComponent></ArticlesComponent>
           <!-- End Articles -->
 
@@ -52,12 +56,13 @@ import ProjectsComponent from '../base/ProjectsComponent.vue'
 import SkillsComponent from '../base/SkillsComponent.vue'
 import WorksComponent from '../base/WorksComponent.vue'
 import ArticlesComponent from '../base/ArticlesComponent.vue'
+import ArticlesDetailsComponent from '../base/ArticlesDetailsComponent.vue'
 import ContactComponent from '../base/ContactComponent.vue'
 
 export default defineComponent({
 
   components: {
-    NavBarComponent, HerosComponent, FavoriteComponent, ProjectsComponent, SkillsComponent, WorksComponent, ArticlesComponent, ContactComponent
+    NavBarComponent, HerosComponent, FavoriteComponent, ProjectsComponent, SkillsComponent, WorksComponent, ArticlesComponent, ArticlesDetailsComponent, ContactComponent
   },
 
   data() {

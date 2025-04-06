@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './index.html', './src/**/*.{vue,js,ts,jsx,tsx}', 
+    './index.html', './src/**/*.{vue,js,ts,jsx,tsx}',
     // 'node_modules/preline/dist/*.js'
   ],
   darkMode: 'class',
@@ -23,6 +23,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography')
     // require('preline/plugin'),
   ],
 }

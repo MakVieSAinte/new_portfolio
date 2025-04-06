@@ -3,95 +3,114 @@
     <!-- Articles -->
     <div class="my-10 sm:my-14">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
-        Articles
+        Articles récents
       </h1>
 
-      <!-- List -->
-      <ul class="space-y-10">
-        <li>
+      <ul class="space-y-10" v-if="!loading && posts.length">
+        <li v-for="(post, index) in posts" :key="index">
           <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
-            Il y 4 jours
+            {{ formatDate(post.publishedAt) }}
           </p>
           <h5 class="font-medium text-md text-gray-800 dark:text-neutral-100">
-            The complete guide to OKRs
+            {{ post.title }}
           </h5>
           <p class="mt-1 text-sm text-gray-500 dark:text-neutral-300">
-            How to make objectives and key results work for your company.
+            {{ post.brief }}
           </p>
           <p class="mt-1">
             <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              href="#">
-              Continue reading
-            </a>
-          </p>
-        </li>
-
-        <li>
-          <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
-            2024
-          </p>
-          <h5 class="font-medium text-md text-gray-800 dark:text-neutral-100">
-            Enhancement in Customer Engagement
-          </h5>
-          <p class="mt-1 text-sm text-gray-500 dark:text-neutral-300">
-            With the aim of optimizing customer interactions and boosting
-            brand loyalty, the team at Preline leveraged Mailchimp's
-            powerful tools and expertise to deliver exceptional results.
-          </p>
-          <p class="mt-1">
-            <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              href="#">
-              Continue reading
-            </a>
-          </p>
-        </li>
-
-        <li>
-          <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
-            2023
-          </p>
-          <h5 class="font-medium text-md text-gray-800 dark:text-neutral-100">
-            How Google Assistant now helps you record stories for kids
-          </h5>
-          <p class="mt-1 text-sm text-gray-500 dark:text-neutral-300">
-            Google is constantly updating its consumer AI, Google
-            Assistant, with new features.
-          </p>
-          <p class="mt-1">
-            <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              href="#">
+              :href="getArticleUrl(post.slug)" target="_blank" rel="noopener noreferrer">
               Continue reading
             </a>
           </p>
         </li>
       </ul>
-      <!-- End List -->
+
+      <p v-if="loading" class="text-gray-500">Chargement des articles...</p>
+      <p v-if="error" class="text-red-500">{{ error }}</p>
     </div>
-    <!-- End Articles -->
   </div>
+  <!-- End Articles -->
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import axios from 'axios';
 
-export default defineComponent({
-
-  name: "ArticleComponent",
-
+export default {
   data() {
     return {
-
+      posts: [] as any[],
+      loading: true,
+      error: null as string | null
     }
   },
 
-  methods: {
-
+  created() {
+    this.fetchArticles();
   },
 
-  mounted() {
+  methods: {
+    async fetchArticles() {
+      const query = `
+      query {
+        publication(host: "geeky-chakri.hashnode.dev") {
+          posts(first: 4) {
+            edges {
+              node {
+                title
+                brief
+                slug
+                publishedAt
+                coverImage {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
 
+      try {
+        const response = await axios.post('https://gql.hashnode.com/', {
+          query
+        }, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const edges = response.data?.data?.publication?.posts?.edges;
+
+        if (Array.isArray(edges)) {
+          this.posts = edges.map((edge: any) => edge.node);
+          console.log(this.posts);
+        } else {
+          this.error = 'Aucun article trouvé.';
+          this.posts = [];
+        }
+      } catch (err: any) {
+        this.error = 'Erreur lors du chargement des articles.';
+        console.error(err);
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    formatDate(dateStr: string): string {
+      const date = new Date(dateStr);
+      const now = new Date();
+      const diff = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+      if (diff === 0) return "Aujourd'hui";
+      if (diff === 1) return "Hier";
+      if (diff < 7) return `Il y a ${diff} jours`;
+      return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    },
+
+    getArticleUrl(slug: string): string {
+      return `https://geeky-chakri.hashnode.dev/${slug}`;
+    }
   }
-});
-</script>
 
-<style scoped></style>
+};
+</script>
