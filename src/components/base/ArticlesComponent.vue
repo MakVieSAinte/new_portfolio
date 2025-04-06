@@ -7,9 +7,9 @@
       </h1>
 
       <ul class="space-y-10" v-if="!loading && posts.length">
-        <li v-for="(post, index) in posts" :key="index">
+        <li v-for="post in posts" :key="post.id">
           <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
-            {{ formatDate(post.publishedAt) }}
+            {{ formatDate(post.publishedAt) }} {{ post.id }}
           </p>
           <h5 class="font-medium text-md text-gray-800 dark:text-neutral-100">
             {{ post.title }}
@@ -19,7 +19,7 @@
           </p>
           <p class="mt-1">
             <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              :href="getArticleUrl(post.slug)" target="_blank" rel="noopener noreferrer">
+            @click.prevent="$emit('article-selected', post.slug)" target="_blank" rel="noopener noreferrer">
               Continue reading
             </a>
           </p>
@@ -57,6 +57,7 @@ export default {
           posts(first: 4) {
             edges {
               node {
+                id
                 title
                 brief
                 slug

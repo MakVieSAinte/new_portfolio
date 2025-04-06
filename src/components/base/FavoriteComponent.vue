@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Fovorite -->
-    <div class="max-w-full py-0 sm:px-4 lg:px-0 lg:py-1 mt-6 sm:mt-14 mx-auto">
+    <div class="max-w-full py-0 sm:px-0 lg:px-0 lg:py-1 mt-6 sm:mt-14 mx-auto">
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         Favorite technologies
       </h1>

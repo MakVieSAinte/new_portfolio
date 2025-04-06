@@ -1,7 +1,7 @@
 <template>
   <div class="my-10">
 
-    <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-blue-500"
+    <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
       href="#">
       <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -10,14 +10,14 @@
       Back to Blog
     </a>
 
-    <h1 v-if="article" class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
+    <h1 v-if="article" class="text-4xl font-bold mt-8 mb-6 text-gray-800 dark:text-white">
       {{ article.title }}
     </h1>
 
     <!-- Prose : typographie stylée automatiquement -->
     <div v-if="article" class="prose prose-neutral dark:prose-invert max-w-none" v-html="article.content.html"></div>
 
-    <div class="sticky bottom-6 inset-x-0 text-center">
+    <div v-if="article" class="sticky bottom-6 inset-x-0 text-center">
       <div class="inline-block bg-white shadow-md rounded-full py-3 px-4 dark:bg-neutral-800">
         <div class="flex items-center gap-x-1.5">
           <!-- Button -->
@@ -29,7 +29,7 @@
                 <path
                   d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
               </svg>
-              {{article.reactionCount}}
+              {{ article.reactionCount }}
               <span
                 class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
                 role="tooltip">
@@ -49,7 +49,7 @@
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
               </svg>
-              {{article.replyCount}}
+              {{ article.replyCount }}
               <span
                 class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
                 role="tooltip">
@@ -141,7 +141,7 @@ export default defineComponent({
   },
   data() {
     return {
-      article: null as any,
+      article: null as any | null,
       loading: true,
       error: null as string | null
     };
@@ -196,8 +196,6 @@ export default defineComponent({
   }
 });
 </script>
-
-
 
 <style>
 /* Styles personnalisés si tu n’utilises pas Tailwind Prose */

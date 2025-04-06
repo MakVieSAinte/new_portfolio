@@ -2,7 +2,7 @@
   <div>
     <!-- Subscribe -->
     <div class="my-10 sm:my-14">
-      <h1 class="mb-5 text-2xl font-medium text-gray-800 dark:text-neutral-300">
+      <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         Subscribe
       </h1>
 
