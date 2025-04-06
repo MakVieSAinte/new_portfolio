@@ -35,7 +35,7 @@
           </a>
         </div>
         <p class="mt-2 text-xs text-gray-500 dark:text-neutral-500">
-          Subscribe in my newsletter with tech article. No spam, unsubscribe at any time.
+          Code, tools, insights — straight to your inbox. Unsubscribe anytime.
         </p>
       </form>
       <!-- End Input -->
