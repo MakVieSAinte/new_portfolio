@@ -9,22 +9,20 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
 
-    data() {
-        return {
-    
-        }
-    },
-
-    methods: {
-
-    },
-
-    mounted() {
+  data() {
+    return {
 
     }
+  },
+
+  methods: {
+
+  },
+
+  mounted() {
+
+  }
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

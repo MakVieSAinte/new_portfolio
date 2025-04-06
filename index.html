@@ -4,37 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>MakVieSAinte | Portfolio</title>
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <script src="./node_modules/preline/dist/preline.js"></script>
-    <script src="./src/assets/js/preline.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/preline@latest/dist/preline.min.js"></script>
-
     <link
+      href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css "
       rel="stylesheet"
-      href="./node_modules/pagedone/src/css/pagedone.css"
     />
-
-    <!-- Theme Check and Update -->
-    <script></script>
   </head>
   <body class="dark:bg-neutral-900">
+    <!-- Bouton toggle Theme -->
     <li
-      class="dark-light inline-block fixed top-10 right-7 z-50"
+      class="dark-light inline-block fixed bottom-0 right-7 z-50"
       aria-pressed="false"
     >
       <!-- Dark Mode -->
@@ -99,10 +91,9 @@
       </button> -->
     </li>
 
-    
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-    <script src="./node_modules/pagedone/src/css/pagedone.js"></script>
+
+    <!-- Script -->
     <script>
       // Fonction pour synchroniser le thème avec localStorage et les classes CSS
       const syncTheme = () => {
@@ -125,7 +116,6 @@
         } else if (isLightOrAuto && !html.classList.contains('light')) {
           html.classList.add('light')
         }
-
         document.documentElement.dataset.theme = isDarkOrAuto ? 'dark' : 'light'
       }
 
@@ -157,10 +147,14 @@
           document.documentElement.dataset.theme = newTheme
         }
       }
-
       button.addEventListener('click', handleSync)
     </script>
 
+    <script type="module" src="/src/main.ts"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
+
+    <!-- Style -->
     <style>
       * {
         box-sizing: border-box;
@@ -180,9 +174,11 @@
       }
 
       body {
+        /* width: 100vw;
+        padding: 0px !important;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
         background: canvas;
         color: canvasText;
       }
@@ -218,48 +214,6 @@
           #02633a;
       }
 
-      ::view-transition-new(body),
-      ::view-transition-old(body) {
-        animation: pan 1s ease-in-out;
-        backface-visibility: hidden;
-        box-shadow: 2.2px 61.3px 73.1px -2px hsl(0 0% 0% / 0.58);
-      }
-
-      ::view-transition-new(body) {
-        --sr: 180deg;
-        background: hsl(0 0% 90%);
-      }
-
-      ::view-transition-old(body) {
-        --sr: 0deg;
-        backface-visibility: hidden;
-      }
-
-      body {
-        view-transition-name: body;
-      }
-
-      @keyframes pan {
-        0% {
-          transform: scale(1) rotateY(var(--sr));
-        }
-        25% {
-          transform: scale(0.5) rotateY(var(--sr));
-          box-shadow: 1.8px 50.7px 51.4px -3.2px hsl(0 0% 0% / 0.32);
-        }
-        75% {
-          transform: scale(0.5) rotateY(calc(var(--sr) + 180deg));
-          box-shadow: 1.8px 50.7px 51.4px -3.2px hsl(0 0% 0% / 0.32);
-        }
-        100% {
-          transform: scale(1) rotateY(calc(var(--sr) + 180deg));
-        }
-      }
-
-      :root {
-        view-transition-name: none;
-      }
-
       [aria-pressed] {
         position: fixed;
         top: 1rem;
@@ -272,26 +226,13 @@
         display: grid;
         place-items: center;
         border-radius: 6px;
-        transition: background 0.2;
+        transition: background 0.2 !important;
         cursor: pointer;
         background-color: color-mix(
           in lch,
           canvas,
           canvasText calc(var(--intent) * 15%)
         );
-      }
-
-      button svg {
-        width: 50%;
-      }
-
-      button:is(:focus-visible, :hover) {
-        --intent: 1;
-      }
-
-      main {
-        width: 768px;
-        max-width: calc(100% - 2rem);
       }
     </style>
   </body>

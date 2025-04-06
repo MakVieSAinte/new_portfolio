@@ -2,34 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './node_modules/preline/variants.css';
+
 body {
-    font-family: "Inter", sans-serif !important;
-    font-weight: 200;
-    color: #4dffb5;
-    /* background-color: #1E152A; */
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 200;
+  color: #4dffb5;
+  /* background-color: #1E152A; */
 }
 
 ::selection {
-    background-color: #4dffb5;
-    color: #1f2937;
+  background-color: #4dffb5;
+  color: #1f2937;
 }
 html {
-    overflow: scroll; 
-    overflow: overlay; 
+  overflow: scroll;
+  overflow: overlay;
 }
 
 /* Pour masquer la barre de défilement sur les navigateurs qui ne supportent pas overflow: overlay */
 html::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
-.scroll-indication {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 13px;
-    background: linear-gradient(to right, #feba3a, #fc3434);
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: transition 0.2s ease-out;
- }

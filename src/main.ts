@@ -1,14 +1,12 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import './main.css'
-import './output.css'
-// import "@/assets/js/main"
-
-
 import App from './App.vue'
 import router from './router'
+// import 'preline/preline'
+import './main.css'
+import './output.css'
+import './assets/css/preline.css'
+import './assets/js/preline.js'
 
 const app = createApp(App)
 

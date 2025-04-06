@@ -14,16 +14,16 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@preline/overlay": "^3.0.0",
     "@preline/theme-switch": "^2.5.0",
     "locomotive-scroll": "^4.1.4",
-    "pagedone": "^1.2.2",
     "pinia": "^2.2.4",
-    "preline": "^2.5.1",
-    "smooth-scrollbar": "^8.8.4",
+    "preline": "^2.7.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.17.0",
     "@vitejs/plugin-vue": "^5.1.4",
