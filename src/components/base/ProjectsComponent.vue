@@ -5,17 +5,18 @@
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         My Projects
       </h1>
-      <p class="text-md font-light text-gray-800 dark:text-slate-300">
+      <p class="text-md font-light text-gray-800 dark:text-slate-300">   
         I love exploring new libraries and JavaScript frameworks 🪄. Here
         is a list of technologies that I have worked with.
       </p>
+
 
 
 <!-- Card Blog -->
 <div class="max-w-[85rem] px-2 py-10 sm:px-4 lg:px-0 lg:py-14 mx-auto">
   <!-- Grid -->
   <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6">
-    <!-- Card -->
+    <!-- Card -->   
     <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 overflow-hidden">
       <div class="h-52 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl">
         <svg class="size-28" width="56" height="180" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
