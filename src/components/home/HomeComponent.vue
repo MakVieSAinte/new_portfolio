@@ -1,5 +1,5 @@
 <template>
-  <div class="box-main relative pt-16 pb-5 px-12 border dark:bg-neutral-800 dark:border-neutral-700 z-20">
+  <div class="box-main relative pt-16 pb-0 px-12 border dark:bg-neutral-800 dark:border-neutral-700 z-20">
     <!-- ========== MAIN CONTENT ========== -->
     <main>
 
