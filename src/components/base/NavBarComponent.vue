@@ -22,12 +22,9 @@
     <div v-if="toggle" id="transform-good hs-sidebar-basic-usage" class="z-50 hs-overlay [--auto-close:lg] lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 w-64
 hs-overlay-open:translate-x-0
 -translate-x-full transition-all duration-300 transform
-h-full
-
-fixed top-0 start-0 bottom-0 z-60
-bg-white border-e border-gray-200 dark:bg-neutral-800 dark:border-neutral-700" role="dialog" tabindex="-1"
-      aria-label="Sidebar">
-      <div class="relative flex flex-col h-full max-h-full ">
+h-full fixed top-0 start-0 bottom-0 z-60
+bg-white border-e border-gray-200 dark:bg-neutral-800 dark:border-neutral-700" role="dialog" tabindex="-1" aria-label="Sidebar">
+      <div class="relative flex flex-col h-full max-h-full">
         <!-- Header -->
         <header class="p-4 flex justify-between items-center gap-x-2">
           <a class="flex-none font-semibold text-sm text-black focus:outline-hidden focus:opacity-80 dark:text-white"

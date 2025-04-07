@@ -32,27 +32,29 @@
 
       <div class="flex items-center flex-wrap gap-6 mt-8">
 
-        
         <!-- Card -->
-        <div class="!w-[30px] flex flex-col h-full bg-white border border-gray-900 rounded-md dark:bg-neutral-900 dark:border-gray-950 pr-3" style="width: max-content;">
+        <!-- <div
+          class="!w-[30px] flex flex-col h-full bg-white border dark:border-red-500 !border-orange-400 rounded-md dark:bg-neutral-900 pr-8"
+          style="width: max-content;">
           <div class="p-1 md:p-2 flex gap-x-4">
-            <div class="shrink-0 flex justify-center items-center w-6 h-6 overflow-hidden bg-gray-100 rounded-md dark:bg-neutral-800">
-              <img src="@/assets/images/hashnode.png" alt="hashnode" width="100%" height="100%"/>
+            <div
+              class="shrink-0 flex justify-center items-center w-6 h-6 overflow-hidden bg-gray-100 rounded-md dark:bg-neutral-800">
+              <img src="@/assets/images/hashnode.png" alt="hashnode" width="100%" height="100%" />
             </div>
-  
+
             <div class="flex items-center justify-center gap-x-2">
               <p class="text-sm text-gray-800 dark:text-neutral-300">
                 Hashnode
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- End Card -->
-        
-        <div class="flex items-center h-full gap-2">
-            <span class="block w-3 h-3 bg-primary rounded-full border-1 border-green-200"></span>
-            <span class="text-sm text-gray-800 dark:text-neutral-300">Available for work</span>
-          </div>
+
+        <!-- <div class="flex items-center h-full gap-2">
+          <span class="block w-3 h-3 bg-primary rounded-full border-1 border-green-200"></span>
+          <span class="text-sm text-gray-800 dark:text-neutral-300">Available for work</span>
+        </div> -->
       </div>
 
     </div>

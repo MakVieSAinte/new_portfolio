@@ -1,13 +1,13 @@
 <template>
-  <div class="box-main relative py-6 px-8">
+  <div class="box-main relative pt-16 pb-5 px-12 border dark:bg-neutral-800 dark:border-neutral-700 z-20">
     <!-- ========== MAIN CONTENT ========== -->
     <main>
 
       <!-- <div class="pt-10 md:pt-16 px-4 sm:px-6 lg:px-8 relative"> -->
 
-      <!-- Heros -->
-      <NavBarComponent></NavBarComponent>
-      <!-- End Heros -->
+      <!-- NavBar -->
+      <!-- <NavBarComponent></NavBarComponent> -->
+      <!-- End NavBar -->
 
       <!-- Heros -->
       <HerosComponent></HerosComponent>
@@ -86,12 +86,12 @@ export default defineComponent({
 
 <style scoped>
 .box-main {
-  width: 800px !important;
+  width: 1100px !important;
   /* background-color: red; */
   /* border-left: 1px solid #333;
   border-right: 1px solid #333; */
 }
-@media (max-width: 870px) {
+@media (max-width: 1100px) {
   .box-main {
     width: 100% !important;
   }

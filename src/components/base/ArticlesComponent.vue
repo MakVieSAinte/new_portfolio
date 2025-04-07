@@ -9,7 +9,7 @@
       <ul class="space-y-10" v-if="!loading && posts.length">
         <li v-for="post in posts" :key="post.id">
           <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
-            {{ formatDate(post.publishedAt) }} {{ post.id }}
+            {{ formatDate(post.publishedAt) }}
           </p>
           <h5 class="font-medium text-md text-gray-800 dark:text-neutral-100">
             {{ post.title }}
