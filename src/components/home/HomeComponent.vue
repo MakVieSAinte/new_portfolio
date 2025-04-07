@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full py-6 px-8" style="width: 800px !important;">
+  <div class="box-main relative py-6 px-8">
     <!-- ========== MAIN CONTENT ========== -->
     <main>
 
@@ -84,4 +84,16 @@ export default defineComponent({
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.box-main {
+  width: 800px !important;
+  /* background-color: red; */
+  /* border-left: 1px solid #333;
+  border-right: 1px solid #333; */
+}
+@media (max-width: 870px) {
+  .box-main {
+    width: 100% !important;
+  }
+}
+</style>
