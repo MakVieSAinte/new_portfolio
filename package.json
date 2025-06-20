@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@preline/overlay": "^3.0.0",
+    "@preline/tabs": "^3.1.0",
     "@preline/theme-switch": "^2.5.0",
     "axios": "^1.8.4",
     "locomotive-scroll": "^4.1.4",

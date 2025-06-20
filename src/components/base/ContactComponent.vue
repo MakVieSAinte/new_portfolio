@@ -1,9 +1,10 @@
 <template>
   <div>
+
     <!-- Subscribe -->
     <div class="my-10 sm:my-14">
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
-        Contact me 
+        Contact me
       </h1>
 
       <!-- Input -->

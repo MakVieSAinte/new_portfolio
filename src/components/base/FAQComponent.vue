@@ -1,0 +1,166 @@
+<template>
+  <div>
+
+        <!-- FAQ -->
+<div class="my-10 sm:my-14">
+      <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
+        Answers to common questions about my process and services.
+      </p>
+
+
+ <nav class="flex justify-between gap-x-1 my-10" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+  <button type="button" class="hs-tab-active:bg-red-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center basis-0 grow inline-flex justify-center items-center gap-x-2  text-sm font-medium text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300 active" id="equal-width-elements-item-1" aria-selected="true" data-hs-tab="#equal-width-elements-1" aria-controls="equal-width-elements-1" role="tab">
+    Services & Process
+  </button>
+  <button type="button" class="hs-tab-active:bg-blue-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center basis-0 grow inline-flex justify-center items-center gap-x-2 bg-transparent text-sm font-medium text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" id="equal-width-elements-item-2" aria-selected="false" data-hs-tab="#equal-width-elements-2" aria-controls="equal-width-elements-2" role="tab">
+    Pricing & Timelines
+  </button>
+  <button type="button" class="hs-tab-active:bg-blue-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center basis-0 grow inline-flex justify-center items-center gap-x-2 bg-transparent text-sm font-medium text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" id="equal-width-elements-item-3" aria-selected="false" data-hs-tab="#equal-width-elements-3" aria-controls="equal-width-elements-3" role="tab">
+    About me
+  </button>
+</nav>
+
+<div class="mt-3">
+  <div id="equal-width-elements-1" role="tabpanel" aria-labelledby="equal-width-elements-item-1">
+     <div class="hs-accordion-group flex flex-col gap-3">
+          <div
+            class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent rounded-xl dark:hs-accordion-active:border-neutral-700 dark:bg-neutral-800 dark:border-transparent"
+            id="hs-active-bordered-heading-one">
+            <button
+              class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:outline-hidden dark:focus:text-neutral-400"
+              aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-one">
+              Accordion #1
+              <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+              </svg>
+            </button>
+            <div id="hs-basic-active-bordered-collapse-one"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+              aria-labelledby="hs-active-bordered-heading-one">
+              <div class="pb-4 px-5">
+                <p class="text-gray-800 dark:text-neutral-200">
+                  <em>This is the first item's accordion body.</em> It is hidden by default, until the collapse plugin
+                  adds the appropriate classes that we use to style each element. These classes control the overall
+                  appearance, as well as the showing and hiding via CSS transitions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-accordion hs-accordion-active:border-gray-200 active bg-white border border-transparent rounded-xl dark:hs-accordion-active:border-neutral-700 dark:bg-neutral-800 dark:border-transparent"
+            id="hs-active-bordered-heading-two">
+            <button
+              class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:outline-hidden dark:focus:text-neutral-400"
+              aria-expanded="true" aria-controls="hs-basic-active-bordered-collapse-two">
+              Accordion #2
+              <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+              </svg>
+            </button>
+            <div id="hs-basic-active-bordered-collapse-two"
+              class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region"
+              aria-labelledby="hs-active-bordered-heading-two">
+              <div class="pb-4 px-5">
+                <p class="text-gray-800 dark:text-neutral-200">
+                  <em>This is the second item's accordion body.</em> It is hidden by default, until the collapse plugin
+                  adds the appropriate classes that we use to style each element. These classes control the overall
+                  appearance, as well as the showing and hiding via CSS transitions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent rounded-xl dark:hs-accordion-active:border-neutral-700 dark:bg-neutral-800 dark:border-transparent"
+            id="hs-active-bordered-heading-three">
+            <button
+              class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:outline-hidden dark:focus:text-neutral-400"
+              aria-expanded="false" aria-controls="hs-basic-active-bordered-collapse-three">
+              Accordion #3
+              <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg class="hs-accordion-active:block hidden size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+              </svg>
+            </button>
+            <div id="hs-basic-active-bordered-collapse-three"
+              class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region"
+              aria-labelledby="hs-active-bordered-heading-three">
+              <div class="pb-4 px-5">
+                <p class="text-gray-800 dark:text-neutral-200">
+                  <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin
+                  adds the appropriate classes that we use to style each element. These classes control the overall
+                  appearance, as well as the showing and hiding via CSS transitions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div id="equal-width-elements-2" class="hidden" role="tabpanel" aria-labelledby="equal-width-elements-item-2">
+    <p class="text-gray-500 dark:text-neutral-400">
+      This is the <em class="font-semibold text-gray-800 dark:text-neutral-200">second</em> item's tab body.
+    </p>
+  </div>
+  <div id="equal-width-elements-3" class="hidden" role="tabpanel" aria-labelledby="equal-width-elements-item-3">
+    <p class="text-gray-500 dark:text-neutral-400">
+      This is the <em class="font-semibold text-gray-800 dark:text-neutral-200">third</em> item's tab body.
+    </p>
+  </div>
+</div>
+</div>
+
+    <!-- End FAQ -->
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+
+  name: "FAQComponent",
+
+  data() {
+    return {
+
+    }
+  },
+
+  methods: {
+
+  },
+
+  mounted() {
+
+  }
+});
+</script>
+
+<style scoped></style>

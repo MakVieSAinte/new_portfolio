@@ -35,6 +35,10 @@
       <ArticlesDetailsComponent v-if="selectedSlug" :slug="selectedSlug" :key="selectedSlug" />
       <!-- End ArticleDetails -->
 
+      <!-- FAQ -->
+      <FAQComponent></FAQComponent>
+      <!-- End FAQ -->
+
       <!-- Contact -->
       <ContactComponent></ContactComponent>
       <!-- End Contact -->
@@ -54,12 +58,13 @@ import SkillsComponent from '../base/SkillsComponent.vue'
 import WorksComponent from '../base/WorksComponent.vue'
 import ArticlesComponent from '../base/ArticlesComponent.vue'
 import ArticlesDetailsComponent from '../base/ArticleDetailComponent.vue'
+import FAQComponent from '../base/FAQComponent.vue'
 import ContactComponent from '../base/ContactComponent.vue'
 
 export default defineComponent({
 
   components: {
-    NavBarComponent, HerosComponent, FavoriteComponent, ProjectsComponent, SkillsComponent, WorksComponent, ArticlesComponent, ArticlesDetailsComponent, ContactComponent
+    NavBarComponent, HerosComponent, FavoriteComponent, ProjectsComponent, SkillsComponent, WorksComponent, ArticlesComponent, ArticlesDetailsComponent, ContactComponent, FAQComponent
   },
 
   data() {
