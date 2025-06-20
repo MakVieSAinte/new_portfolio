@@ -1,12 +1,10 @@
 <template>
-  <div class="box-main relative pt-16 pb-0 px-12 border dark:bg-neutral-800 dark:border-neutral-700 z-20">
+  <div class="box-main relative pt-32 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
     <!-- ========== MAIN CONTENT ========== -->
-    <main>
-
-      <!-- <div class="pt-10 md:pt-16 px-4 sm:px-6 lg:px-8 relative"> -->
+    <main class="">
 
       <!-- NavBar -->
-      <!-- <NavBarComponent></NavBarComponent> -->
+      <NavBarComponent></NavBarComponent>
       <!-- End NavBar -->
 
       <!-- Heros -->
@@ -41,7 +39,6 @@
       <ContactComponent></ContactComponent>
       <!-- End Contact -->
 
-      <!-- </div> -->
     </main>
     <!-- ========== END MAIN CONTENT ========== -->
   </div>
@@ -86,12 +83,10 @@ export default defineComponent({
 
 <style scoped>
 .box-main {
-  width: 1100px !important;
-  /* background-color: red; */
-  /* border-left: 1px solid #333;
-  border-right: 1px solid #333; */
+  width: 56rem !important;
 }
-@media (max-width: 1100px) {
+
+@media (max-width: 56rem) {
   .box-main {
     width: 100% !important;
   }

@@ -26,7 +26,7 @@
               Juin 2024 - Present
             </h3>
 
-            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+            <p class="font-semibold text-sm text-gray-800 dark:text-white">
               Frontend Developer &amp; Web Integrator
             </p>
 
@@ -100,7 +100,7 @@
               Novembre 2023 - 2024
             </h3>
 
-            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+            <p class="font-semibold text-sm text-gray-800 dark:text-white">
               Junior Software Engineer – Possacode
             </p>
 
@@ -147,7 +147,7 @@
               Juin 2023 - Octobre 2023
             </h3>
 
-            <p class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+            <p class="font-semibold text-sm text-gray-800 dark:text-white">
               Freelance Graphic Designer
             </p>
 

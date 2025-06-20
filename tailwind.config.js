@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         primary: "#4dffb5",
         secondary: "#CAD4E7",
-        myblack: "#1E152A",
+        myblack: "oklch(20.5% 0 0)",
         bordure: "#757575",
         accent: {
           DEFAULT: "#005FB8",

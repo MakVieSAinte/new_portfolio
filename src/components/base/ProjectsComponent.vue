@@ -5,7 +5,7 @@
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         My Projects
       </h1>
-      <p class="text-md font-light text-gray-800 dark:text-slate-300">
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
         I love exploring new libraries and JavaScript frameworks 🪄. Here
         is a list of technologies that I have worked with.
       </p>

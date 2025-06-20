@@ -11,7 +11,7 @@
           <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
             {{ formatDate(post.publishedAt) }}
           </p>
-          <h5 class="font-medium text-md text-gray-800 dark:text-neutral-100">
+          <h5 class="font-medium text-md text-gray-800 dark:text-white">
             {{ post.title }}
           </h5>
           <p class="mt-1 text-sm text-gray-500 dark:text-neutral-300">
@@ -19,7 +19,7 @@
           </p>
           <p class="mt-1">
             <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-            @click.prevent="$emit('article-selected', post.slug)" target="_blank" rel="noopener noreferrer">
+              @click.prevent="$emit('article-selected', post.slug)" target="_blank" rel="noopener noreferrer">
               Continue reading
             </a>
           </p>

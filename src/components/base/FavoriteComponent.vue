@@ -5,7 +5,7 @@
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         Favorite technologies
       </h1>
-      <p class="text-md font-light text-gray-800 dark:text-slate-300">
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
         I love exploring new libraries and JavaScript frameworks 🪄. Here
         is a list of technologies that I have worked with.
       </p>
@@ -55,7 +55,8 @@
 
         <!-- Typescript -->
         <a class="box shrink-0 transition hover:-translate-y-2" href="https://www.typescriptlang.org/">
-          <svg class="md:size-10 size-12 mx-auto sm:mx-0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
+          <svg class="md:size-10 size-12 mx-auto sm:mx-0" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
+            height="48" viewBox="0 0 48 48">
             <rect width="36" height="36" x="6" y="6" fill="#1976d2"></rect>
             <polygon fill="#fff"
               points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264">
@@ -115,8 +116,9 @@
 
         <!-- Php -->
         <a class="box shrink-0 transition hover:-translate-y-2" href="https://www.typescriptlang.org/">
-          <svg class="md:size-10 size-12 mx-auto sm:mx-0" width="47px" height="47px" viewBox="0 -60.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+          <svg class="md:size-10 size-12 mx-auto sm:mx-0" width="47px" height="47px" viewBox="0 -60.5 256 256"
+            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            preserveAspectRatio="xMidYMid">
             <defs>
               <radialGradient id="radialGradient-1" cx="0.8366" cy="-125.811" r="363.0565"
                 gradientTransform="matrix(0.463 0 0 0.463 76.4644 81.9182)" gradientUnits="userSpaceOnUse">
@@ -158,8 +160,8 @@
 
         <!-- GSAP -->
         <a class="box shrink-0 transition hover:-translate-y-4" href="https://gsap.com/">
-          <svg class="md:size-10 size-12 mx-auto sm:mx-0" height="2500" viewBox="-2.138 -2.29 314.9 359.304" width="2157"
-            xmlns="http://www.w3.org/2000/svg">
+          <svg class="md:size-10 size-12 mx-auto sm:mx-0" height="2500" viewBox="-2.138 -2.29 314.9 359.304"
+            width="2157" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m48.173 155.568c-10.389 4.887-37.886 26.886-43.182 33.404-5.5 6.518-7.129-3.666-1.426-20.572 4.48-13.647 15.888-32.183 35.034-48.07 11.202-9.166 35.849-22.405 50.921-30.146 3.056-1.63 42.571-18.332 77.809-26.683 3.056-.815-3.666 5.092-4.685 8.351-5.296 15.48-111.01 81.882-111.01 81.882zm148.894 186.78c1.833 10.999.204 11.814-11.202 13.24-11.407 1.426-19.758-2.852-22.813-5.703-3.056-2.853-3.666-9.166-.611-14.869 1.834-3.667 3.667-4.889 4.686-9.37 1.018-4.277 1.833-5.296 2.647-6.925.814-1.427 1.019-2.853 1.222-12.833.204-9.98 0-28.72 1.019-36.663 1.019-8.147 36.257 3.666 36.257 3.666s-8.352 20.776-10.592 25.868c-2.241 5.093-2.037 14.869-2.037 16.906s-.814 6.11-1.426 6.314c-.611.203 2.037 5.499.814 8.555-.815 2.852 1.833 10.185 2.036 11.814zm13.444-311.437c-1.223-7.74 0-23.018 1.629-25.461 5.093-6.926 31.979-7.74 37.683.407 2.444 3.666 2.24 12.221 1.833 17.721-.407 5.499-1.833 17.313-2.037 21.184-.203 2.852-29.738 7.332-36.256-.408-1.834-2.036-2.852-13.443-2.852-13.443zm59.884 291.679c12.425 8.963 21.998 10.592 28.312 13.851 6.314 3.26 4.685 9.574-5.907 11.407-8.555 1.629-21.998-1.63-30.96-1.63s-28.924 1.019-34.22-2.647c-6.11-4.277-3.463-12.222-3.463-12.222 1.63-4.48 5.703-14.462 4.481-22.609s-2.852-12.628-5.907-20.165c-3.055-7.536-5.295-26.071-2.443-27.09s2.036 0 5.703.814c3.666.814 7.74 2.037 15.684 2.037s16.702-1.223 19.758-1.833c3.055-.611 5.499-1.223 4.48 5.092-1.018 6.314-4.073 18.128-4.277 27.294-.203 9.166-.203 19.758.408 21.591.61 1.833 5.092 3.87 8.351 6.11z"
               fill="#010101" />
