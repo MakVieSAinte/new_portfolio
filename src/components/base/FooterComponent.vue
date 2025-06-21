@@ -2,42 +2,35 @@
   <div>
     <!-- ========== FOOTER ========== -->
     <footer class="w-full max-w-full mx-auto px-0 pt-4">
-      <div class="pt-6 pb-10">
-        <div class="flex flex-wrap justify-between items-center gap-2">
+      <div class="pt-6 md:pb-10 max-md:pb-20">
+        <div class="flex flex-wrap justify-between items-center gap-2 md:pb-1 max-md:pb-5">
           <div>
 
 
             <!-- Language Dropdown -->
-           <div class="relative inline-flex" ref="dropdownRef">
-    <!-- Button -->
-    <button
-      @click="toggleDropdown"
-      class="py-1 px-2 inline-flex items-center gap-x-2 text-[12px] rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-    >
-      <span class="shrink-0 size-3 rounded-full" v-html="selected.icon"></span>
-      {{ selected.label }}
-      <svg :class="{ 'rotate-180': isOpen }" class="transition-transform shrink-0 size-4 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path d="m18 15-6-6-6 6" />
-      </svg>
-    </button>
+            <div class="relative inline-flex" ref="dropdownRef">
+              <!-- Button -->
+              <button @click="toggleDropdown"
+                class="py-1 px-2 inline-flex items-center gap-x-2 text-[12px] rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+                <span class="shrink-0 size-3 rounded-full" v-html="selected.icon"></span>
+                {{ selected.label }}
+                <svg :class="{ 'rotate-180': isOpen }"
+                  class="transition-transform shrink-0 size-4 text-gray-500 dark:text-neutral-500"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="m18 15-6-6-6 6" />
+                </svg>
+              </button>
 
-    <!-- Dropdown (opens upward) -->
-    <div
-      v-show="isOpen"
-      class="absolute bottom-full mb-2 z-10 w-44 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700"
-    >
-      <a
-        v-for="lang in languages"
-        :key="lang.label"
-        href="#"
-        @click.prevent="selectLanguage(lang)"
-        class="flex items-center gap-x-2 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
-      >
-        <span class="shrink-0 size-3 rounded-full" v-html="lang.icon"></span>
-        {{ lang.label }}
-      </a>
-    </div>
-  </div>
+              <!-- Dropdown (opens upward) -->
+              <div v-show="isOpen"
+                class="absolute bottom-full mb-2 z-10 w-44 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700">
+                <a v-for="lang in languages" :key="lang.label" href="#" @click.prevent="selectLanguage(lang)"
+                  class="flex items-center gap-x-2 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                  <span class="shrink-0 size-3 rounded-full" v-html="lang.icon"></span>
+                  {{ lang.label }}
+                </a>
+              </div>
+            </div>
             <!-- End Language Dropdown -->
 
 
@@ -68,37 +61,28 @@
               </a>
             </li>
             <li class="inline-block">
-    <!-- Bouton pour activer le mode sombre -->
-    <button
-      v-if="theme === 'light'"
-      @click="setTheme('dark')"
-      type="button"
-      class="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700"
-    >
-      <span class="sr-only">Activer le mode sombre</span>
-      <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none"
-           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-           viewBox="0 0 24 24">
-        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-      </svg>
-    </button>
+              <!-- Bouton pour activer le mode sombre -->
+              <button v-if="theme === 'light'" @click="setTheme('dark')" type="button"
+                class="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700">
+                <span class="sr-only">Activer le mode sombre</span>
+                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+              </button>
 
-    <!-- Bouton pour désactiver le mode sombre -->
-    <button
-      v-else
-      @click="setTheme('light')"
-      type="button"
-      class="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700"
-    >
-      <span class="sr-only">Désactiver le mode sombre</span>
-      <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none"
-           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-           viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="4"/>
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-      </svg>
-    </button>
-  </li>
+              <!-- Bouton pour désactiver le mode sombre -->
+              <button v-else @click="setTheme('light')" type="button"
+                class="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700">
+                <span class="sr-only">Désactiver le mode sombre</span>
+                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="4" />
+                  <path
+                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                </svg>
+              </button>
+            </li>
           </ul>
           <!-- End List -->
         </div>
@@ -393,11 +377,11 @@ export default defineComponent({
   },
 
   mounted() {
- const savedTheme = localStorage.getItem('theme') || 'light'
+    const savedTheme = localStorage.getItem('theme') || 'light'
     this.setTheme(savedTheme)
-     document.addEventListener('click', this.closeDropdown)
-},
-beforeUnmount() {
+    document.addEventListener('click', this.closeDropdown)
+  },
+  beforeUnmount() {
     document.removeEventListener('click', this.closeDropdown)
   }
 });

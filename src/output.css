@@ -2393,6 +2393,58 @@ html::-webkit-scrollbar {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+@media not all and (min-width: 768px) {
+  .max-md\:bottom-10 {
+    bottom: 2.5rem;
+  }
+
+  .max-md\:bottom-8 {
+    bottom: 2rem;
+  }
+
+  .max-md\:bottom-5 {
+    bottom: 1.25rem;
+  }
+
+  .max-md\:bg-white\/50 {
+    background-color: rgb(255 255 255 / 0.5);
+  }
+
+  .max-md\:bg-white\/70 {
+    background-color: rgb(255 255 255 / 0.7);
+  }
+
+  .max-md\:bg-white\/60 {
+    background-color: rgb(255 255 255 / 0.6);
+  }
+
+  .max-md\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .max-md\:pb-5 {
+    padding-bottom: 1.25rem;
+  }
+
+  .max-md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .max-md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .max-md\:dark\:bg-neutral-800\/70:is(.dark *) {
+    background-color: rgb(38 38 38 / 0.7);
+  }
+
+  .max-md\:dark\:bg-neutral-800\/60:is(.dark *) {
+    background-color: rgb(38 38 38 / 0.6);
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:mx-0 {
     margin-left: 0px;
@@ -2466,6 +2518,18 @@ html::-webkit-scrollbar {
 }
 
 @media (min-width: 768px) {
+  .md\:bottom-10 {
+    bottom: 2.5rem;
+  }
+
+  .md\:top-4 {
+    top: 1rem;
+  }
+
+  .md\:top-10 {
+    top: 2.5rem;
+  }
+
   .md\:my-6 {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -2485,6 +2549,10 @@ html::-webkit-scrollbar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:bg-white\/50 {
+    background-color: rgb(255 255 255 / 0.5);
+  }
+
   .md\:p-2 {
     padding: 0.5rem;
   }
@@ -2497,9 +2565,39 @@ html::-webkit-scrollbar {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:pb-1 {
+    padding-bottom: 0.25rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .md\:dark\:bg-neutral-800\/50:is(.dark *) {
+    background-color: rgb(38 38 38 / 0.5);
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:top-10 {
+    top: 2.5rem;
+  }
+
+  .lg\:top-4 {
+    top: 1rem;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
