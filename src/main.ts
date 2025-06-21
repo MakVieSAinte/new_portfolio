@@ -10,6 +10,9 @@ import './assets/js/preline.js'
 
 const app = createApp(App)
 
+const savedTheme = localStorage.getItem('theme') || 'light'
+document.documentElement.classList.toggle('dark', savedTheme === 'dark')
+
 app.use(createPinia())
 app.use(router)
 
