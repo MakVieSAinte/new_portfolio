@@ -1,7 +1,7 @@
 <template>
   <div class="box-main relative pt-32 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
     <!-- ========== MAIN CONTENT ========== -->
-    <main>
+    <main class="pt-8">
       <!-- NavBar -->
       <NavBarComponent></NavBarComponent>
       <!-- End NavBar -->
@@ -41,6 +41,10 @@
       <!-- Contact -->
       <ContactComponent></ContactComponent>
       <!-- End Contact -->
+      
+      <!-- Footer -->
+      <FooterComponent></FooterComponent>
+      <!-- End Footer -->
 
     </main>
     <!-- ========== END MAIN CONTENT ========== -->
@@ -59,11 +63,12 @@ import ArticlesComponent from '../base/ArticlesComponent.vue'
 import ArticlesDetailsComponent from '../base/ArticleDetailComponent.vue'
 import FAQComponent from '../base/FAQComponent.vue'
 import ContactComponent from '../base/ContactComponent.vue'
+import FooterComponent from '../base/FooterComponent.vue'
 
 export default defineComponent({
 
   components: {
-    NavBarComponent, HerosComponent, FavoriteComponent, ProjectsComponent, SkillsComponent, WorksComponent, ArticlesComponent, ArticlesDetailsComponent, ContactComponent, FAQComponent
+    NavBarComponent, HerosComponent, FavoriteComponent, ProjectsComponent, SkillsComponent, WorksComponent, ArticlesComponent, ArticlesDetailsComponent, ContactComponent, FAQComponent, FooterComponent
   },
 
   data() {

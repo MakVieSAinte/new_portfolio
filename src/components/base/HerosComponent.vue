@@ -8,9 +8,9 @@
           src="@/assets/images/profil.jpg" alt="Avatar" width="150px" />
       </div>
 
-      <div class="grow ml-3">
+      <div class="grow ml-1">
         <h1 class="text-4xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          MakVieSAinte
+          MakVieSAinte  
         </h1>
         <p class="text-writter relative text-md font-light text-gray-900 dark:text-neutral-400">
           FullStack developer and Web designer

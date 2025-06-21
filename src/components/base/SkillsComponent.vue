@@ -7,7 +7,7 @@
       </h1>
 
       <!-- List -->
-      <div class="space-y-6">
+      <div class="space-y-3">
         <dl class="flex flex-col sm:flex-row gap-1">
           <dt class="min-w-40">
             <span class="block text-md font-medium text-gray-800 dark:text-white">Design Tools:</span>
