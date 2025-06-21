@@ -1,9 +1,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import TheArticleDetailComponent from '../components/base/ArticleDetailComponent.vue'
+import NavBarComponent from '@/components/base/NavBarComponent.vue'
 
 export default defineComponent({
-  components: { TheArticleDetailComponent },
+  components: { NavBarComponent, TheArticleDetailComponent },
   props: {
     slug: {
       type: String,
@@ -15,6 +16,7 @@ export default defineComponent({
 
 <template>
   <main>
+    <NavBarComponent />
     <TheArticleDetailComponent :slug="slug" />
   </main>
 </template>

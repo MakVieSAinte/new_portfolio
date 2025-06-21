@@ -2,9 +2,9 @@
   <div>
     <!-- Profile -->
     <div class="flex items-center gap-x-3">
-      <div class="shrink-0 border border-gray-100 dark:border-gray-700 rounded-full">
+      <div class="shrink-0 border border-gray-100 dark:border-neutral-700 rounded-full p-[1.5px]">
         <img
-          class="shrink-0 size-24 rounded-full border-2 border-gray-200 dark:border-gray-900 outline-2 outline-primary"
+          class="shrink-0 size-24 rounded-full border-2 border-gray-200 dark:border-neutral-900 outline-2 outline-primary"
           src="@/assets/images/profil.jpg" alt="Avatar" width="150px" />
       </div>
 

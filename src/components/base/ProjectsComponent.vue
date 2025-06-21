@@ -15,7 +15,7 @@
       <!-- Card Blog -->
       <div class="max-w-[85rem] px-2 py-10 sm:px-4 lg:px-0 lg:py-14 mx-auto">
         <!-- Grid -->
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <!-- Card -->
           <div @mouseenter="playVideo" @mouseleave="stopVideo"
             class="group flex flex-col h-full bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 overflow-hidden">
