@@ -14,9 +14,7 @@ const router = createRouter({
       path: '/article/:slug',
       name: 'ArticleDetail',
       component: () => import('@/views/ArticleDetailView.vue'),
-      props: route => ({
-        slug: route.params.slug,
-      })
+      props: true
     }
   ],
 })

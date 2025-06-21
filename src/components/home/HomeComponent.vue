@@ -87,13 +87,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.box-main {
-  width: 56rem !important;
-}
-
-@media (max-width: 56rem) {
-  .box-main {
-    width: 100% !important;
-  }
-}
 </style>

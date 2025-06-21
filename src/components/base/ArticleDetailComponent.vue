@@ -1,14 +1,17 @@
 <template>
-  <div class="my-10">
+  
+  <div class="box-main mx-auto py-10 px-8 lg:px-12 md:px-8 sm:px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
 
-    <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
-      href="#">
+<router-link
+  class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
+  to="/"
+>
       <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="m15 18-6-6 6-6" />
       </svg>
       Back to Blog
-    </a>
+    </router-link>
 
     <h1 v-if="article" class="text-4xl font-bold mt-8 mb-6 text-gray-800 dark:text-white">
       {{ article.title }}
@@ -149,7 +152,7 @@ export default defineComponent({
   async created() {
     const query = `
       query {
-        publication(host: "geeky-chakri.hashnode.dev") {
+        publication(host: "capsule-tech-and-code.hashnode.dev") {
           post(slug: "${this.slug}") {
             title
             content {

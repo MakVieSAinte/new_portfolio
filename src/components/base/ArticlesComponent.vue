@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Articles -->
-    <div class="my-10 sm:my-14">
+    <div class="my-10 sm:my-14 relative">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
         Articles récents
       </h1>
@@ -18,10 +18,18 @@
             {{ post.brief }}
           </p>
           <p class="mt-1">
-            <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
+            <!-- <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
               @click.prevent="$emit('article-selected', post.slug)" target="_blank" rel="noopener noreferrer">
               Continue reading
-            </a>
+            </a> -->
+
+            <router-link
+    class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
+    :to="`/article/${post.slug}`"
+  >
+    Continue reading
+  </router-link>
+
           </p>
         </li>
       </ul>
@@ -53,7 +61,7 @@ export default {
     async fetchArticles() {
       const query = `
       query {
-        publication(host: "geeky-chakri.hashnode.dev") {
+        publication(host: "capsule-tech-and-code.hashnode.dev") {
           posts(first: 4) {
             edges {
               node {
