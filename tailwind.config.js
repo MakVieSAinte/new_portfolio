@@ -23,7 +23,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/typography')
-    require('preline/plugin'),
+    // require('@tailwindcss/typography')
+    // require('preline/plugin'),
   ],
 }

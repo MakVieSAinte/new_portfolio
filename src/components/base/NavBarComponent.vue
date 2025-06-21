@@ -1,123 +1,89 @@
 <template>
   <div>
+    <!-- NavBar -->
+    <div class="fixed top-10 inset-x-0 text-center z-50">
+      <div
+        class="inline-block backdrop-blur-md bg-white/70 rounded-full py-3 px-4 dark:bg-neutral-800/70 border border-neutral-200 dark:border-neutral-700 z-50">
+        <div class="flex items-center gap-x-1">
+          <!-- Button -->
+          <div class="hs-tooltip inline-block">
+            <button type="button"
+              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white transition-colors duration-150">
+              Home
+              <span
+                class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
+                role="tooltip">
+                Home
+              </span>
+            </button>
+          </div>
+          <!-- Button -->
 
-    <!-- Navigation Toggle -->
-    <div class="fixed right-8 top-8">
-      <button type="button"
-        class="py-2 px-4 inline-flex justify-center items-center gap-x-2 text-start bg-gray-800 border border-gray-800 text-white text-sm font-medium rounded-lg shadow-2xs align-middle hover:bg-gray-950 focus:outline-hidden focus:bg-gray-900 dark:bg-white dark:text-neutral-800 dark:hover:bg-neutral-200 dark:focus:bg-neutral-200"
-        @click="openSidebar()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-menu-icon lucide-menu">
-          <line x1="4" x2="20" y1="12" y2="12" />
-          <line x1="4" x2="20" y1="6" y2="6" />
-          <line x1="4" x2="20" y1="18" y2="18" />
-        </svg>
-        Menu
-      </button>
-    </div>
-    <!-- End Navigation Toggle -->
+          <div class="block h-3 border-e border-gray-300 mx-2 dark:border-neutral-600"></div>
 
-    <!-- Sidebar -->
-    <div v-if="toggle" id="transform-good hs-sidebar-basic-usage" class="z-50 hs-overlay [--auto-close:lg] lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 w-64
-hs-overlay-open:translate-x-0
--translate-x-full transition-all duration-300 transform
-h-full fixed top-0 start-0 bottom-0 z-60
-bg-white border-e border-gray-200 dark:bg-neutral-800 dark:border-neutral-700" role="dialog" tabindex="-1" aria-label="Sidebar">
-      <div class="relative flex flex-col h-full max-h-full">
-        <!-- Header -->
-        <header class="p-4 flex justify-between items-center gap-x-2">
-          <a class="flex-none font-semibold text-sm text-black focus:outline-hidden focus:opacity-80 dark:text-white"
-            href="#" aria-label="Brand">
-            <h1 class="text-xl font-medium text-gray-800 dark:text-neutral-300 font-familjen_grotesk">
-              MakVieSAinte
-            </h1>
+          <!-- Button -->
+          <div class="hs-tooltip inline-block">
+            <button type="button"
+              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white transition-colors duration-150">
+              Projects
+              <span
+                class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
+                role="tooltip">
+                Projects
+              </span>
+            </button>
+          </div>
+          <!-- Button -->
+
+          <div class="block h-3 border-e border-gray-300 mx-2 dark:border-neutral-600"></div>
+
+          <!-- Button -->
+          <div class="hs-tooltip inline-block">
+            <button type="button"
+              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white transition-colors duration-150">
+              About
+              <span
+                class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
+                role="tooltip">
+                About
+              </span>
+            </button>
+          </div>
+          <!-- Button -->
+
+          <div class="block h-3 border-e border-gray-300 mx-2 dark:border-neutral-600"></div>
+
+          <!-- Button -->
+          <div class="hs-tooltip inline-block">
+            <button type="button"
+              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white transition-colors duration-150">
+              Blog
+              <span
+                class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
+                role="tooltip">
+                Blog
+              </span>
+            </button>
+          </div>
+          <!-- Button -->
+
+          <div class="block h-3 border-e border-gray-300 mx-2 dark:border-neutral-600"></div>
+
+          <a href="http://">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+              class="bi bi-linkedin text-neutral-400 hover:text-white transition-colors duration-150" viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg>
           </a>
 
-          <div class="">
-            <!-- Close Button -->
-            <button type="button"
-              class="flex justify-center items-center gap-x-3 size-6 bg-white border border-gray-200 text-sm text-gray-600 hover:bg-gray-100 rounded-full disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
-              @click="hideSidebar()">
-              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
-              </svg>
-              <span class="sr-only">Close</span>
-            </button>
-            <!-- End Close Button -->
-          </div>
-        </header>
-        <!-- End Header -->
 
-        <!-- Body -->
-        <nav
-          class="h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
-          <div class=" pb-0 px-2  w-full flex flex-col flex-wrap">
-            <ul class="space-y-1">
-              <li>
-                <a class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-white"
-                  href="#">
-                  <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                    <polyline points="9 22 9 12 15 12 15 22" />
-                  </svg>
-                  Home
-                </a>
-              </li>
+  
 
-              <li>
-                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200"
-                  href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="size-4">
-                    <rect width="14" height="8" x="5" y="2" rx="2" />
-                    <rect width="20" height="8" x="2" y="14" rx="2" />
-                    <path d="M6 18h2" />
-                    <path d="M12 18h6" />
-                  </svg>
-                  Project
-                </a>
-              </li>
-
-
-              <li>
-                <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200"
-                  href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="size-4">
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
-                  </svg>
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:text-neutral-200"
-                  href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="size-4">
-                    <path d="M4 11a9 9 0 0 1 9 9" />
-                    <path d="M4 4a16 16 0 0 1 16 16" />
-                    <circle cx="5" cy="19" r="1" />
-                  </svg>
-                  Blog <span
-                    class="ms-auto py-0.5 px-1.5 inline-flex items-center gap-x-1.5 text-xs bg-primary text-gray-800 rounded-full dark:bg-neutral-600 dark:text-neutral-900 font-semibold">33+</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <!-- End Body -->
+        </div>
       </div>
     </div>
-    <!-- End Sidebar -->
+    <!-- End NavBar -->
   </div>
 </template>
 
@@ -130,17 +96,11 @@ export default defineComponent({
 
   data() {
     return {
-      toggle: false
     }
   },
 
   methods: {
-    openSidebar() {
-      this.toggle = true;
-    },
-    hideSidebar() {
-      this.toggle = false;
-    }
+
   },
 
   mounted() {
@@ -149,10 +109,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.transform-good {
-  transform: translateX(-100%);
-  transition: all 0.3s ease-in-out;
-  will-change: transform;
-}
-</style>
+<style scoped></style>

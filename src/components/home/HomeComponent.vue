@@ -1,8 +1,7 @@
 <template>
   <div class="box-main relative pt-32 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
     <!-- ========== MAIN CONTENT ========== -->
-    <main class="">
-
+    <main>
       <!-- NavBar -->
       <NavBarComponent></NavBarComponent>
       <!-- End NavBar -->

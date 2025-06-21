@@ -1,6 +1,6 @@
 <template>
   
-  <div class="box-main mx-auto py-10 px-8 lg:px-12 md:px-8 sm:px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
+  <div class="box-main mx-auto pt-32 pb-10 px-8 lg:px-12 md:px-8 sm:px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
 
 <router-link
   class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
