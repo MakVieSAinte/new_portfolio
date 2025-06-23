@@ -2,15 +2,15 @@
   <div>
     <!-- Profile -->
     <div class="flex items-center gap-x-3">
-      <div class="shrink-0 border border-gray-100 dark:border-neutral-700 rounded-full p-[1.5px]">
+      <div class="shrink-0 border border-gray-300 dark:border-neutral-800 rounded-full p-[2.5px]">
         <img
-          class="shrink-0 size-24 rounded-full border-2 border-gray-200 dark:border-neutral-900 outline-2 outline-primary"
+          class="shrink-0 size-24 rounded-full object-cover object-center"
           src="@/assets/images/profil.jpg" alt="Avatar" width="150px" />
       </div>
 
       <div class="grow ml-1">
         <h1 class="text-4xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          MakVieSAinte  
+          MakVieSAinte
         </h1>
         <p class="text-writter relative text-md font-light text-gray-900 dark:text-neutral-400">
           FullStack developer and Web designer
@@ -32,7 +32,7 @@
         problems.
       </p>
 
-      <div class="flex items-center flex-wrap gap-6 my-4"> 
+      <div class="flex items-center flex-wrap gap-6 my-4">
 
         <div class="flex items-center h-full gap-2 hover:bg-primary/5 px-4 py-2 rounded-md poin cursor-pointer transition-all duration-150">
           <span class="pulse block w-2 h-2 bg-primary rounded-full border-1 border-green-200"></span>
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-    </div> 
+    </div>
   </div>
 </template>
 
@@ -70,7 +70,7 @@ export default defineComponent({
 <style scoped>
 
 .pulse {
-  animation: pulse-animation 1    s infinite;
+  animation: pulse-animation 1s infinite;
 }
 
 @keyframes pulse-animation {

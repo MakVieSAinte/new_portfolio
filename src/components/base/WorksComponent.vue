@@ -17,7 +17,7 @@
           <div
             class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
             <div class="relative z-10 size-6 flex justify-center items-center">
-              <img src="@/assets/images/ayokai-logo.webp" class="shrink-0 text-gray-600 dark:text-slate-200"
+              <img src="@/assets/images/ayokai-logo.webp" class="shrink-0 text-gray-700 dark:text-slate-200"
                 height="62px" />
             </div>
           </div>
@@ -25,7 +25,7 @@
 
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
-            <h3 class="mb-1 text-xs text-gray-600 dark:text-slate-200">
+            <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
               Juin 2024 - Present
             </h3>
 
@@ -33,26 +33,26 @@
               Frontend Developer &amp; Web Integrator
             </p>
 
-            <p class="mt-1 text-sm text-gray-600 dark:text-slate-200">
+            <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
               Ayokai is a software development and testing company. Within a small, agile and hyper-programming-oriented
               team, I contribute to the design and implementation of scalable and secure web applications.
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Integrated web interfaces with a mobile-first approach using Vue.js, HTML/CSS, and TailwindCSS.
               </li>
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Built robust and secure APIs with Express.js, protected by JWT middleware and structured with a modular
                 architecture.
               </li>
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Set up decoupled microservices to improve backend scalability and maintainability.
               </li>
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Used Mongoose ORM to model data and ensure consistency between services.
               </li>
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Worked closely with QA/testers to deliver features without regression, through cross-testing practices.
               </li>
             </ul>
@@ -69,7 +69,7 @@
                       <h3 class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
                         Ayokai Congo
                       </h3>
-                      <p class="mt-1 text-sm text-gray-500 dark:text-neutral-400">
+                      <p class="mt-1 font-normal text-sm text-gray-500 dark:text-neutral-400">
                         Ayokai is a software testing and development company based in Europe and Africa. We help
                         companies strengthen their quality gates to speed up their delivery.
                       </p>
@@ -91,7 +91,7 @@
           <div
             class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
             <div class="relative z-10 size-10 flex justify-center items-center">
-              <img src="@/assets/images/possacode.jpg" class="shrink-0 text-gray-600 dark:text-slate-200"
+              <img src="@/assets/images/possacode.jpg" class="shrink-0 text-gray-700 dark:text-slate-200"
                 height="172px" />
             </div>
           </div>
@@ -99,7 +99,7 @@
 
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
-            <h3 class="mb-1 text-xs text-gray-600 dark:text-slate-200">
+            <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
               Novembre 2023 - 2024
             </h3>
 
@@ -107,16 +107,16 @@
               Junior Software Engineer – PossaCode
             </p>
 
-            <p class="mt-1 text-sm text-gray-600 dark:text-slate-200">
+            <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
               Possacode is a non-profit organization based in the Republic of Congo, committed to empowering and
               connecting developers through learning and collaboration.
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Worked within a supportive and engaged tech community focused on open knowledge sharing.
               </li>
-              <li class="ps-1 text-sm text-gray-600 dark:text-slate-200">
+              <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
                 Participated in open-source initiatives and group workshops, with peer mentoring.
               </li>
             </ul>
@@ -146,7 +146,7 @@
 
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
-            <h3 class="mb-1 text-xs text-gray-600 dark:text-slate-200">
+            <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
               Juin 2023 - Octobre 2023
             </h3>
 
@@ -154,7 +154,7 @@
               Freelance Graphic Designer
             </p>
 
-            <p class="mt-1 text-sm text-gray-600 dark:text-slate-200">
+            <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
               Designed custom visuals for various clients and brands, including logos, posters, web banners, and social
               media content.
             </p>
