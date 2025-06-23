@@ -11,7 +11,7 @@
       </p>
 
       <!-- Grid -->
-      <div class="my-6 mt-12 md:my-6 grid grid-cols-5 sm:flex sm:justify-start sm:flex-row gap-6 sm:gap-x-4 lg:gap-x-4">
+      <div class="my-6 mt-8 md:my-6 grid grid-cols-5 sm:flex sm:justify-start sm:flex-row gap-6 sm:gap-x-4 lg:gap-x-4">
         <!-- Figma -->
         <a class="box shrink-0 transition hover:-translate-y-2 hover:rotate-2" href="https://www.figma.com/fr-fr/">
           <svg class="md:size-10 size-12 mx-auto sm:mx-0 dark:text-slate-200" xmlns="http://www.w3.org/2000/svg" x="0px"

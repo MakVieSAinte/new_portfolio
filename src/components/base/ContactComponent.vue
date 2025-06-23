@@ -6,9 +6,12 @@
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         Contact me
       </h1>
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
+        Answers to common questions about my process and services.
+      </p>
 
       <!-- Input -->
-      <form>
+      <form class="mt-8">
         <div
           class="p-1.5 flex flex-col sm:flex-row items-center gap-2 border border-gray-200 rounded-lg dark:border-neutral-700">
           <div class="relative w-full !outline-0">

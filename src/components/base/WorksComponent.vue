@@ -5,11 +5,14 @@
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
         Work experience
       </h1>
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
+        Answers to common questions about my process and services.
+      </p>
 
       <!-- Timeline -->
       <div>
         <!-- Item -->
-        <div class="group relative flex gap-x-5">
+        <div class="group relative flex gap-x-5 mt-8">
           <!-- Icon -->
           <div
             class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
@@ -101,7 +104,7 @@
             </h3>
 
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              Junior Software Engineer – Possacode
+              Junior Software Engineer – PossaCode
             </p>
 
             <p class="mt-1 text-sm text-gray-600 dark:text-slate-200">

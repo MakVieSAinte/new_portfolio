@@ -65,6 +65,7 @@ import FAQComponent from '../base/FAQComponent.vue'
 import ContactComponent from '../base/ContactComponent.vue'
 import FooterComponent from '../base/FooterComponent.vue'
 
+
 export default defineComponent({
 
   components: {
@@ -73,18 +74,21 @@ export default defineComponent({
 
   data() {
     return {
-      selectedSlug: ''
+      selectedSlug: '',
+
+      nom: '',
+      prenom: '',
+      users: []
     }
   },
 
   methods: {
     handleArticleSelected(slug: string) {
       this.selectedSlug = slug;
-    }
+    },
   },
 
   mounted() {
-
   }
 });
 

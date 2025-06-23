@@ -11,7 +11,7 @@
       </p>
 
 
- <nav class="flex justify-between gap-x-1 my-10" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+ <nav class="flex justify-between gap-x-1 mt-8 mb-10" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
   <button type="button" class="hs-tab-active:bg-blue-600 hs-tab-active:text-white hs-tab-active:hover:text-white hs-tab-active:dark:text-white py-3 px-4 text-center basis-0 grow inline-flex justify-center items-center gap-x-2 bg-transparent text-sm font-medium text-gray-500 hover:text-blue-600 focus:outline-hidden focus:text-blue-600 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300 active" id="equal-width-elements-item-1" aria-selected="true" data-hs-tab="#equal-width-elements-1" aria-controls="equal-width-elements-1" role="tab">
     Services & Process
   </button>

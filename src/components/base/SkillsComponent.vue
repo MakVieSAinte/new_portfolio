@@ -5,9 +5,12 @@
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
         Skills & Tools
       </h1>
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
+        Answers to common questions about my process and services.
+      </p>
 
       <!-- List -->
-      <div class="space-y-3">
+      <div class="space-y-3 mt-8">
         <dl class="flex flex-col sm:flex-row gap-1">
           <dt class="min-w-40">
             <span class="block text-md font-medium text-gray-800 dark:text-white">Design Tools:</span>

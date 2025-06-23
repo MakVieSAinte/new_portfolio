@@ -19,11 +19,12 @@
     "@preline/overlay": "^3.0.0",
     "@preline/tabs": "^3.1.0",
     "@preline/theme-switch": "^2.5.0",
+    "@supabase/supabase-js": "^2.50.0",
     "axios": "^1.8.4",
     "locomotive-scroll": "^4.1.4",
     "pinia": "^2.2.4",
     "preline": "^2.7.0",
-    "vue": "^3.5.12",
+    "vue": "^3.5.17",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {

@@ -22,7 +22,7 @@
     <!-- End Profile -->
 
     <!-- About -->
-    <div class="mt-8">
+    <div class="mt-8 mb-12">
       <p class="text-lg text-gray-800 dark:text-neutral-400 font-light">
         For over 4 years, I have been passionate about the world of
         computing. I have developed expertise in both front-end and
@@ -32,35 +32,15 @@
         problems.
       </p>
 
-      <div class="flex items-center flex-wrap gap-6 mt-8">
+      <div class="flex items-center flex-wrap gap-6 my-4"> 
 
-        <!-- Card -->
-        <!-- <div
-          class="!w-[30px] flex flex-col h-full bg-white border dark:border-red-500 !border-orange-400 rounded-md dark:bg-neutral-900 pr-8"
-          style="width: max-content;">
-          <div class="p-1 md:p-2 flex gap-x-4">
-            <div
-              class="shrink-0 flex justify-center items-center w-6 h-6 overflow-hidden bg-gray-100 rounded-md dark:bg-neutral-800">
-              <img src="@/assets/images/hashnode.png" alt="hashnode" width="100%" height="100%" />
-            </div>
-
-            <div class="flex items-center justify-center gap-x-2">
-              <p class="text-sm text-gray-800 dark:text-neutral-300">
-                Hashnode
-              </p>
-            </div>
-          </div>
-        </div> -->
-        <!-- End Card -->
-
-        <div class="flex items-center h-full gap-2">
-          <span class="block w-3 h-3 bg-primary hover:bg-primary rounded-full border-1 border-green-200"></span>
-          <span class="text-sm text-gray-800 dark:text-neutral-300">Available for work</span>
+        <div class="flex items-center h-full gap-2 hover:bg-primary/5 px-4 py-2 rounded-md poin cursor-pointer transition-all duration-150">
+          <span class="pulse block w-2 h-2 bg-primary rounded-full border-1 border-green-200"></span>
+          <span class="text-sm text-gray-800 font-normal dark:text-primary">Available for new opportunities</span>
         </div>
       </div>
 
-    </div>
-    <!-- End About -->
+    </div> 
   </div>
 </template>
 
@@ -87,4 +67,19 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.pulse {
+  animation: pulse-animation 1    s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 255, 181);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgb(77, 255, 181, 0.0);
+  }
+}
+
+</style>
