@@ -34,7 +34,7 @@
 
       <div class="flex items-center flex-wrap gap-6 my-4">
 
-        <div class="flex items-center h-full gap-2 hover:bg-primary/5 px-4 py-2 rounded-md poin cursor-pointer transition-all duration-150">
+        <div class="flex items-center h-full gap-2 border border-neutral-800/30 hover:bg-primary/5 px-4 py-2 rounded-md poin cursor-pointer transition-all duration-150">
           <span class="pulse block w-2 h-2 bg-primary rounded-full border-1 border-green-200"></span>
           <span class="text-sm text-gray-800 font-normal dark:text-primary">Available for new opportunities</span>
         </div>
