@@ -11,7 +11,7 @@
             <div class="relative inline-flex" ref="dropdownRef">
               <!-- Button -->
               <button @click="toggleDropdown"
-                class="py-1 px-2 inline-flex items-center gap-x-2 text-[12px] rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+                class="py-1 px-2 inline-flex items-center gap-x-2 text-[12px] rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-800 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
                 <span class="shrink-0 size-3 rounded-full" v-html="selected.icon"></span>
                 {{ selected.label }}
                 <svg :class="{ 'rotate-180': isOpen }"
@@ -23,7 +23,7 @@
 
               <!-- Dropdown (opens upward) -->
               <div v-show="isOpen"
-                class="absolute bottom-full mb-2 z-10 w-44 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 border-slate-100
+                class="absolute bottom-full mb-2 z-10 w-44 bg-white shadow-md rounded-lg p-2 dark:bg-neutral-800 dark:border dark:border-neutral-800 border-slate-100
                 ">
                 <a v-for="lang in languages" :key="lang.label" href="#" @click.prevent="selectLanguage(lang)"
                   class="flex items-center gap-x-2 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
@@ -72,7 +72,7 @@
 
               <!-- Bouton pour désactiver le mode sombre -->
               <button v-else @click="setTheme('light')" type="button"
-                class="relative flex justify-center items-center size-8 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700">
+                class="relative flex justify-center items-center size-8 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700">
                 <span class="sr-only">Désactiver le mode sombre</span>
                 <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">

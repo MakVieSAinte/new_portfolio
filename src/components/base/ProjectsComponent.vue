@@ -21,7 +21,7 @@
           <div @mouseenter="playVideo" @mouseleave="stopVideo"
             class="group flex flex-col bg-slate-100/50 border border-neutral-200 rounded-lg dark:bg-neutral-800/30 dark:border-neutral-800 overflow-hidden h-[266px] p-[7px] relative">
 
-            <div class="w-full h-max flex items-center justify-start gap-1 mb-[2px]">
+            <div class="w-full h-max flex items-center justify-start gap-1 mb-[2px] pl-[3px]">
               <span
                 class="w-[8px] h-[8px] border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-red-600 transition-all duration-100"></span>
               <span
@@ -48,7 +48,7 @@
                   <a href="https://nature-emoi.vercel.app/" target="_blank"
                     class="text-neutral-700 dark:text-white text-sm font-medium hover:underline">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-3 group-hover:-rotate-45 transition-all duration-100">
+                      stroke="currentColor" class="size-3 group-hover:-rotate-45 transition-all duration-[5s]">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
 

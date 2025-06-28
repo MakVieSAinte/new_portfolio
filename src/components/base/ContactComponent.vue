@@ -13,7 +13,7 @@
       <!-- Input -->
       <form class="mt-8">
         <div
-          class="p-1.5 flex flex-col sm:flex-row items-center gap-2 border border-gray-200 rounded-lg dark:border-neutral-700">
+          class="p-1.5 flex flex-col sm:flex-row items-center gap-2 border border-gray-200 rounded-lg dark:border-neutral-800">
           <div class="relative w-full !outline-0">
             <label for="hero-input" class="sr-only">Subscribe</label>
             <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3">

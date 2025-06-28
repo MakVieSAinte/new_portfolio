@@ -58,7 +58,7 @@
             </ul>
             <div class="mt-3">
               <!-- Card -->
-              <a class="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700"
+              <a class="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-800"
                 href="#">
                 <div class="relative flex items-center overflow-hidden">
                   <img class="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"

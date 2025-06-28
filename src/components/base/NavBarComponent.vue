@@ -3,7 +3,7 @@
     <!-- NavBar -->
     <div class="fixed md:top-10 max-md:bottom-5 inset-x-0 text-center z-50">
       <div
-        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-full py-3 px-4 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-600 z-50">
+        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-full py-3 px-4 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
         <div class="flex items-center gap-x-1">
           <!-- Button -->
           <div class="hs-tooltip inline-block">
