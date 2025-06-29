@@ -59,29 +59,7 @@
             </svg>
           </a>
             </li>
-            <li class="inline-block">
-              <!-- Bouton pour activer le mode sombre -->
-              <button v-if="theme === 'light'" @click="setTheme('dark')" type="button"
-                class="relative flex justify-center items-center size-8 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700">
-                <span class="sr-only">Activer le mode sombre</span>
-                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                </svg>
-              </button>
-
-              <!-- Bouton pour désactiver le mode sombre -->
-              <button v-else @click="setTheme('light')" type="button"
-                class="relative flex justify-center items-center size-8 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none dark:border-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700">
-                <span class="sr-only">Désactiver le mode sombre</span>
-                <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="4" />
-                  <path
-                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-                </svg>
-              </button>
-            </li>
+            
           </ul>
           <!-- End List -->
         </div>
