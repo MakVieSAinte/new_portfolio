@@ -110,7 +110,7 @@
     <!-- End NavBar -->
 
     <!-- Lang -->
-    <div class="fixed max-md:relative md:top-12 max-md:top-3 max-md:right-3 right-10 text-center z-50">
+    <div class="fixed max-md:relative md:top-12 max-md:top-4 max-md:right-4 right-10 text-center z-50">
       <div
         class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-md py-2 max-md:py-0 px-3 max-md:px-1 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
         <div class="flex items-center gap-x-3 max-md:gap-x-1">

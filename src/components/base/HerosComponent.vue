@@ -84,7 +84,7 @@ export default defineComponent({
 
 <style scoped>
 .pulse {
-  animation: pulse-animation 1s infinite;
+  animation: pulse-animation 0.95s infinite;
 }
 
 @keyframes pulse-animation {

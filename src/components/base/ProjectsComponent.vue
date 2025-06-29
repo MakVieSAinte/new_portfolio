@@ -40,15 +40,15 @@
             <div class="absolute bottom-0 w-full h-max mt-2 bg-transparent px-auto flex items-center justify-center">
               <div
                 class="flex items-center justify-between backdrop-blur-sm bg-gray-400/20 dark:bg-neutral-800/60 w-[70%] h-max py-2 px-3 mt-2  mx-auto rounded-t-md text-left border-t border-x border-neutral-200/30 dark:border-neutral-600/40">
-                <p class="text-neutral-700 dark:text-white text-sm font-medium">
+                <p class="text-neutral-100 dark:text-white text-sm font-medium">
                   Nature Emoi
                 </p>
                 <div
-                  class="p-1 border border-transparent group-hover:border-neutral-200/30 dark:group-hover:border-neutral-600/30 rounded-full transition-all duration-300">
+                  class="p-1 border border-transparent group-hover:border-neutral-100/30 dark:group-hover:border-neutral-600/30 rounded-full transition-all duration-300">
                   <a href="https://nature-emoi.vercel.app/" target="_blank"
-                    class="text-neutral-700 dark:text-white text-sm font-medium hover:underline">
+                    class="text-neutral-100 dark:text-white text-sm font-medium hover:underline">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                      stroke="currentColor" class="size-3 group-hover:-rotate-45 transition-all duration-[5s]">
+                      stroke="currentColor" class="size-3 group-hover:-rotate-45 transition-all duration-[1s]">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
 
