@@ -281,6 +281,12 @@
 import { defineComponent } from 'vue'
 import 'preline'
 
+declare global {
+  interface Window {
+    HSStaticMethods: any;
+  }
+}
+
 export default defineComponent({
 
   name: "FAQComponent",

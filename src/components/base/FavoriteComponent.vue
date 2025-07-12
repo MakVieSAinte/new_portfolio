@@ -139,7 +139,7 @@ let currentIndex = 0
 
 allBoxes.forEach(box => {
   box.addEventListener('mouseenter', e => {
-    const el = e.target
+    const el = e.target as Element
     currentIndex = allBoxes.indexOf(el)
 
     allBoxes.forEach((box, index) => {
