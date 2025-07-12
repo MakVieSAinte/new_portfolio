@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "watch": "tailwindcss -i ./src/main.css -o ./src/output.css --watch",
+    "watch": "tailwindcss -i ./src/main.css -o ./dist/output.css --watch",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",

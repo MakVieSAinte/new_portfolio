@@ -26,8 +26,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import NavBarComponent from '../base/NavBarComponent.vue'
-import HerosComponent from '../base/HerosComponent.vue'
-import ProjectsComponent from '../base/ProjectsComponent.vue'
+import HerosComponent from '../home/HerosComponent.vue'
+import ProjectsComponent from '../project/MyProjectsComponent.vue'
 import FooterComponent from '../base/FooterComponent.vue'
 
 

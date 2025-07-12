@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 import 'preline/preline'
 import './main.css'
-import './output.css'
+import '../dist/output.css'
 import './assets/css/preline.css'
 import './assets/js/preline.js'
 

@@ -1,5 +1,6 @@
 <template>
-  <div class="box-main relative pt-32 max-md:pt-16 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border-x bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
+  <div
+    class="box-main relative pt-32 max-md:pt-16 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border-x bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
     <!-- ========== MAIN CONTENT ========== -->
     <main class="pt-3">
       <!-- NavBar -->
@@ -41,7 +42,7 @@
       <!-- Contact -->
       <ContactComponent></ContactComponent>
       <!-- End Contact -->
-      
+
       <!-- Footer -->
       <FooterComponent></FooterComponent>
       <!-- End Footer -->
@@ -54,15 +55,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import NavBarComponent from '../base/NavBarComponent.vue'
-import HerosComponent from '../base/HerosComponent.vue'
-import FavoriteComponent from '../base/FavoriteComponent.vue'
-import ProjectsComponent from '../base/ProjectsComponent.vue'
-import SkillsComponent from '../base/SkillsComponent.vue'
-import WorksComponent from '../base/WorksComponent.vue'
-import ArticlesComponent from '../base/ArticlesComponent.vue'
-import ArticlesDetailsComponent from '../base/ArticleDetailComponent.vue'
-import FAQComponent from '../base/FAQComponent.vue'
-import ContactComponent from '../base/ContactComponent.vue'
+import HerosComponent from './HerosComponent.vue'
+import FavoriteComponent from './FavoriteComponent.vue'
+import ProjectsComponent from '../project/MyProjectsComponent.vue'
+import SkillsComponent from './SkillsComponent.vue'
+import WorksComponent from './WorksComponent.vue'
+import ArticlesComponent from '../blog/ArticlesComponent.vue'
+import ArticlesDetailsComponent from '../blog/ArticleDetailComponent.vue'
+import FAQComponent from './FAQComponent.vue'
+import ContactComponent from './ContactComponent.vue'
 import FooterComponent from '../base/FooterComponent.vue'
 
 
@@ -94,5 +95,4 @@ export default defineComponent({
 
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

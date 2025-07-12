@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import TheArticleDetailComponent from '../components/base/ArticleDetailComponent.vue'
+import TheArticleDetailComponent from '../components/blog/ArticleDetailComponent.vue'
 import NavBarComponent from '@/components/base/NavBarComponent.vue'
 
 export default defineComponent({
