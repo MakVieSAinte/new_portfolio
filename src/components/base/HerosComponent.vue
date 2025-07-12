@@ -7,6 +7,8 @@
           alt="Avatar" width="150px" />
       </div>
 
+      <div id="bmc-button-container"></div>
+
       <div class="grow ml-1">
         <h1 class="text-4xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
           MakVieSAinte
@@ -43,7 +45,7 @@
 </svg> <span class="group-hover:underline underline-offset-2 transition-all duration-200">download CV.</span>
           </span>
           </a>
-  
+
       </p>
 
       <div class="flex items-center flex-wrap gap-6 my-4">
@@ -77,7 +79,23 @@ export default defineComponent({
   },
 
   mounted() {
-
+    // Vérifie si le script n'est pas déjà chargé
+    if (!document.getElementById('bmc-script')) {
+      const script = document.createElement('script')
+      script.id = 'bmc-script'
+      script.type = 'text/javascript'
+      script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js'
+      script.setAttribute('data-name', 'bmc-button')
+      script.setAttribute('data-slug', 'MakVieSAinte')
+      script.setAttribute('data-color', '#FFDD00')
+      script.setAttribute('data-emoji', '')
+      script.setAttribute('data-font', 'Cookie')
+      script.setAttribute('data-text', 'Offrez-moi un café')
+      script.setAttribute('data-outline-color', '#000000')
+      script.setAttribute('data-font-color', '#000000')
+      script.setAttribute('data-coffee-color', '#ffffff')
+      document.getElementById('bmc-button-container')?.appendChild(script)
+    }
   }
 });
 </script>
