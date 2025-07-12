@@ -5,7 +5,7 @@
 
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          Designing Interfaces, <br> Building Experiences.
+          Articles  
         </h1>
       </div>
 
@@ -15,7 +15,7 @@
     <!-- About -->
     <div class="mt-8 mb-12">
       <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
-        I've worked on a variety of projects, focusing on creating intuitive digital experiences where thoughtful design meets clean code. Here are some highlights I'm proud of, showcasing my process from concept to execution.
+        All of my long-form thoughts on programming, user interfaces, product design, and more, collected in chronological order.
       </p>
 
     </div>

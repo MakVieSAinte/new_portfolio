@@ -33,9 +33,9 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink to="/" type="button"
+            <routerLink to="/labs" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
-              :class="activePage === 'lab'
+              :class="activePage === 'labs'
                 ? 'dark:text-white text-gray-800'
                 : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'">
               {{ texts.lab }}
@@ -46,7 +46,7 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink to="/" type="button"
+            <routerLink to="/about" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'about'
                 ? 'dark:text-white text-gray-800'
@@ -59,7 +59,7 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink to="/" type="button"
+            <routerLink to="/blog" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'blog'
                 ? 'dark:text-white text-gray-800'
@@ -159,7 +159,7 @@ export default defineComponent({
       const pathMap: Record<string, string> = {
         '/': 'home',
         '/projects': 'project',
-        '/lab': 'lab',
+        '/labs': 'labs',
         '/about': 'about',
         '/blog': 'blog'
       }

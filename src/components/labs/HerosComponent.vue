@@ -5,7 +5,7 @@
 
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          Designing Interfaces, <br> Building Experiences.
+          Random experiments <br> with UI I do in my free time.  
         </h1>
       </div>
 

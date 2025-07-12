@@ -1,11 +1,16 @@
 <template>
   <div>
     <!-- Profile -->
-    <div class="flex items-center gap-x-3">
+    <div class="flex items-center justify-between gap-x-3">
+
+      <div class="shrink-0 border border-gray-300 dark:border-neutral-800 rounded-sm p-[2.5px]">
+        <img class="shrink-0 size-24 rounded-sm object-cover object-center" src="@/assets/images/profil.jpg"
+          alt="Avatar" width="150px" />
+      </div>
 
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          Designing Interfaces, <br> Building Experiences.
+          About Me 
         </h1>
       </div>
 
