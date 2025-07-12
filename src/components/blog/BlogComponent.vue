@@ -9,6 +9,14 @@
       <!-- Heros -->
       <HerosComponent></HerosComponent>
       <!-- End Heros -->
+
+             <!-- Articles -->
+      <ArticlesComponent @article-selected="handleArticleSelected" />
+      <!-- End Articles -->
+
+      <!-- ArticleDetails -->
+      <ArticlesDetailsComponent v-if="selectedSlug" :slug="selectedSlug" :key="selectedSlug" />
+      <!-- End ArticleDetails -->
       
       <!-- Footer -->
       <FooterComponent></FooterComponent>
@@ -24,12 +32,14 @@ import { defineComponent } from 'vue'
 import NavBarComponent from '../base/NavBarComponent.vue'
 import FooterComponent from '../base/FooterComponent.vue'
 import HerosComponent from './HerosComponent.vue'
+import ArticlesComponent from '../blog/ArticlesComponent.vue'
+import ArticlesDetailsComponent from '../blog/ArticleDetailComponent.vue'
 
 
 export default defineComponent({
 
   components: {
-    NavBarComponent, HerosComponent, FooterComponent
+    NavBarComponent, HerosComponent, FooterComponent, ArticlesComponent, ArticlesDetailsComponent
   },
 
   data() {

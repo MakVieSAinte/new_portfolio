@@ -2,6 +2,13 @@
   <div>
     <!-- Articles -->
     <div class="my-10 sm:my-14 relative">
+      <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
+        Articles récents
+      </h1>
+      <p class="text-md font-light text-gray-800 dark:text-neutral-400">
+        Answers to common questions about my process and services.
+      </p>
+
       <ul class="space-y-10 mt-8" v-if="!loading && posts.length">
         <li v-for="post in posts" :key="post.id">
           <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
