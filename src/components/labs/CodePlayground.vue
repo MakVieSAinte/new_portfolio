@@ -1,22 +1,35 @@
 <template>
-  <div class="w-full max-w-4xl mx-auto bg-slate-100/50 dark:bg-neutral-950 border border-slate-100/50 dark:border-neutral-800/90 rounded-md">
+  <div
+    class="group w-full max-w-4xl mx-auto bg-slate-100/50 dark:bg-neutral-950 border border-slate-100/50 dark:border-neutral-800/90 rounded-md">
     <div class="flex space-x-2 px-1 pt-1 pb-0">
       <button v-for="tab in tabs" :key="tab" :class="[
         'px-1 pt-2 pb-3 focus:outline-none outline-none border-0 transition-all duration-300',
         activeTab === tab ? 'text-gray-800 dark:text-neutral-200 border-b-2 border-primary' : 'text-gray-800 dark:text-neutral-300'
       ]" @click="activeTab = tab">
-      <span :class="[
-        'py-[5px] px-3 text-xs font-medium rounded-md focus:outline-none hover:bg-neutral-800',
-      ]">
-        {{ tab }}  
-      </span>
+        <span :class="[
+          'py-[5px] px-3 text-xs font-medium rounded-md focus:outline-none hover:bg-neutral-800',
+        ]">
+          {{ tab }}
+        </span>
       </button>
     </div>
 
     <div v-if="activeTab !== 'Preview'" class="relative">
-      <button class="absolute top-2 right-2 text-white bg-gray-900 hover:bg-gray-600 px-2 py-1 text-xs rounded"
-        @click="copyToClipboard(code[activeTab.toLowerCase()])">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-icon lucide-clipboard"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+      <button
+        class="absolute top-2 right-4 text-neutral-500 bg-neutral-900 hover:bg-neutral-900/50 hover:text-neutral-400 px-2 py-2 text-xs rounded hidden group-hover:inline-block transition-all duration-600"
+        @click="copyToClipboard(code[activeTab.toLowerCase()])" title="Copie le code">
+        <!-- Icône de copie -->
+        <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-clipboard-icon lucide-clipboard">
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+        </svg>
+        <!-- Icône de validation -->
+        <svg v-else xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+          <path d="M20 6L9 17l-5-5" />
+        </svg>
       </button>
       <pre class="bg-slate-100/50 dark:bg-neutral-800/30 text-white rounded p-4 overflow-auto text-sm h-72">
         <code :class="'language-' + activeTab.toLowerCase()" v-html="highlightedCode" />
@@ -68,7 +81,8 @@ export default defineComponent({
 
     return {
       tabs,
-      activeTab: tabs[0] || 'Preview'
+      activeTab: tabs[0] || 'Preview',
+      copied: false,
     }
   },
 
@@ -110,9 +124,17 @@ export default defineComponent({
   methods: {
     copyToClipboard(content: string) {
       navigator.clipboard.writeText(content)
-        .then(() => console.log('Code copied!'))
+        .then(() => {
+          console.log('Code copied!')
+          this.copied = true
+
+          // Réinitialiser l'icône après 1.5 secondes
+          setTimeout(() => {
+            this.copied = false
+          }, 2000)
+        })
         .catch(err => console.error('Copy failed', err))
-    }
+    },
   }
 })
 </script>
@@ -120,4 +142,27 @@ export default defineComponent({
 <style scoped>
 @import 'prismjs/themes/prism-tomorrow.css';
 
+/* Personnalisation de la scrollbar pour le code */
+pre::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #404040;
+  /* Couleur du thumb */
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent !important;
+  /* Couleur du fond */
+  border-radius: 2px;
+}
+
+/* Pour Firefox */
+pre {
+  scrollbar-width: thin;
+  scrollbar-color: #404040 transparent;
+}
 </style>
