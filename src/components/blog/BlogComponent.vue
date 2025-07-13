@@ -44,12 +44,14 @@ export default defineComponent({
 
   data() {
     return {
-
+      selectedSlug: '',
     }
   },
 
   methods: {
-    
+    handleArticleSelected(slug: string) {
+      this.selectedSlug = slug;
+    },
   },
 
   mounted() {

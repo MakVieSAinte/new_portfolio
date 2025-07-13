@@ -207,9 +207,9 @@ body {
   line-height: 1.9 !important;
 }
 
-*p,
-*span,
-*h1 {
+p,
+span,
+h1 {
   background-color: transparent !important;
 }
 

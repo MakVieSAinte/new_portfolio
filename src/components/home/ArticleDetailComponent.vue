@@ -1,6 +1,6 @@
 <template>
   
-  <div class="box-main mx-auto pt-32 pb-10 px-8 lg:px-12 md:px-8 sm:px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
+  <div class="box-main mx-auto pt-32 pb-10 px-8 lg:px-12 md:px-8 sm:px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 !text-gray-800 !dark:text-neutral-400">
 
 <router-link
   class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
@@ -180,10 +180,10 @@ export default defineComponent({
           .replace(/<ol/g, '<ol class="list-decimal pl-6"')
           .replace(/<h1/g, '<h1 class="text-2xl mt-8 mb-2 font-bold"')
           .replace(/<h2/g, '<h2 class="text-2xl mt-8 mb-4 font-bold"')
-          .replace(/<h3/g, '<h3 class="text-xl mt-6 mb-3 font-semibold"')
-          .replace(/<p/, '<p class="my-5"')
-          .replace(/<p(?=\s*><code)/g, '<p class="mt-5 code-paragraph mb-8"')
-          .replace(/<pre(?=\s*><code)/g, '<pre class="mt-8 code-paragraph mb-8"');
+          .replace(/<h3/g, '<h3 class="text-xl mt-6 mb-3 font-semibold text-gray-800 dark:text-neutral-400"')
+          .replace(/<p/, '<p class="my-5 text-gray-800 dark:text-neutral-400"')
+          .replace(/<p(?=\s*><code)/g, '<p class="mt-5 code-paragraph mb-8 text-gray-800 dark:text-neutral-400"')
+          .replace(/<pre(?=\s*><code)/g, '<pre class="mt-8 code-paragraph mb-8 text-gray-800 dark:text-neutral-400"');
 
         this.article = post;
         console.log(this.article);
@@ -207,9 +207,9 @@ body {
   line-height: 1.9 !important;
 }
 
-*p,
-*span,
-*h1 {
+p,
+span,
+h1 {
   background-color: transparent !important;
 }
 
