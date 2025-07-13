@@ -10,6 +10,10 @@
       <HerosComponent></HerosComponent>
       <!-- End Heros -->
       
+      <!-- Source Code -->
+      <SourceCodeComponent></SourceCodeComponent>
+      <!-- End Source Code -->
+      
       <!-- Footer -->
       <FooterComponent></FooterComponent>
       <!-- End Footer -->
@@ -24,12 +28,13 @@ import { defineComponent } from 'vue'
 import NavBarComponent from '../base/NavBarComponent.vue'
 import FooterComponent from '../base/FooterComponent.vue'
 import HerosComponent from './HerosComponent.vue'
+import SourceCodeComponent from './SourceCodeComponent.vue'
 
 
 export default defineComponent({
 
   components: {
-    NavBarComponent, HerosComponent, FooterComponent
+    NavBarComponent, HerosComponent, FooterComponent, SourceCodeComponent
   },
 
   data() {

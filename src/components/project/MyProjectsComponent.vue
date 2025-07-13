@@ -121,11 +121,55 @@
 
 
 
-
         </div>
         <!-- End Grid -->
       </div>
       <!-- End Card Blog -->
+
+      <div class="w-full bg-red-600">
+
+
+        <div class="w-full max-w-4xl mx-auto">
+    <div class="flex space-x-2 mb-4 border-b border-gray-300">
+      <button
+        v-for="tab in tabs"
+        :key="tab"
+        :class="[
+          'px-4 py-2 text-sm font-medium rounded-t-md focus:outline-none',
+          activeTab === tab ? 'bg-white text-black border-t border-l border-r border-gray-300' : 'bg-gray-100 text-gray-500'
+        ]"
+        @click="activeTab = tab"
+      >
+        {{ tab }}
+      </button>
+    </div>
+
+    <div v-if="activeTab !== 'Preview'">
+      <pre class="bg-gray-900 text-white rounded p-4 overflow-auto text-sm">
+        <code :class="'language-' + activeTab.toLowerCase()" v-html="highlightedCode" />
+      </pre>
+    </div>
+
+    <div v-else class="border rounded-md overflow-hidden">
+      <iframe
+        :srcdoc="previewContent"
+        class="w-full h-96 border-0"
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+    </div>
+  </div>
+
+  
+
+<iframe src="https://codesandbox.io/embed/lhlmss?view=editor+%2B+preview&module=%2Findex.html&hidenavigation=1"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="test"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+  
+</div>
   </div>
 </template>
 
