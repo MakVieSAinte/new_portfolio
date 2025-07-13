@@ -39,7 +39,7 @@ export default defineComponent({
         ])
         return { html, css, js }
       })
-    )
+    )  
 
     this.projects = allProjects
   },

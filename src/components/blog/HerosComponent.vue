@@ -5,7 +5,7 @@
 
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          Articles  
+          Articles
         </h1>
       </div>
 
@@ -15,7 +15,8 @@
     <!-- About -->
     <div class="mt-8 mb-12">
       <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
-        All of my long-form thoughts on programming, user interfaces, product design, and more, collected in chronological order.
+        All of my long-form thoughts on programming, user interfaces, product design, and more, collected in
+        chronological order.
       </p>
 
     </div>
