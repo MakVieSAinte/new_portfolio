@@ -16,7 +16,7 @@
           <!-- Icon -->
           <div
             class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-            <div class="relative z-10 size-6 flex justify-center items-center">
+            <div class="relative z-10 size-8 flex justify-center items-center">
               <img src="@/assets/images/ayokai-logo.webp" class="shrink-0 text-gray-700 dark:text-slate-200"
                 height="62px" />
             </div>
@@ -90,9 +90,9 @@
           <!-- Icon -->
           <div
             class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
-            <div class="relative z-10 size-10 flex justify-center items-center">
-              <img src="@/assets/images/possacode.jpg" class="shrink-0 text-gray-700 dark:text-slate-200"
-                height="172px" />
+            <div class="relative z-10 size-12 flex justify-center items-center">
+              <img src="@/assets/images/possacode-removebg-preview.png" class="shrink-0 text-gray-700 dark:text-slate-200"
+                height="262px" />
             </div>
           </div>
           <!-- End Icon -->

@@ -1,0 +1,4 @@
+- Faire les captures pour les projets
+- Géré la traduction sur tout le site
+- Faire le bon texte sur tout le site web
+- Publier quelques articles sur hashnode
