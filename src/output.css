@@ -895,11 +895,6 @@ video {
   display: none;
 }
 
-.size-10 {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
 .size-12 {
   width: 3rem;
   height: 3rem;
@@ -1388,6 +1383,21 @@ video {
   border-top-color: transparent;
 }
 
+.bg-\[\#00CA4E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 202 78 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#FF605C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 96 92 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#FFBD44\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 189 68 / var(--tw-bg-opacity, 1));
+}
+
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
@@ -1442,6 +1452,21 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
 }
 
 .fill-black {
@@ -2266,8 +2291,22 @@ html::-webkit-scrollbar {
   background-color: rgb(202 138 4 / var(--tw-bg-opacity, 1));
 }
 
+.group:hover .group-hover\:bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
+}
+
+.group:hover .group-hover\:bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
+}
+
 .group:hover .group-hover\:underline {
   text-decoration-line: underline;
+}
+
+.group:hover .group-hover\:opacity-80 {
+  opacity: 0.8;
 }
 
 .dark\:border-neutral-600:is(.dark *) {

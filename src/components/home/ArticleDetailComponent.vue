@@ -3,7 +3,7 @@
   <div class="box-main mx-auto pt-32 pb-10 px-8 lg:px-12 md:px-8 sm:px-5 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 !text-gray-800 !dark:text-neutral-400">
 
 <router-link
-  class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 hover:text-gray-800 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
+  class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
   to="/"
 >
       <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -126,7 +126,8 @@
     </div>
     <!-- End Sticky Share Group -->
 
- 
+    <p v-if="loading" class="text-gray-500">Chargement...</p>
+    <p v-if="error" class="text-red-500">{{ error }}</p>
   </div>
 </template>
 
@@ -179,11 +180,10 @@ export default defineComponent({
           .replace(/<ol/g, '<ol class="list-decimal pl-6"')
           .replace(/<h1/g, '<h1 class="text-2xl mt-8 mb-2 font-bold"')
           .replace(/<h2/g, '<h2 class="text-2xl mt-8 mb-4 font-bold"')
-          .replace(/<h3/g, '<h3 class="text-xl mt-6 mb-3 font-semibold !text-gray-800 !dark:text-neutral-400"')
-          .replace(/<p/, '<p class="my-5 !text-gray-800 !dark:text-neutral-400"')
-          .replace(/<p(?=\s*><code)/g, '<p class="mt-5 code-paragraph mb-8 !text-gray-800 !dark:text-neutral-400"')
-          .replace(/<pre(?=\s*><code)/g, '<pre class="mt-8 code-paragraph mb-8 !text-gray-800 !dark:text-neutral-400"')
-          .replace(/<code/g, '<hr class="my-8 py-8"');
+          .replace(/<h3/g, '<h3 class="text-xl mt-6 mb-3 font-semibold text-gray-800 dark:text-neutral-400"')
+          .replace(/<p/, '<p class="my-5 text-gray-800 dark:text-neutral-400"')
+          .replace(/<p(?=\s*><code)/g, '<p class="mt-5 code-paragraph mb-8 text-gray-800 dark:text-neutral-400"')
+          .replace(/<pre(?=\s*><code)/g, '<pre class="mt-8 code-paragraph mb-8 text-gray-800 dark:text-neutral-400"');
 
         this.article = post;
         console.log(this.article);
@@ -245,17 +245,4 @@ p code {
   padding: 0.2rem 0.4rem;
   border-radius: 0.25rem;
 }
-
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 120px;
-  height: 20px;
-  -webkit-mask: radial-gradient(circle closest-side,#000 94%,#0000) left/20% 100%;
-  background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
-  animation: l17 2s infinite steps(6);
-}
-@keyframes l17 {
-    100% {background-size:120% 100%}
-}
-
 </style>

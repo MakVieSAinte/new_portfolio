@@ -10,8 +10,6 @@
         is a list of technologies that I have worked with.
       </p>
 
-
-
       <!-- Card Blog -->
       <div class="max-w-[85rem] px-2 py-10 sm:px-4 lg:px-0 lg:py-14 mx-auto">
         <!-- Grid -->
@@ -23,11 +21,11 @@
 
             <div class="w-full h-max flex items-center justify-start gap-1 mb-[2px] pl-[3px]">
               <span
-                class="w-[8px] h-[8px] border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-red-600 transition-all duration-100"></span>
+                class="block w-[8px] h-[8px] bg-red-700 border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-red-600 transition-all duration-100 z-50"></span>
               <span
-                class="w-[8px] h-[8px] border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-yellow-600 transition-all duration-100"></span>
+                class="w-[8px] h-[8px] bg-yellow-400 border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-yellow-600 transition-all duration-100 z-50"></span>
               <span
-                class="w-[8px] h-[8px] border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-green-600 transition-all duration-100"></span>
+                class="w-[8px] h-[8px] bg-green-500 border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-green-600 transition-all duration-100 z-50"></span>
             </div>
 
             <div class="group w-full h-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden rounded-md mt-2">
@@ -57,11 +55,9 @@
               </div>
             </div>
 
-            <!-- link -->
-            <a href="https://nature-emoi.vercel.app/" target="_blank" class="absolute inset-0 z-50">
 
 
-            </a>
+
 
           </div>
           <!-- End Card -->
