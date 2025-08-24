@@ -59,7 +59,7 @@
       <div class="flex items-center flex-wrap gap-6 my-4">
 
         <div
-          class="flex items-center h-full gap-2 border border-neutral-200/30 dark:border-neutral-800 hover:bg-primary/20 dark:hover:bg-primary/5 px-4 py-2 rounded-md poin cursor-pointer transition-all duration-150">
+          class="flex items-center h-full gap-2 bg-slate-100/50 dark:bg-neutral-800/30 border border-neutral-200/30 dark:border-neutral-800 hover:bg-primary/20 dark:hover:bg-primary/5 !hover:border-primary px-4 py-2 rounded-md poin cursor-pointer transition-all duration-150">
           <span class="pulse block w-2 h-2 bg-primary rounded-full border-1 border-green-200"></span>
           <span class="text-sm text-gray-800 font-normal dark:text-primary">Disponible pour de nouvelles opportunités</span>
         </div>

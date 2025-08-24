@@ -20,11 +20,11 @@
 
             <div class="w-full h-max flex items-center justify-start gap-1 mb-[2px] pl-[3px]">
               <span
-                class="block w-[8px] h-[8px] bg-red-700 border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-red-600 transition-all duration-100 z-50"></span>
+                class="block w-[8px] h-[8px] !bg-neutral-200 border-neutral-100 dark:!bg-neutral-700 rounded-full group-hover:!bg-red-600 transition-all duration-300 z-50"></span>
               <span
-                class="w-[8px] h-[8px] bg-yellow-400 border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-yellow-600 transition-all duration-100 z-50"></span>
+                class="w-[8px] h-[8px] !bg-neutral-200 border-neutral-100 dark:!bg-neutral-700 rounded-full group-hover:!bg-yellow-600 transition-all duration-300 z-50"></span>
               <span
-                class="w-[8px] h-[8px] bg-green-500 border-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-green-600 transition-all duration-100 z-50"></span>
+                class="w-[8px] h-[8px] !bg-neutral-200 border-neutral-100 dark:!bg-neutral-700 rounded-full group-hover:!bg-green-600 transition-all duration-300 z-50"></span>
             </div>
 
             <div class="group w-full h-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden rounded-md mt-2">
