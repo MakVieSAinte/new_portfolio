@@ -72,7 +72,7 @@
 
           <li class="inline-block">
             <!-- Bouton pour activer le mode sombre -->
-            <button v-if="theme === 'light'" @click="setTheme('dark')" type="button"
+            <button v-if="theme === 'dark'" @click="setTheme('light')" type="button"
               class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150">
               <span class="sr-only">Activer le mode sombre</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
@@ -84,7 +84,7 @@
             </button>
 
             <!-- Bouton pour désactiver le mode sombre -->
-            <button v-else @click="setTheme('light')" type="button"
+            <button v-else @click="setTheme('dark')" type="button"
               class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150">
               <span class="sr-only">Désactiver le mode sombre</span>
 

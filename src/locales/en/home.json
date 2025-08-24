@@ -1,3 +1,42 @@
 {
-  "title": "Footer"
+  "hero": {
+    "availableForOpportunities": "Available for new opportunities",
+    "downloadCV": "download CV",
+    "linkedin": "LinkedIn"
+  },
+  "projects": {
+    "title": "My projects",
+    "description": "My projects reflect my passion for design and engineering. Each creation is designed to combine aesthetics, performance and user experience."
+  },
+  "works": {
+    "title": "Professional experience",
+    "description": "Each assignment has strengthened my passion for design, front-end and back-end development, as well as creative problem solving."
+  },
+  "articles": {
+    "title": "Recent articles",
+    "description": "I regularly share my discoveries, reflections and projects related to web development and new technologies.",
+    "readMore": "Read more",
+    "loading": "Loading articles...",
+    "error": "Error loading articles.",
+    "noArticles": "No articles found.",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{days} days ago"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "Find answers to the most frequently asked questions here.",
+    "tabs": {
+      "services": "Services & Process",
+      "pricing": "Pricing & Timeframes",
+      "about": "About me"
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "Have an idea, project, professional opportunity or just a question? Leave me your email and I will get back to you quickly.",
+    "name": "Your first and last name",
+    "email": "Enter your email",
+    "send": "Send"
+  }
 }

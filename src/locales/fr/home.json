@@ -1,3 +1,42 @@
 {
-  "title": "Footer"
+  "hero": {
+    "availableForOpportunities": "Disponible pour de nouvelles opportunités",
+    "downloadCV": "téléchargez CV",
+    "linkedin": "LinkedIn"
+  },
+  "projects": {
+    "title": "Mes projets",
+    "description": "Mes projets sont le reflet de ma passion pour le design et l'ingénierie. Chaque réalisation est pensée pour allier esthétique, performance et expérience utilisateur."
+  },
+  "works": {
+    "title": "Expériences professionnelles",
+    "description": "Chaque mission a renforcé ma passion pour le design, le développement front-end et back-end, ainsi que pour la résolution créative de problèmes."
+  },
+  "articles": {
+    "title": "Articles récents",
+    "description": "Je partage régulièrement mes découvertes, réflexions et projets autour du développement web et des nouvelles technologies.",
+    "readMore": "Lire plus",
+    "loading": "Chargement des articles...",
+    "error": "Erreur lors du chargement des articles.",
+    "noArticles": "Aucun article trouvé.",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "daysAgo": "Il y a {days} jours"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "description": "Retrouvez ici les réponses aux questions les plus fréquentes.",
+    "tabs": {
+      "services": "Services & Processus",
+      "pricing": "Tarifs & Délais",
+      "about": "À propos de moi"
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Une idée, un projet, une opportunité professionnelle ou simplement une question ? Laissez-moi votre e-mail et je vous recontacterai rapidement.",
+    "name": "Votre nom et prénom",
+    "email": "Entrez votre e-mail",
+    "send": "Envoyer"
+  }
 }
