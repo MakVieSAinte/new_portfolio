@@ -3,10 +3,10 @@
     <!-- Work Experience -->
     <div class="mt-10 sm:mt-14">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
-        Work experience
+        Expériences professionnelles
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Answers to common questions about my process and services.
+        Chaque mission a renforcé ma passion pour le design, le développement front-end et back-end, ainsi que pour la résolution créative de problèmes.
       </p>
 
       <!-- Timeline -->
@@ -26,34 +26,36 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              Juin 2024 - Present
+              Juin 2024 - Présent
             </h3>
 
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              Frontend Developer &amp; Web Integrator
+              Développeur Frontend &amp; Intégrateur Web
             </p>
 
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              Ayokai is a software development and testing company. Within a small, agile and hyper-programming-oriented
-              team, I contribute to the design and implementation of scalable and secure web applications.
+              Ayokai est une société de développement et de test logiciel. Au sein d'une petite équipe agile et orientée
+              hyper-programmation,
+              je contribue à la conception et à la mise en œuvre d'applications web évolutives et sécurisées.
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Integrated web interfaces with a mobile-first approach using Vue.js, HTML/CSS, and TailwindCSS.
+                Intégration d'interfaces web en approche mobile-first avec Vue.js, HTML/CSS et TailwindCSS.
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Built robust and secure APIs with Express.js, protected by JWT middleware and structured with a modular
-                architecture.
+                Création d'API robustes et sécurisées avec Express.js, protégées par un middleware JWT et structurées en
+                architecture modulaire.
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Set up decoupled microservices to improve backend scalability and maintainability.
+                Mise en place de microservices découplés pour améliorer la scalabilité et la maintenabilité du backend.
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Used Mongoose ORM to model data and ensure consistency between services.
+                Modélisation des données avec Mongoose ORM pour garantir la cohérence entre les services.
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Worked closely with QA/testers to deliver features without regression, through cross-testing practices.
+                Collaboration étroite avec les QA/testeurs pour livrer des fonctionnalités sans régression, via des
+                pratiques de cross-testing.
               </li>
             </ul>
             <div class="mt-3">
@@ -70,8 +72,9 @@
                         Ayokai Congo
                       </h3>
                       <p class="mt-1 font-normal text-sm text-gray-500 dark:text-neutral-400">
-                        Ayokai is a software testing and development company based in Europe and Africa. We help
-                        companies strengthen their quality gates to speed up their delivery.
+                        Ayokai est une société de test et de développement logiciel basée en Europe et en Afrique. Nous
+                        aidons
+                        les entreprises à renforcer leurs processus qualité pour accélérer leurs livraisons.
                       </p>
                     </div>
                   </div>
@@ -91,8 +94,8 @@
           <div
             class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
             <div class="relative z-10 size-12 flex justify-center items-center">
-              <img src="@/assets/images/possacode-removebg-preview.png" class="shrink-0 text-gray-700 dark:text-slate-200"
-                height="262px" />
+              <img src="@/assets/images/possacode-removebg-preview.png"
+                class="shrink-0 text-gray-700 dark:text-slate-200" height="262px" />
             </div>
           </div>
           <!-- End Icon -->
@@ -104,20 +107,20 @@
             </h3>
 
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              Junior Software Engineer – PossaCode
+              Ingénieur Logiciel Junior – PossaCode
             </p>
 
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              Possacode is a non-profit organization based in the Republic of Congo, committed to empowering and
-              connecting developers through learning and collaboration.
+              Possacode est une organisation à but non lucratif basée en République du Congo, engagée à autonomiser et
+              connecter les développeurs par l'apprentissage et la collaboration.
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Worked within a supportive and engaged tech community focused on open knowledge sharing.
+                Participation à une communauté tech solidaire et engagée, axée sur le partage ouvert des connaissances.
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Participated in open-source initiatives and group workshops, with peer mentoring.
+                Participation à des initiatives open-source et à des ateliers de groupe, avec mentorat entre pairs.
               </li>
             </ul>
 
@@ -151,12 +154,12 @@
             </h3>
 
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              Freelance Graphic Designer
+              Graphiste Freelance
             </p>
 
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              Designed custom visuals for various clients and brands, including logos, posters, web banners, and social
-              media content.
+              Réalisation de visuels sur-mesure pour divers clients et marques : logos, affiches, bannières web et
+              contenus pour les réseaux sociaux.
             </p>
           </div>
           <!-- End Right Content -->

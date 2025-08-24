@@ -3,11 +3,10 @@
     <!-- Fovorite -->
     <div class="max-w-full py-0 sm:px-0 lg:px-0 lg:py-1 mt-6 sm:mt-0 mx-auto">
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
-        Favorite technologies
+        Technologies favorites
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        I love exploring new libraries and JavaScript frameworks 🪄. Here
-        is a list of technologies that I have worked with.
+        Ces outils sont pour moi bien plus que des langages ou frameworks : ce sont des partenaires pour transformer des idées en expériences concrètes et engageantes.
       </p>
 
       <!-- Grid -->

@@ -6,7 +6,7 @@
         Articles récents
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Answers to common questions about my process and services.
+        Je partage régulièrement mes découvertes, réflexions et projets autour du développement web et des nouvelles technologies.
       </p>
 
       <ul class="space-y-10 mt-8" v-if="!loading && posts.length">
@@ -30,7 +30,7 @@
     class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
     :to="`/article/${post.slug}`"
   >
-    Continue reading
+    Lire plus
   </router-link>
 
           </p>
