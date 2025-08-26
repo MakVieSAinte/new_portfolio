@@ -8,9 +8,9 @@ export default defineComponent({
   props: {
     slug: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 })
 </script>
 

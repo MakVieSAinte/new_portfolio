@@ -8,7 +8,7 @@ import BlogView from '../views/BlogView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [   
+  routes: [
     {
       path: '/',
       name: 'home',
@@ -38,8 +38,8 @@ const router = createRouter({
       path: '/article/:slug',
       name: 'ArticleDetail',
       component: () => import('@/views/ArticleDetailView.vue'),
-      props: true
-    }
+      props: true,
+    },
   ],
 })
 

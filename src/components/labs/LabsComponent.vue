@@ -1,5 +1,7 @@
 <template>
-  <div class="box-main relative pt-32 max-md:pt-16 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border-x bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
+  <div
+    class="box-main relative pt-32 max-md:pt-16 pb-0 lg:px-12 md:px-8 sm:px-5 px-5 border-x bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800"
+  >
     <!-- ========== MAIN CONTENT ========== -->
     <main class="pt-3">
       <!-- NavBar -->
@@ -9,15 +11,14 @@
       <!-- Heros -->
       <HerosComponent></HerosComponent>
       <!-- End Heros -->
-      
+
       <!-- Source Code -->
       <SourceCodeComponent></SourceCodeComponent>
       <!-- End Source Code -->
-      
+
       <!-- Footer -->
       <FooterComponent></FooterComponent>
       <!-- End Footer -->
-
     </main>
     <!-- ========== END MAIN CONTENT ========== -->
   </div>
@@ -30,28 +31,22 @@ import FooterComponent from '../base/FooterComponent.vue'
 import HerosComponent from './HerosComponent.vue'
 import SourceCodeComponent from './SourceCodeComponent.vue'
 
-
 export default defineComponent({
-
   components: {
-    NavBarComponent, HerosComponent, FooterComponent, SourceCodeComponent
+    NavBarComponent,
+    HerosComponent,
+    FooterComponent,
+    SourceCodeComponent,
   },
 
   data() {
-    return {
-
-    }
+    return {}
   },
 
-  methods: {
-    
-  },
+  methods: {},
 
-  mounted() {
-  }
-});
-
+  mounted() {},
+})
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,28 +1,19 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-
   data() {
-    return {
-
-    }
+    return {}
   },
 
-  methods: {
+  methods: {},
 
-  },
-
-  mounted() {
-
-  }
-});
+  mounted() {},
+})
 </script>
 
 <style scoped></style>

@@ -29,6 +29,6 @@ export function useI18n(page: string) {
   return {
     locale,
     setLocale,
-    texts
+    texts,
   }
 }

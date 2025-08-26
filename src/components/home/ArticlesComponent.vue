@@ -6,7 +6,8 @@
         Articles récents
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Je partage régulièrement mes découvertes, réflexions et projets autour du développement web et des nouvelles technologies.
+        Je partage régulièrement mes découvertes, réflexions et projets autour
+        du développement web et des nouvelles technologies.
       </p>
 
       <ul class="space-y-10 mt-8" v-if="!loading && posts.length">
@@ -27,12 +28,11 @@
             </a> -->
 
             <router-link
-    class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-    :to="`/article/${post.slug}`"
-  >
-    Lire plus
-  </router-link>
-
+              class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
+              :to="`/article/${post.slug}`"
+            >
+              Lire plus
+            </router-link>
           </p>
         </li>
       </ul>
@@ -45,19 +45,19 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   data() {
     return {
       posts: [] as any[],
       loading: true,
-      error: null as string | null
+      error: null as string | null,
     }
   },
 
   created() {
-    this.fetchArticles();
+    this.fetchArticles()
   },
 
   methods: {
@@ -81,48 +81,57 @@ export default {
           }
         }
       }
-    `;
+    `
 
       try {
-        const response = await axios.post('https://gql.hashnode.com/', {
-          query
-        }, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
+        const response = await axios.post(
+          'https://gql.hashnode.com/',
+          {
+            query,
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          },
+        )
 
-        const edges = response.data?.data?.publication?.posts?.edges;
+        const edges = response.data?.data?.publication?.posts?.edges
 
         if (Array.isArray(edges)) {
-          this.posts = edges.map((edge: any) => edge.node);
-          console.log(this.posts);
+          this.posts = edges.map((edge: any) => edge.node)
+          console.log(this.posts)
         } else {
-          this.error = 'Aucun article trouvé.';
-          this.posts = [];
+          this.error = 'Aucun article trouvé.'
+          this.posts = []
         }
       } catch (err: any) {
-        this.error = 'Erreur lors du chargement des articles.';
-        console.error(err);
+        this.error = 'Erreur lors du chargement des articles.'
+        console.error(err)
       } finally {
-        this.loading = false;
+        this.loading = false
       }
     },
 
     formatDate(dateStr: string): string {
-      const date = new Date(dateStr);
-      const now = new Date();
-      const diff = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
-      if (diff === 0) return "Aujourd'hui";
-      if (diff === 1) return "Hier";
-      if (diff < 7) return `Il y a ${diff} jours`;
-      return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      const date = new Date(dateStr)
+      const now = new Date()
+      const diff = Math.floor(
+        (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24),
+      )
+      if (diff === 0) return "Aujourd'hui"
+      if (diff === 1) return 'Hier'
+      if (diff < 7) return `Il y a ${diff} jours`
+      return date.toLocaleDateString('fr-FR', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      })
     },
 
     getArticleUrl(slug: string): string {
-      return `https://geeky-chakri.hashnode.dev/${slug}`;
-    }
-  }
-
-};
+      return `https://geeky-chakri.hashnode.dev/${slug}`
+    },
+  },
+}
 </script>
