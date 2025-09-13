@@ -45,7 +45,7 @@
 
         <a
           href="linkedin"
-          class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-500"
+          class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150"
         >
           <span
             class="flex items-center justify-center gap-[6px] font-medium !text-[16px] text-gray-800 dark:text-neutral-200 dark:group-hover:dark:text-neutral-100 group-hover:dark:text-gray-900 leading-none"
@@ -72,10 +72,10 @@
          vous pouvez également
         <a
           href="linkedin"
-          class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-500"
+          class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150"
         >
           <span
-            class="flex items-center justify-center gap-[6px] font-medium !text-[16px] text-gray-800 dark:text-neutral-200 dark:group-hover:dark:text-neutral-100 group-hover:dark:text-gray-900 leading-none"
+            class="flex items-center justify-center gap-[5px] font-medium !text-[16px] text-gray-800 dark:text-neutral-200 dark:group-hover:dark:text-neutral-100 group-hover:dark:text-gray-900 leading-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,6 +115,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '@/composables'
 
 export default defineComponent({
   name: 'HerosComponent',
@@ -142,6 +143,14 @@ export default defineComponent({
       script.setAttribute('data-font-color', '#000000')
       script.setAttribute('data-coffee-color', '#ffffff')
       document.getElementById('bmc-button-container')?.appendChild(script)
+    }
+  },
+
+    setup() {
+    const { texts } = useI18n('navbar')
+
+    return {
+      texts,
     }
   },
 })

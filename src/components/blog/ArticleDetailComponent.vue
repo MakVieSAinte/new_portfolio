@@ -271,8 +271,8 @@ export default defineComponent({
               html
             }
               reactionCount
-              replyCount 
-              
+              replyCount
+
           }
         }
       }

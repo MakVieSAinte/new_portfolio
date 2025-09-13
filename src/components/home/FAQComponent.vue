@@ -530,7 +530,7 @@
               >
                 <div class="pb-4 px-5">
                   <p class="text-gray-800 dark:text-neutral-400 leading-snug">
-                    Je communique immédiatement sur tout retard et propose des
+                    Je communique immédiatement sur tout retard et je propose des
                     solutions pour respecter vos priorités tout en maintenant la
                     qualité.
                   </p>
