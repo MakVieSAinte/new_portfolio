@@ -1,7 +1,12 @@
 {
   "hero": {
     "name": "MakVieSAinte",
-    "role": "Software Developer and Web Designer"
+    "role": "Software Developer and Web Designer",
+    "description": "Je suis un développeur passionné par la création d'expériences web innovantes et l'art de transformer des idées en solutions digitales. Mon approche combine",
+    "linkedin": "LinkedIn",
+    "description2": "et expertise technique pour concevoir des applications performantes et esthétiques. Je crois que chaque projet est une opportunité d'apprendre, de grandir et de créer quelque chose d'unique.",
+    "downloadCV": "Télécharger CV",
+    "availableForOpportunities": "Disponible pour de nouvelles opportunités"
   },
   "articles": {
     "title": "Articles récents",
