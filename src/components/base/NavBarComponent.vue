@@ -3,21 +3,16 @@
     <!-- NavBar -->
     <div class="fixed md:top-10 max-md:bottom-5 inset-x-0 text-center z-50">
       <div
-        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-full py-3 px-5 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50"
-      >
+        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-full py-3 px-5 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
         <div class="flex items-center gap-x-5">
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink
-              to="/"
-              type="button"
+            <routerLink to="/" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
-              :class="
-                activePage === 'home'
+              :class="activePage === 'home'
                   ? 'dark:text-white text-gray-800'
                   : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
-              "
-            >
+                ">
               {{ texts.home }}
             </routerLink>
           </div>
@@ -25,16 +20,12 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink
-              to="/projects"
-              type="button"
+            <routerLink to="/projects" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
-              :class="
-                activePage === 'project'
+              :class="activePage === 'project'
                   ? 'dark:text-white text-gray-800'
                   : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
-              "
-            >
+                ">
               {{ texts.project }}
             </routerLink>
           </div>
@@ -42,16 +33,12 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink
-              to="/labs"
-              type="button"
+            <routerLink to="/labs" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
-              :class="
-                activePage === 'labs'
+              :class="activePage === 'labs'
                   ? 'dark:text-white text-gray-800'
                   : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
-              "
-            >
+                ">
               {{ texts.lab }}
             </routerLink>
           </div>
@@ -59,16 +46,12 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink
-              to="/about"
-              type="button"
+            <routerLink to="/about" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
-              :class="
-                activePage === 'about'
+              :class="activePage === 'about'
                   ? 'dark:text-white text-gray-800'
                   : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
-              "
-            >
+                ">
               {{ texts.about }}
             </routerLink>
           </div>
@@ -76,16 +59,12 @@
 
           <!-- Button -->
           <div class="hs-tooltip inline-block">
-            <routerLink
-              to="/blog"
-              type="button"
+            <routerLink to="/blog" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
-              :class="
-                activePage === 'blog'
+              :class="activePage === 'blog'
                   ? 'dark:text-white text-gray-800'
                   : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
-              "
-            >
+                ">
               {{ texts.blog }}
             </routerLink>
           </div>
@@ -93,50 +72,24 @@
 
           <li class="inline-block">
             <!-- Bouton pour activer le mode sombre -->
-            <button
-              v-if="theme === 'dark'"
-              @click="setTheme('light')"
-              type="button"
-              class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150"
-            >
+            <button v-if="theme === 'dark'" @click="setTheme('light')" type="button"
+              class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150">
               <span class="sr-only">Activer le mode sombre</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="17"
-                height="17"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-moon-icon lucide-moon"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-moon-icon lucide-moon">
                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
               </svg>
             </button>
 
             <!-- Bouton pour désactiver le mode sombre -->
-            <button
-              v-else
-              @click="setTheme('dark')"
-              type="button"
-              class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150"
-            >
+            <button v-else @click="setTheme('dark')" type="button"
+              class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150">
               <span class="sr-only">Désactiver le mode sombre</span>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="17"
-                height="17"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-sun-icon lucide-sun"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-sun-icon lucide-sun">
                 <circle cx="12" cy="12" r="4" />
                 <path d="M12 2v2" />
                 <path d="M12 20v2" />
@@ -155,39 +108,28 @@
     <!-- End NavBar -->
 
     <!-- Lang -->
-    <div
-      class="fixed max-md:relative md:top-12 max-md:top-4 max-md:right-4 right-10 text-center z-50"
-    >
+    <div class="fixed max-md:relative md:top-12 max-md:top-4 max-md:right-4 right-10 text-center z-50">
       <div
-        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-md py-2 max-md:py-0 px-3 max-md:px-1 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50"
-      >
+        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-md py-2 max-md:py-0 px-3 max-md:px-1 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
         <div class="flex items-center gap-x-3 max-md:gap-x-1">
           <!-- Bouton EN -->
           <div class="hs-tooltip inline-block">
-            <button
-              @click="changeLanguage('en')"
-              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm"
-              :class="
-                locale === 'en'
+            <button @click="changeLanguage('en')"
+              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm" :class="locale === 'en'
                   ? 'text-gray-900 dark:text-white'
                   : 'text-neutral-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white'
-              "
-            >
+                ">
               en
             </button>
           </div>
 
           <!-- Bouton FR -->
           <div class="hs-tooltip inline-block">
-            <button
-              @click="changeLanguage('fr')"
-              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm"
-              :class="
-                locale === 'fr'
+            <button @click="changeLanguage('fr')"
+              class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm" :class="locale === 'fr'
                   ? 'text-gray-900 dark:text-white'
                   : 'text-neutral-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white'
-              "
-            >
+                ">
               fr
             </button>
           </div>
@@ -210,7 +152,8 @@ export default defineComponent({
     const theme = ref('dark')
     const activePage = ref('home')
     const route = useRoute()
-    const { locale, setLocale, texts } = useI18n('navbar')
+    // Chargement des traductions pour la navbar et home
+    const { locale, setLocale, texts } = useI18n('navbar,home')
 
     // 🔁 Active page par rapport à la route
     const updateActivePage = () => {
@@ -226,7 +169,12 @@ export default defineComponent({
 
     // 🌐 Changement de langue
     function changeLanguage(lang: string) {
-      setLocale(lang, 'navbar')
+      // Utiliser la même liste de pages qu'au chargement initial
+      setLocale(lang, 'navbar,home')
+
+      // Debugging
+      console.log(`🔄 Langue changée pour: ${lang}`)
+      console.log('📚 Traductions:', texts.value)
     }
 
     // 🌓 Changement de thème
