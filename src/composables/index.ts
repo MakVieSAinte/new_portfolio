@@ -12,7 +12,7 @@ async function loadMessages(pageInput: string) {
     if (!page) continue
 
     try {
-      console.log(`🌍 Chargement des traductions: ${locale.value}/${page}.json`)
+      // console.log(`🌍 Chargement des traductions: ${locale.value}/${page}.json`)
       const messages = await import(`../locales/${locale.value}/${page}.json`)
 
       // Fusionner avec les traductions existantes plutôt que de remplacer
@@ -21,7 +21,7 @@ async function loadMessages(pageInput: string) {
         ...messages.default,
       }
 
-      console.log(`✅ Traductions chargées pour ${page}:`, messages.default)
+      // console.log(`✅ Traductions chargées pour ${page}:`, messages.default)
     } catch (e) {
       console.error(
         `❌ Erreur chargement locale ${locale.value}/${page}.json:`,

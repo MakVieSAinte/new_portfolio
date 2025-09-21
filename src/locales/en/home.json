@@ -2,15 +2,14 @@
   "hero": {
     "name": "MakVieSAinte",
     "role": "Software Developer and Web Designer",
-    "description": "I am a developer passionate about creating innovative web experiences and the art of transforming ideas into digital solutions. My approach combines",
-    "linkedin": "LinkedIn",
-    "description2": "and technical expertise to design high-performing and aesthetic applications. I believe that every project is an opportunity to learn, grow, and create something unique.",
+    "description": "I am a developer passionate about creating accessible and perfectly optimized user interfaces, combining refined design with robust front-end and back-end engineering. I strive to build experiences that are aesthetic, intuitive, and high-performing, and I regularly share my discoveries and projects on",
+    "description2": "you can also",
     "downloadCV": "Download CV",
     "availableForOpportunities": "Available for new opportunities"
   },
   "articles": {
     "title": "Recent Articles",
-    "description": "I regularly share my discoveries, reflections, and projects around web development and new technologies.",
+    "description": "I regularly share my discoveries, reflections, and projects about web development and new technologies.",
     "readMore": "Read more",
     "loading": "Loading articles...",
     "noArticles": "No articles found.",
@@ -34,7 +33,7 @@
     "loadError": "Error loading the article."
   },
   "contact": {
-    "title": "Contact me",
+    "title": "Contact Me",
     "description": "An idea, a project, a professional opportunity, or simply a question? Leave me your email and I will get back to you quickly.",
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "Enter your email",
@@ -47,36 +46,45 @@
     "tabs": {
       "services": "Services & Process",
       "pricing": "Pricing & Deadlines",
-      "about": "About me"
+      "about": "About Me"
     },
     "qns": {
       "typesProjects": {
         "q": "What types of projects do you work on?",
-        "a": "I develop interactive websites, front-end and back-end applications, as well as complete full-stack solutions tailored to my clients’ needs."
+        "a": "I develop interactive websites, front-end and back-end applications, as well as complete full-stack solutions",
+        "a2": "tailored to my clients’ needs."
       },
       "technologies": {
-        "q": "What languages and technologies do you master?",
-        "a": "I mainly work with JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, TailwindCSS and Git, while staying open to exploring new technologies depending on the project."
+        "q": "Which languages and technologies do you master?",
+        "a": "I mainly work with JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, TailwindCSS, and Git,",
+        "a2": "while staying open to exploring new technologies depending on the project."
       },
       "process": {
         "q": "How does your work process go?",
-        "a": "My process includes five steps: needs discovery, design, development, review and feedback, then delivery and support if needed."
+        "a": "My process includes five steps: needs discovery, design, development, review and feedback,",
+        "a2": "then delivery and support if necessary."
       },
       "testsBeforeDelivery": {
-        "q": "Do you test before delivery?",
-        "a": "Yes, I test all features and the user experience to ensure performance and reliability."
+        "q": "Do you run tests before delivery?",
+        "a": "Yes, I test all features and the user experience to ensure",
+        "a2": "performance and reliability."
       },
       "priceFix": {
         "q": "How do you set the price of a project?",
-        "a": "The price depends on complexity, estimated time, and requested features. I always provide a detailed quote before starting."
+        "a": "The price depends on complexity, estimated time, and requested features,",
+        "a2": "I always provide a detailed quote before starting."
       },
       "hourlyOrFixed": {
-        "q": "Do you work hourly or at a fixed price?",
-        "a": "I can adapt to both: fixed price for a complete project or hourly rate for specific tasks or adjustments."
+        "q": "Do you work hourly or on a fixed-price basis?",
+        "a": "I can adapt to both:",
+        "a2": "fixed-price for a full project or hourly rate for one-off tasks or adjustments."
       },
       "deadlines": {
         "q": "What are your average delivery times?",
-        "a": "The deadlines depend on project complexity. In general, a simple site can be delivered in 2 to 4 weeks, while a complete application requires more time."
+        "a": "Deadlines depend on the project complexity. Generally, a simple website",
+        "a2": "can be delivered in 2 to 4 weeks",
+        "a3": "while a full application",
+        "a4": "requires more time."
       },
       "delays": {
         "q": "What happens if the project takes longer than expected?",
@@ -84,67 +92,46 @@
       },
       "whoAreYou": {
         "q": "Who are you and what is your background?",
-        "a": "I am MakVieSainte, software developer and web designer. Passionate about coding for several years, I started programming in high school before continuing my studies at university. In my second year, I did an internship which ended that same year with a fixed-term contract (CDD). This experience allowed me to strengthen my skills and confirm my commitment to web development."
+        "a": "I am MakVieSainte, software developer and web designer.",
+        "a2": "Passionate about coding for several years, I started programming in high school before continuing my studies at university. In my second year, I did an internship that ended the same year with a fixed-term contract (CDD). This experience strengthened my skills and confirmed my commitment to the web development field."
       },
       "frontOrBack": {
-        "q": "Are you more oriented towards front-end or back-end?",
+        "q": "Are you more front-end or back-end oriented?",
         "a": "I master both, but I have a strong passion for creating accessible and high-performing user interfaces, so I lean more towards front-end."
       },
       "hobbies": {
         "q": "What are your passions outside of development?",
-        "a": "Outside of development, I am very interested in psychology and I love diving into documentaries to learn more. I am also passionate about graphic design and football."
+        "a": "Outside of development, I am very interested in psychology and enjoy immersing myself in documentaries to learn more. I am also passionate about graphic design and football."
       },
       "skillToDevelop": {
         "q": "What skill would you like to develop this year?",
-        "a": "This year, I am trying to broaden my skillset beyond pure development. I am particularly interested in DevOps, to better understand deployment, continuous integration and environment automation. At the same time, I am also discovering the basics of LLMs (Large Language Models) in artificial intelligence. Finally, I am learning automated testing with UiPath to strengthen the quality and reliability of the projects I work on."
+        "a": "This year, I am trying to broaden my skill set beyond pure development. I am particularly interested in DevOps, to better understand deployment, continuous integration, and environment automation. At the same time, I am also exploring the basics of LLMs (Large Language Models) in artificial intelligence. Finally, I am learning automated testing with UiPath to strengthen the quality and reliability of the projects I work on."
       }
     }
   },
   "favorite": {
     "title": "Favorite Technologies",
-    "description": "These tools are for me much more than languages or frameworks: they are partners to transform ideas into concrete and engaging experiences."
+    "description": "For me, these tools are more than just languages or frameworks: they are partners to transform ideas into concrete and engaging experiences."
   },
   "projects": {
     "title": "My Projects",
-    "description": "My projects reflect my passion for design and engineering. Each creation is designed to combine aesthetics, performance, and user experience.",
-    "sampleProject": {
-      "name": "Nature Emoi",
-      "alt": "project image",
-      "previewLink": "https://nature-emoi.vercel.app/"
-    }
+    "description": "My projects reflect my passion for design and engineering. Each creation is designed to combine aesthetics, performance, and user experience."
   },
   "skills": {
     "title": "Skills and Tools",
-    "description": "From front-end to back-end, including design and software testing, I master a variety of technologies and tools.",
-    "design": ["Figma", "Adobe XD", "PhotoShop", "Canva"],
-    "devOpsAndHosting": [
-      "Chrome DevTools",
-      "Vercel",
-      "Docker",
-      "NGINX",
-      "Playwright",
-      "Cypress",
-      "Supabase"
+    "description": "From front-end to back-end, including design and software testing, I master various technologies and tools.",
+    "section": [
+      "Design Tools",
+      "Development Tools",
+      "Development",
+      "Collaboration",
+      "Others",
+      "Soft Skills"
     ],
-    "librariesAndTools": ["Tailwind CSS", "GSAP", "ChartJS", "ChatGPT"],
-    "languagesAndFrameworks": [
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "Vue",
-      "TypeScript",
-      "Node",
-      "Express",
-      "MongoDB",
-      "MySQL"
-    ],
-    "tools": ["VS Code", "Postman", "Playwright", "Cypress", "Supabase"],
-    "collaboration": ["Jira", "Confluence", "Bitbucket", "Teams", "GitHub"],
-    "others": ["GraphQL"],
     "softSkills": [
       "Excellent communication",
       "Fast learning ability",
-      "Open to feedback",
+      "Receptive to feedback",
       "Creativity",
       "Adaptability"
     ]
@@ -155,11 +142,11 @@
     "ayokai": {
       "date": "June 2024 - Present",
       "role": "Frontend Developer & Web Integrator",
-      "description": "Ayokai is a software development and testing company. Within a small agile and hyper-programming-oriented team, I contribute to the design and implementation of scalable and secure web applications.",
+      "description": "Ayokai is a software development and testing company. Within a small agile team oriented toward hyper-programming, I contribute to designing and implementing scalable and secure web applications.",
       "bullets": [
         "Integration of mobile-first web interfaces with Vue.js, HTML/CSS, and TailwindCSS.",
-        "Creation of robust and secure APIs with Express.js, protected by JWT middleware and structured in modular architecture.",
-        "Data modeling with Mongoose ORM to ensure consistency between services.",
+        "Creation of robust and secure APIs with Express.js, protected by JWT middleware and structured with a modular architecture.",
+        "Data modeling with Mongoose ORM to ensure consistency across services.",
         "Close collaboration with QA/testers to deliver regression-free features through cross-testing practices."
       ],
       "qa": {
@@ -168,7 +155,7 @@
       },
       "card": {
         "title": "Ayokai Congo",
-        "description": "Ayokai is a software testing and development company based in Europe and Africa. We help businesses strengthen their quality processes to accelerate delivery."
+        "description": "Ayokai is a software testing and development company based in Europe and Africa. We help businesses strengthen their quality processes to speed up delivery."
       }
     },
     "possacode": {
@@ -177,18 +164,21 @@
       "description": "Possacode is a non-profit organization based in the Republic of Congo, committed to empowering and connecting developers through learning and collaboration.",
       "bullets": [
         "Participation in a supportive and engaged tech community focused on open knowledge sharing.",
-        "Participation in open-source initiatives and group workshops, with peer-to-peer mentoring."
+        "Participation in open-source initiatives and group workshops, with peer mentoring."
       ],
       "lead": {
         "title": "Technical Lead",
         "date": "August 2025 - Present",
-        "description": "Managing internal projects, leading practical workshops, and supporting community members in skill development."
+        "description": "Leading internal projects, managing hands-on workshops, and supporting the community members’ skill growth."
       }
     },
     "freelance": {
       "date": "June 2023 - October 2023",
       "role": "Freelance Graphic Designer",
-      "description": "Creation of tailor-made visuals for various clients and brands: logos, posters, web banners, and social media content."
+      "description": "Created tailor-made visuals for various clients and brands: logos, posters, web banners, and social media content."
     }
+  },
+  "footer": {
+    "reserved": "All rights reserved."
   }
 }

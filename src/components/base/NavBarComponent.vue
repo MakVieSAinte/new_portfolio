@@ -4,14 +4,14 @@
     <div class="fixed md:top-10 max-md:bottom-5 inset-x-0 text-center z-50">
       <div
         class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-full py-3 px-5 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
-        <div class="flex items-center gap-x-5">
+        <div class="flex items-center gap-x-3">
           <!-- Button -->
           <div class="hs-tooltip inline-block">
             <routerLink to="/" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'home'
-                  ? 'dark:text-white text-gray-800'
-                  : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
+                ? 'dark:text-white text-gray-800'
+                : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
                 ">
               {{ texts.home }}
             </routerLink>
@@ -23,8 +23,8 @@
             <routerLink to="/projects" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'project'
-                  ? 'dark:text-white text-gray-800'
-                  : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
+                ? 'dark:text-white text-gray-800'
+                : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
                 ">
               {{ texts.project }}
             </routerLink>
@@ -36,8 +36,8 @@
             <routerLink to="/labs" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'labs'
-                  ? 'dark:text-white text-gray-800'
-                  : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
+                ? 'dark:text-white text-gray-800'
+                : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
                 ">
               {{ texts.lab }}
             </routerLink>
@@ -49,8 +49,8 @@
             <routerLink to="/about" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'about'
-                  ? 'dark:text-white text-gray-800'
-                  : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
+                ? 'dark:text-white text-gray-800'
+                : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
                 ">
               {{ texts.about }}
             </routerLink>
@@ -62,8 +62,8 @@
             <routerLink to="/blog" type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-md md:text-sm transition-colors duration-150"
               :class="activePage === 'blog'
-                  ? 'dark:text-white text-gray-800'
-                  : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
+                ? 'dark:text-white text-gray-800'
+                : 'text-neutral-500 hover:text-gray-800 focus:text-gray-800 dark:text-neutral-400 dark:hover:text-white dark:focus:text-white'
                 ">
               {{ texts.blog }}
             </routerLink>
@@ -116,8 +116,8 @@
           <div class="hs-tooltip inline-block">
             <button @click="changeLanguage('en')"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm" :class="locale === 'en'
-                  ? 'text-gray-900 dark:text-white'
-                  : 'text-neutral-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white'
+                ? 'text-gray-900 dark:text-white'
+                : 'text-neutral-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white'
                 ">
               en
             </button>
@@ -127,8 +127,8 @@
           <div class="hs-tooltip inline-block">
             <button @click="changeLanguage('fr')"
               class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm" :class="locale === 'fr'
-                  ? 'text-gray-900 dark:text-white'
-                  : 'text-neutral-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white'
+                ? 'text-gray-900 dark:text-white'
+                : 'text-neutral-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white'
                 ">
               fr
             </button>

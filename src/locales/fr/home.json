@@ -51,31 +51,40 @@
     "qns": {
       "typesProjects": {
         "q": "Quels types de projets réalises-tu ?",
-        "a": "Je développe des sites web interactifs, des applications front-end et back-end, ainsi que des solutions full-stack complètes, adaptées aux besoins de mes clients."
+        "a": "Je développe des sites web interactifs, des applications front-end et back-end, ainsi que des solutions full-stack complètes",
+        "a2": "adaptées aux besoins de mes clients."
       },
       "technologies": {
         "q": "Quels langages et technologies maîtrises-tu ?",
-        "a": "Je travaille principalement avec JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, TailwindCSS et Git, tout en restant ouvert à explorer de nouvelles technologies selon le projet."
+        "a": "Je travaille principalement avec JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, TailwindCSS et Git,",
+        "a2": "tout en restant ouvert à explorer de nouvelles technologies selon le projet."
       },
       "process": {
         "q": "Comment se déroule ton processus de travail ?",
-        "a": "Mon processus comprend cinq étapes : découverte des besoins, conception, développement, revue et feedback, puis livraison et support si nécessaire."
+        "a": "Mon processus comprend cinq étapes : découverte des besoins, conception, développement, revue et feedback,",
+        "a2": "puis livraison et support si nécessaire."
       },
       "testsBeforeDelivery": {
         "q": "Fais-tu des tests avant la livraison ?",
-        "a": "Oui, je teste toutes les fonctionnalités et l’expérience utilisateur pour garantir performance et fiabilité."
+        "a": "Oui, je teste toutes les fonctionnalités et l’expérience utilisateur pour garantir",
+        "a2": "performance et fiabilité."
       },
       "priceFix": {
         "q": "Comment fixes-tu le prix d’un projet ?",
-        "a": "Le prix dépend de la complexité, du temps estimé et des fonctionnalités demandées. Je fournis toujours un devis détaillé avant de commencer."
+        "a": "Le prix dépend de la complexité, du temps estimé et des fonctionnalités demandées,",
+        "a2": "Je fournis toujours un devis détaillé avant de commencer."
       },
       "hourlyOrFixed": {
         "q": "Est-ce que tu travailles au tarif horaire ou au forfait ?",
-        "a": "Je peux m’adapter aux deux : forfait pour un projet complet ou tarif horaire pour des missions ponctuelles ou des ajustements."
+        "a": "Je peux m’adapter aux deux : ",
+        "a2": "forfait pour un projet complet ou tarif horaire pour des missions ponctuelles ou des ajustements."
       },
       "deadlines": {
         "q": "Quels sont tes délais moyens de réalisation ?",
-        "a": "Les délais dépendent de la complexité du projet. En général, un site simple peut être livré en 2 à 4 semaines, tandis qu’une application complète nécessite davantage de temps."
+        "a": "Les délais dépendent de la complexité du projet. En général, un site simple ",
+        "a2": "peut être livré en 2 à 4 semaines",
+        "a3": "tandis qu’une application complète ",
+        "a4": "nécessite davantage de temps."
       },
       "delays": {
         "q": "Que se passe-t-il si le projet prend plus de temps que prévu ?",
@@ -83,7 +92,8 @@
       },
       "whoAreYou": {
         "q": "Qui es-tu et quel est ton parcours ?",
-        "a": "Je suis MakVieSainte, software developer et web designer. Passionné par le code depuis plusieurs années, j’ai commencé à programmer au lycée avant de poursuivre mes études à l’université. Dès ma deuxième année universitaire, j’ai effectué un stage qui s’est conclu la même année par un contrat à durée déterminée (CDD). Cette expérience m’a permis de renforcer mes compétences et de confirmer mon engagement dans le domaine du développement web."
+        "a": "Je suis MakVieSainte, software developer et web designer. ", 
+        "a2": "Passionné par le code depuis plusieurs années, j’ai commencé à programmer au lycée avant de poursuivre mes études à l’université. Dès ma deuxième année universitaire, j’ai effectué un stage qui s’est conclu la même année par un contrat à durée déterminée (CDD). Cette expérience m’a permis de renforcer mes compétences et de confirmer mon engagement dans le domaine du développement web."
       },
       "frontOrBack": {
         "q": "Es-tu plus orienté front-end ou back-end ?",
@@ -167,7 +177,7 @@
       "role": "Graphiste Freelance",
       "description": "Réalisation de visuels sur-mesure pour divers clients et marques : logos, affiches, bannières web et contenus pour les réseaux sociaux."
     }
-  }, 
+  },
   "footer": {
     "reserved": "Tous droits réservés."
   }
