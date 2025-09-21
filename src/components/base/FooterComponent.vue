@@ -6,7 +6,7 @@
         <div class="flex flex-wrap justify-between items-center gap-2 md:pb-1 max-md:pb-5">
           <!-- Copyright -->
           <div class="relative inline-flex mt-2 text-sm text-gray-800 dark:text-neutral-300">
-            © 2025, MakVieSAinte - Tous droits réservés.
+            © 2025, MakVieSAinte - {{ texts?.footer?.reserved }}
           </div>
           <!-- End Copyright -->
 
@@ -60,6 +60,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
+
 
 export default defineComponent({
   name: 'FooterComponent',
@@ -71,6 +73,15 @@ export default defineComponent({
   methods: {},
 
   mounted() { },
+
+  setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
+  },
 })
 </script>
 

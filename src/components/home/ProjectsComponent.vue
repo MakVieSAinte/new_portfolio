@@ -3,12 +3,10 @@
     <!-- Projects -->
     <div class="mt-10 sm:mt-12">
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
-        Mes projets
+        {{ texts?.projects?.title }}
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Mes projets sont le reflet de ma passion pour le design et l’ingénierie.
-        Chaque réalisation est pensée pour allier esthétique, performance et
-        expérience utilisateur.
+        {{ texts?.projects?.description }}
       </p>
 
       <!-- Card Blog -->
@@ -101,6 +99,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
 
 export default defineComponent({
   name: 'ProjectsComponent',
@@ -133,6 +132,15 @@ export default defineComponent({
   },
 
   mounted() {},
+
+      setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
+  },
 })
 </script>
 

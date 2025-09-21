@@ -3,11 +3,10 @@
     <!-- Skills -->
     <div class="my-10 sm:my-14">
       <h1 class="mb-1 text-3xl font-medium text-primary font-familjen_grotesk">
-         Compétences et outils 
+         {{texts?.skills?.title}}
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Du front-end au back-end, en passant par le design et le test logiciel, je maîtrise des
-        technologies et outils variés.
+        {{texts?.skills?.description}}
       </p>
 
       <!-- List -->
@@ -16,7 +15,7 @@
           <dt class="min-w-40">
             <span
               class="block text-md font-medium text-gray-800 dark:text-white"
-              >Outils de design&nbsp;:</span
+              >{{texts?.skills?.section?.[0]}}&nbsp;:</span
             >
           </dt>
           <dd>
@@ -154,7 +153,7 @@
           <dt class="min-w-40">
             <span
               class="block text-md font-medium text-gray-800 dark:text-white"
-              >Outils de développement&nbsp;:</span
+              >{{texts?.skills?.section?.[1]}}&nbsp;:</span
             >
           </dt>
           <dd>
@@ -561,7 +560,7 @@
           <dt class="min-w-40">
             <span
               class="block text-md font-medium text-gray-800 dark:text-white"
-              >Développement&nbsp;:</span
+              >{{texts?.skills?.section?.[2]}}&nbsp;:</span
             >
           </dt>
           <dd>
@@ -845,7 +844,7 @@
           <dt class="min-w-40">
             <span
               class="block text-md font-medium text-gray-800 dark:text-white"
-              >Collaboration&nbsp;:</span
+              >{{texts?.skills?.section?.[3]}}&nbsp;:</span
             >
           </dt>
           <dd>
@@ -1064,7 +1063,7 @@
           <dt class="min-w-40">
             <span
               class="block text-md font-medium text-gray-800 dark:text-white"
-              >Autres:</span
+              >{{texts?.skills?.section?.[4]}}:</span
             >
           </dt>
           <dd>
@@ -1195,7 +1194,7 @@
           <dt class="min-w-40">
             <span
               class="block text-md font-medium text-gray-800 dark:text-white"
-              >Soft Skills&nbsp;:</span
+              >{{texts?.skills?.section?.[5]}}&nbsp;:</span
             >
           </dt>
           <dd>
@@ -1203,27 +1202,27 @@
               <li
                 class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300"
               >
-                Excellente communication
+                {{texts?.skills?.softSkills?.[0]}}
               </li>
               <li
                 class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300"
               >
-                Capacité d'apprentissage rapide
+                {{texts?.skills?.softSkills?.[1]}}
               </li>
               <li
                 class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300"
               >
-                Réceptif(ve) aux retours
+                {{texts?.skills?.softSkills?.[2]}}
               </li>
               <li
                 class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300"
               >
-                Créativité
+                {{texts?.skills?.softSkills?.[3]}}
               </li>
               <li
                 class="me-4 mb-6 after:content-['.'] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300"
               >
-                Adaptabilité
+                {{texts?.skills?.softSkills?.[4]}}
               </li>
             </ul>
           </dd>
@@ -1237,6 +1236,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
 
 export default defineComponent({
   name: 'SkillsComponent',
@@ -1248,6 +1248,15 @@ export default defineComponent({
   methods: {},
 
   mounted() {},
+
+      setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
+  },
 })
 </script>
 

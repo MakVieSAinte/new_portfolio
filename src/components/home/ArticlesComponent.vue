@@ -3,11 +3,10 @@
     <!-- Articles -->
     <div class="my-10 sm:my-14 relative">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
-        Articles récents
+        {{texts?.articles?.title}}
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Je partage régulièrement mes découvertes, réflexions et projets autour
-        du développement web et des nouvelles technologies.
+        {{texts?.articles?.description}}
       </p>
 
       <ul class="space-y-10 mt-8" v-if="!loading && posts.length">
@@ -31,13 +30,15 @@
               class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
               :to="`/article/${post.slug}`"
             >
-              Lire plus
+              {{texts?.articles?.readMore}}
             </router-link>
           </p>
         </li>
       </ul>
 
-      <p v-if="loading" class="text-gray-500">Chargement des articles...</p>
+      <p v-if="loading" class="text-gray-500">
+        {{texts?.articles?.loading}}
+      </p>
       <p v-if="error" class="text-red-500">{{ error }}</p>
     </div>
   </div>
@@ -46,6 +47,8 @@
 
 <script lang="ts">
 import axios from 'axios'
+import { useI18n } from '../../composables'
+
 
 export default {
   data() {
@@ -132,6 +135,15 @@ export default {
     getArticleUrl(slug: string): string {
       return `https://geeky-chakri.hashnode.dev/${slug}`
     },
+  },
+
+   setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
   },
 }
 </script>

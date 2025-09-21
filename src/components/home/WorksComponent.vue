@@ -3,12 +3,10 @@
     <!-- Work Experience -->
     <div class="mt-10 sm:mt-14">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
-        Expériences professionnelles
+        {{texts?.works?.title}}
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        Chaque mission a renforcé ma passion pour le design, le développement
-        front-end et back-end, ainsi que pour la résolution créative de
-        problèmes.
+        {{texts?.works?.intro}}
       </p>
 
       <!-- Timeline -->
@@ -28,45 +26,38 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              Juin 2024 - Présent
+              {{texts?.works?.ayokai?.date}}
             </h3>
 
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              Développeur Frontend &amp; Intégrateur Web
+              {{texts?.works?.ayokai?.role}}
             </p>
 
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              Ayokai est une société de développement et de test logiciel. Au
-              sein d'une petite équipe agile et orientée hyper-programmation, je
-              contribue à la conception et à la mise en œuvre d'applications web
-              évolutives et sécurisées.
+              {{texts?.works?.ayokai?.description}}
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Intégration d'interfaces web en approche mobile-first avec
-                Vue.js, HTML/CSS et TailwindCSS.
+                {{texts?.works?.ayokai?.bullets?.[0]}}
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Création d'API robustes et sécurisées avec Express.js, protégées
-                par un middleware JWT et structurées en architecture modulaire.
+                {{texts?.works?.ayokai?.bullets?.[1]}}
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Modélisation des données avec Mongoose ORM pour garantir la
-                cohérence entre les services.
+                {{texts?.works?.ayokai?.bullets?.[2]}}
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                Collaboration étroite avec les QA/testeurs pour livrer des
-                fonctionnalités sans régression, via des pratiques de
-                cross-testing.
+                {{texts?.works?.ayokai?.bullets?.[3]}}
               </li>
             </ul>
             <!-- Section QA chez Ayokai -->
             <div class="mt-3 p-4 rounded-lg bg-primary/5">
-              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">QA / Testeur logiciel</h4>
+              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">
+                {{texts?.works?.ayokai?.qa?.title}}
+              </h4>
               <p class="text-sm text-gray-700 dark:text-slate-200">
-                En plus du développement, je fais partie de l’équipe QA où je contribue à la rédaction des plans de
-                test, à l’exécution des scénarios et à l’automatisation des tests.
+                {{texts?.works?.ayokai?.qa?.description}}
               </p>
             </div>
             <div class="mt-3">
@@ -80,13 +71,10 @@
                   <div class="grow p-4 ms-32 sm:ms-48">
                     <div class="min-h-24 flex flex-col justify-center">
                       <h3 class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
-                        Ayokai Congo
+                        {{texts?.works?.ayokai?.card?.title}}
                       </h3>
                       <p class="mt-1 font-normal text-sm text-gray-500 dark:text-neutral-400">
-                        Ayokai est une société de test et de développement
-                        logiciel basée en Europe et en Afrique. Nous aidons les
-                        entreprises à renforcer leurs processus qualité pour
-                        accélérer leurs livraisons.
+                        {{texts?.works?.ayokai?.card?.description}}
                       </p>
                     </div>
                   </div>
@@ -114,16 +102,14 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              Novembre 2023 - Présent
+              {{texts?.works?.possacode?.date}}
             </h3>
             <p class="font-semibold text-sm text-gray-800 dark:text-white mt-6">
-              Ingénieur Logiciel Junior – PossaCode
+              {{texts?.works?.possacode?.role}}
             </p>
-
+            
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              Possacode est une organisation à but non lucratif basée en
-              République du Congo, engagée à autonomiser et connecter les
-              développeurs par l'apprentissage et la collaboration.
+              {{texts?.works?.possacode?.description}}
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
@@ -139,14 +125,13 @@
 
             <!-- Section Lead -->
             <div class="mt-5 p-2 rounded-lg bg-primary/5">
-              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">Responsable Technique
+              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">{{texts?.works?.possacode?.lead?.title}}
                 <span class="mb-1 text-xs font-light text-gray-700 dark:text-slate-200">
-                  (Août 2025 - Présent)
+                  {{texts?.works?.possacode?.lead?.date}}
                 </span>
               </h4>
               <p class="text-sm text-gray-700 dark:text-slate-200">
-                En tant que responsable technique, j’ai piloté des projets en interne, encadré des ateliers pratiques et
-                accompagné la montée en compétences des membres de la communauté.
+                {{texts?.works?.possacode?.lead?.description}}
               </p>
             </div>
           </div>
@@ -175,17 +160,15 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              Juin 2023 - Octobre 2023
+              {{texts?.works?.freelance?.date}}
             </h3>
-
+            
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              Graphiste Freelance
+              {{texts?.works?.freelance?.role}}
             </p>
-
+            
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              Réalisation de visuels sur-mesure pour divers clients et marques :
-              logos, affiches, bannières web et contenus pour les réseaux
-              sociaux.
+              {{texts?.works?.freelance?.description}}
             </p>
           </div>
           <!-- End Right Content -->
@@ -200,6 +183,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
+
 
 export default defineComponent({
   name: 'WorkComponent',
@@ -211,6 +196,15 @@ export default defineComponent({
   methods: {},
 
   mounted() { },
+
+   setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
+  },
 })
 </script>
 
