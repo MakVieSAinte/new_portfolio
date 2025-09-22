@@ -1,0 +1,68 @@
+import type { Project } from '../types/project'
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: 'Nature Emoi',
+    imageSrc: 'src/assets/images/projets/nature-moi.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description:
+      "Site web de présentation pour une entreprise de plantes d'intérieur",
+    technologies: ['Vue.js', 'CSS', 'HTML'],
+  },
+  {
+    id: 2,
+    title: 'Kolor app',
+    imageSrc: 'src/assets/images/projets/kolor-app.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description: 'Application de génération de palettes de couleurs',
+    technologies: ['Vue.js', 'TailwindCSS'],
+  },
+  {
+    id: 3,
+    title: 'DBS',
+    imageSrc: 'src/assets/images/projets/dbs.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description: 'Application bancaire pour la gestion de comptes',
+    technologies: ['Vue.js', 'TypeScript', 'TailwindCSS'],
+  },
+  {
+    id: 4,
+    title: 'Raft Bank',
+    imageSrc: 'src/assets/images/projets/raft.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description: 'Plateforme bancaire avec interface moderne',
+    technologies: ['Vue.js', 'TypeScript', 'Supabase'],
+  },
+  {
+    id: 5,
+    title: 'Convert currency',
+    imageSrc: 'src/assets/images/projets/convert.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description: 'Convertisseur de devises en temps réel',
+    technologies: ['Vue.js', 'API', 'TailwindCSS'],
+  },
+  {
+    id: 6,
+    title: 'Mvuama app',
+    imageSrc: 'src/assets/images/projets/mvuama-app.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description: 'Application mobile pour la gestion financière personnelle',
+    technologies: ['Vue.js', 'TypeScript', 'Supabase'],
+  },
+  {
+    id: 7,
+    title: "Help Children's",
+    imageSrc: 'src/assets/images/projets/help.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    description: 'Application mobile pour la gestion financière personnelle',
+    technologies: ['Vue.js', 'TypeScript', 'Supabase'],
+  },
+]
