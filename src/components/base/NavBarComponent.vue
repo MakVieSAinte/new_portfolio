@@ -3,7 +3,7 @@
     <!-- NavBar -->
     <div class="fixed md:top-10 max-md:bottom-5 inset-x-0 text-center z-50">
       <div
-        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-full py-3 px-5 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
+        class="inline-block backdrop-blur-sm md:bg-white/90 max-md:bg-white/95 rounded-full py-3 px-5 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-800/20 z-50 shadow-lg shadow-neutral-950/5">
         <div class="flex items-center gap-x-3">
           <!-- Button -->
           <div class="hs-tooltip inline-block">
@@ -70,7 +70,7 @@
           </div>
           <!-- Button -->
 
-          <li class="inline-block">
+          <li class="inline-block ml-2">
             <!-- Bouton pour activer le mode sombre -->
             <button v-if="theme === 'dark'" @click="setTheme('light')" type="button"
               class="relative flex justify-center items-center max-md:text-md md:text-sm text-neutral-500 dark:text-neutral-400 dark:hover:text-white hover:text-neutral-900 transition-colors duration-150">
@@ -110,7 +110,7 @@
     <!-- Lang -->
     <div class="fixed max-md:relative md:top-12 max-md:top-4 max-md:right-4 right-10 text-center z-50">
       <div
-        class="inline-block backdrop-blur-sm md:bg-white/50 max-md:bg-white/60 rounded-md py-2 max-md:py-0 px-3 max-md:px-1 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-800 z-50">
+        class="inline-block backdrop-blur-sm md:bg-white/90 max-md:bg-white/95 rounded-md py-2 max-md:py-0 px-3 max-md:px-1 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-800/20 z-50">
         <div class="flex items-center gap-x-3 max-md:gap-x-1">
           <!-- Bouton EN -->
           <div class="hs-tooltip inline-block">
