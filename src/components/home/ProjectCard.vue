@@ -27,9 +27,9 @@
             {{ title }}
           </p>
           <!-- Ajout des technologies (visible au survol) -->
-          <div class="hidden group-hover:flex mt-1 gap-1 flex-wrap">
+          <div class="hidden group-hover:flex mt-1 gap-1 flex-wrap transsition-all duration-500">
             <span v-for="(tech, index) in technologies" :key="index"
-              class="px-1.5 py-0.5 text-[10px] bg-gray-800/50 dark:bg-neutral-700/50 text-white rounded-sm">
+              class="py-0.5 text-[10px] bg-gray-800/50 dark:bg-neutral-700/50 text-white rounded-sm transition-all duration-300">
               {{ tech }}
             </span>
           </div>

@@ -16,7 +16,9 @@
     </h1>
 
     <!-- Prose : typographie stylée automatiquement -->
-    <div v-if="article" class="prose prose-neutral dark:prose-invert max-w-none" v-html="article.content.html"></div>
+    <div v-if="article"
+      class="prose prose-neutral dark:prose-invert max-w-none text-gray-800 dark:text-gray-200 article-content"
+      v-html="article.content.html"></div>
 
     <div v-if="article" class="sticky bottom-6 inset-x-0 text-center">
       <div class="inline-block bg-white shadow-md rounded-full py-3 px-4 dark:bg-neutral-800">
@@ -177,34 +179,8 @@ export default defineComponent({
 
       const post = res.data?.data?.publication?.post
       if (post) {
-        // Amélioration du formatage HTML en laissant Tailwind Prose gérer le thème
-        post.content.html = post.content.html
-          // Listes
-          .replace(/<ul/g, '<ul class="pl-6 space-y-2"')
-          .replace(/<ol/g, '<ol class="pl-6 space-y-2"')
-          .replace(/<li/g, '<li class="pl-1"')
-
-          // Titres - juste l'espacement, prose gère les tailles et couleurs
-          .replace(/<h1/g, '<h1 class="mt-10 mb-4"')
-          .replace(/<h2/g, '<h2 class="mt-8 mb-4"')
-          .replace(/<h3/g, '<h3 class="mt-6 mb-3"')
-          .replace(/<h4/g, '<h4 class="mt-5 mb-2"')
-
-          // Paragraphes
-          .replace(/<p/g, '<p class="my-5 leading-relaxed"')
-
-          // Code et blocs de code
-          .replace(/<code(?!\s*class=)/g, '<code class="font-mono text-sm px-1.5 py-0.5 rounded bg-gray-100 dark:bg-neutral-800 text-primary"')
-          .replace(/<pre(?=\s*><code)/g, '<pre class="overflow-x-auto border border-gray-200 dark:border-neutral-800 my-6 rounded-lg"')
-
-          // Liens
-          .replace(/<a (?!class)/g, '<a class="text-primary hover:underline focus:underline transition-all" ')
-
-          // Images
-          .replace(/<img (?!class)/g, '<img class="rounded-lg shadow-sm my-6" ')
-
-          // Citations
-          .replace(/<blockquote(?!class)/g, '<blockquote class="border-l-4 border-primary pl-4 py-2 my-6 italic" ')
+        // Aucune manipulation de HTML nécessaire - Tailwind Typography (prose) se charge de tout
+        this.article = post
 
         this.article = post
         // console.log(this.article) // Commenté pour éviter les logs en prod
@@ -222,90 +198,112 @@ export default defineComponent({
 </script>
 
 <style>
-/* Styles personnalisés pour compléter Tailwind Prose */
+/* Les styles de base sont maintenant gérés par @tailwindcss/typography */
+/* Nous n'avons besoin que de quelques ajustements */
 
-/* Base styles */
 body {
   line-height: 1.9 !important;
 }
 
-p,
-span,
-h1 {
-  background-color: transparent !important;
-}
-
-/* Améliorations pour Tailwind Prose */
+/* Assurer une taille de fonte confortable */
 .prose {
   font-size: 1.05rem;
 }
 
-/* Code blocks */
-.prose pre {
-  background-color: #0f172a !important;
-  /* slate-900 */
-  color: #f1f5f9 !important;
-  /* slate-100 */
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-  border: 1px solid #334155;
-  /* slate-700 */
+/* Style spécifique pour notre article */
+.article-content {
+  --tw-prose-headings: theme('colors.gray.900');
+  --tw-prose-invert-headings: white;
 }
 
-.dark .prose pre {
-  background-color: #0f172a !important;
-  /* dark slate */
-  border-color: #1e293b !important;
+/* Corriger les espaces entre les paragraphes pour plus de lisibilité */
+.prose p+p {
+  margin-top: 1.25em;
 }
 
-/* Inline code */
-.prose code:not(pre code) {
-  color: var(--primary-color, #69D3A7);
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
-  background-color: #f1f5f9;
+/* S'assurer que les images sont responsives */
+.prose img {
+  max-width: 100%;
+  height: auto;
 }
 
+/* Assurer la lisibilité du code inline sur les thèmes sombres */
 .dark .prose code:not(pre code) {
-  background-color: #1e293b;
+  color: #4dffb5;
+  background-color: rgba(15, 23, 42, 0.8);
+  /* fond plus contrasté pour le code */
+  font-weight: 600;
 }
 
-/* Links */
+/* Transition douce pour les liens */
 .prose a {
-  color: var(--primary-color, #69D3A7) !important;
-  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.prose a:hover {
-  text-decoration: underline;
+/* Amélioration de la lisibilité en mode sombre */
+.dark .prose {
+  color: #e2e8f0 !important;
+  /* text-gray-200, override important pour s'assurer de la visibilité */
 }
 
-/* Blockquotes */
-.prose blockquote {
-  border-left-color: var(--primary-color, #69D3A7) !important;
-  font-style: italic;
+.dark .prose p,
+.dark .prose ul,
+.dark .prose ol,
+.dark .prose li {
+  color: #e2e8f0 !important;
+  /* s'assurer que tous les éléments de texte sont suffisamment clairs */
 }
 
-/* Headings */
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4 {
-  color: #0f172a !important;
-  font-weight: 700;
+.dark .prose strong {
+  color: white !important;
 }
 
+/* Styles spécifiques pour les titres en mode dark - Force l'application des couleurs */
 .dark .prose h1,
 .dark .prose h2,
 .dark .prose h3,
 .dark .prose h4 {
-  color: #f8fafc !important;
+  color: white !important;
+  /* Blanc pur pour un contraste maximal */
 }
 
-/* Lists */
-.prose ul li::marker {
-  color: var(--primary-color, #69D3A7) !important;
+.dark .prose h1 {
+  font-size: 2rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+}
+
+.dark .prose h2 {
+  font-size: 1.5rem !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.75rem !important;
+  font-weight: 700 !important;
+}
+
+.dark .prose h3 {
+  font-size: 1.25rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  color: #f3f4f6 !important;
+  /* Légèrement moins blanc que les h1/h2 */
+}
+
+.dark .prose h4 {
+  font-size: 1.125rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  color: #f3f4f6 !important;
+  /* Légèrement moins blanc que les h1/h2 */
+}
+
+/* Améliorer les contrastes pour les blockquotes en mode sombre */
+.dark .prose blockquote {
+  background-color: rgba(15, 23, 42, 0.5);
+  border-left-color: #4dffb5 !important;
+  padding: 0.75rem 1rem;
+  color: #e2e8f0 !important;
 }
 </style>
