@@ -29,10 +29,10 @@ html::-webkit-scrollbar {
 }
 
 .box-main {
-  width: 52rem !important;
+  width: 62rem !important;
 }
 
-@media (max-width: 52rem) {
+@media (max-width: 62rem) {
   .box-main {
     width: 100% !important;
   }

@@ -27,6 +27,7 @@ module.exports = {
             color: theme('colors.gray.800'),
             a: {
               color: theme('colors.primary'),
+              textDecoration: 'none',
               '&:hover': {
                 textDecoration: 'underline',
               },
@@ -50,13 +51,13 @@ module.exports = {
               marginBottom: '0.5rem',
             },
             code: {
-              color: theme('colors.primary'),
-              backgroundColor: theme('colors.gray.100'),
+              color: theme('colors.gray.800'),
+              backgroundColor: theme('colors.slate.100'),
               borderRadius: '0.25rem',
               padding: '0.125rem 0.25rem',
             },
             pre: {
-              backgroundColor: theme('colors.gray.900'),
+              backgroundColor: theme('colors.gray.100'),
               color: theme('colors.gray.100'),
               borderRadius: '0.5rem',
               overflowX: 'auto',

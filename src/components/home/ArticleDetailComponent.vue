@@ -134,6 +134,17 @@
 <script lang="ts">
 import axios from 'axios'
 import { defineComponent } from 'vue'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-css'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-jsx'
+import 'prismjs/components/prism-tsx'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-bash'
+import 'prismjs/components/prism-markdown'
+import 'prismjs/themes/prism-tomorrow.css'
 
 export default defineComponent({
   props: {
@@ -179,9 +190,9 @@ export default defineComponent({
 
       const post = res.data?.data?.publication?.post
       if (post) {
-        // Aucune manipulation de HTML nécessaire - Tailwind Typography (prose) se charge de tout
-        this.article = post
-
+        // Application de la coloration syntaxique avec Prism
+        post.content.html = this.applyPrismSyntaxHighlighting(post.content.html)
+        
         this.article = post
         // console.log(this.article) // Commenté pour éviter les logs en prod
       } else {
@@ -194,10 +205,56 @@ export default defineComponent({
       this.loading = false
     }
   },
+  
+  methods: {
+    applyPrismSyntaxHighlighting(html: string): string {
+      // Crée un élément temporaire pour manipuler le HTML
+      const tempDiv = document.createElement('div')
+      tempDiv.innerHTML = html
+      
+      // Trouve tous les blocs de code <pre><code>
+      const codeBlocks = tempDiv.querySelectorAll('pre code')
+      
+      codeBlocks.forEach((codeElement: HTMLElement) => {
+        // Détecte le langage depuis la classe ou utilise 'javascript' par défaut
+        let language = 'javascript'
+        
+        // Recherche des classes comme 'language-javascript', 'language-css', etc.
+        const languageClass = Array.from(codeElement.classList).find(className => 
+          className.startsWith('language-')
+        )
+        
+        if (languageClass) {
+          language = languageClass.replace('language-', '')
+        } else {
+          // S'il n'y a pas de classe de langage, on l'ajoute
+          codeElement.classList.add(`language-${language}`)
+        }
+        
+        // Vérifie que le langage est supporté par Prism
+        if (Prism.languages[language]) {
+          const code = codeElement.textContent || ''
+          codeElement.innerHTML = Prism.highlight(code, Prism.languages[language], language)
+        }
+        
+        // Ajoute une classe pour les styles personnalisés
+        const parentPre = codeElement.parentElement
+        if (parentPre && parentPre.tagName === 'PRE') {
+          parentPre.classList.add('syntax-highlighted', 'prism-code')
+        }
+      })
+      
+      // Retourne le HTML modifié
+      return tempDiv.innerHTML
+    }
+  },
 })
 </script>
 
 <style>
+/* Importation des styles Prism pour la coloration syntaxique */
+@import 'prismjs/themes/prism-tomorrow.css';
+
 /* Les styles de base sont maintenant gérés par @tailwindcss/typography */
 /* Nous n'avons besoin que de quelques ajustements */
 
@@ -305,5 +362,51 @@ body {
   border-left-color: #4dffb5 !important;
   padding: 0.75rem 1rem;
   color: #e2e8f0 !important;
+}
+
+/* Styles pour les blocs de code avec coloration syntaxique */
+.prose pre {
+  background-color: #1e293b !important;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.prose pre.prism-code {
+  background-color: #1f2937 !important;
+  border: 1px solid #374151;
+}
+
+.prose pre code {
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 0;
+  background-color: transparent !important;
+  color: #e2e8f0 !important;
+  border-radius: 0;
+  border: none;
+}
+
+/* Scrollbars personnalisées pour les blocs de code */
+.prose pre::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+
+.prose pre {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 transparent;
 }
 </style>
