@@ -3,11 +3,9 @@
     <!-- Profile -->
     <div class="flex items-center gap-x-3">
       <div class="grow ml-1">
-        <h1
-          class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk"
-        >
-          Random experiments <br />
-          with UI I do in my free time.
+        <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
+          Mon Playground <br />
+          for UI Experiments
         </h1>
       </div>
     </div>
@@ -15,13 +13,9 @@
 
     <!-- About -->
     <div class="mt-8 mb-12">
-      <p
-        class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light"
-      >
-        I've worked on a variety of projects, focusing on creating intuitive
-        digital experiences where thoughtful design meets clean code. Here are
-        some highlights I'm proud of, showcasing my process from concept to
-        execution.
+      <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
+        Un espace où je bricole avec le code. Animations, transitions, effets visuels… Ce labo est mon terrain de jeu
+        pour tester et apprendre. Rien de trop sérieux, juste de la curiosité et beaucoup de fun.
       </p>
     </div>
   </div>

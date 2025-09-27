@@ -20,7 +20,7 @@
         utilisateur. Plusieurs sont open source, que vous pouvez découvrir sur
 
         <a href="https://github.com/MakVieSAinte"
-          class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150">
+          class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 pt-[4px] pb-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150">
           <span
             class="flex items-center justify-center gap-[6px] font-medium !text-[16px] text-gray-800 dark:text-neutral-200 dark:group-hover:dark:text-neutral-100 group-hover:dark:text-gray-900 leading-none">
 

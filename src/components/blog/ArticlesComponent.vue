@@ -21,16 +21,27 @@
 
             <router-link
               class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              :to="`/article/${post.slug}`"
-            >
+              :to="`/article/${post.slug}`">
               Continue reading
             </router-link>
           </p>
         </li>
       </ul>
 
-      <p v-if="loading" class="text-gray-500">Chargement des articles...</p>
-      <p v-if="error" class="text-red-500">{{ error }}</p>
+      <!-- Loading Spinner -->
+      <div v-if="loading" class="flex justify-center items-center py-12">
+        <div class="relative">
+          <div class="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+          </div>
+        </div>
+        <span class="ml-4 text-gray-600 dark:text-gray-300">Chargement des articles...</span>
+      </div>
+
+      <!-- Error Message -->
+      <div v-if="error" class="text-center py-12">
+        <p class="text-red-500 dark:text-red-400">{{ error }}</p>
+      </div>
     </div>
   </div>
   <!-- End Articles -->

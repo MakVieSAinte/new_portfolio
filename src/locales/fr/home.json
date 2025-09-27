@@ -115,7 +115,8 @@
   },
   "projects": {
     "title": "Mes projets",
-    "description": "Mes projets sont le reflet de ma passion pour le design et l’ingénierie. Chaque réalisation est pensée pour allier esthétique, performance et expérience utilisateur."
+    "description": "Mes projets sont le reflet de ma passion pour le design et l’ingénierie. Chaque réalisation est pensée pour allier esthétique, performance et expérience utilisateur.",
+    "viewAllButton": "Voir tous les projets"
   },
   "skills": {
     "title": "Compétences et outils",

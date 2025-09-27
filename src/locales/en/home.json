@@ -115,7 +115,8 @@
   },
   "projects": {
     "title": "My Projects",
-    "description": "My projects reflect my passion for design and engineering. Each creation is designed to combine aesthetics, performance, and user experience."
+    "description": "My projects reflect my passion for design and engineering. Each creation is designed to combine aesthetics, performance, and user experience.",
+    "viewAllButton": "View all projects"
   },
   "skills": {
     "title": "Skills and Tools",
