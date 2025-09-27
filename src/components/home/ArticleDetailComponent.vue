@@ -192,7 +192,7 @@ export default defineComponent({
       if (post) {
         // Application de la coloration syntaxique avec Prism
         post.content.html = this.applyPrismSyntaxHighlighting(post.content.html)
-        
+
         this.article = post
         // console.log(this.article) // Commenté pour éviter les logs en prod
       } else {
@@ -205,45 +205,45 @@ export default defineComponent({
       this.loading = false
     }
   },
-  
+
   methods: {
     applyPrismSyntaxHighlighting(html: string): string {
       // Crée un élément temporaire pour manipuler le HTML
       const tempDiv = document.createElement('div')
       tempDiv.innerHTML = html
-      
+
       // Trouve tous les blocs de code <pre><code>
       const codeBlocks = tempDiv.querySelectorAll('pre code')
-      
+
       codeBlocks.forEach((codeElement: HTMLElement) => {
         // Détecte le langage depuis la classe ou utilise 'javascript' par défaut
         let language = 'javascript'
-        
+
         // Recherche des classes comme 'language-javascript', 'language-css', etc.
-        const languageClass = Array.from(codeElement.classList).find(className => 
+        const languageClass = Array.from(codeElement.classList).find(className =>
           className.startsWith('language-')
         )
-        
+
         if (languageClass) {
           language = languageClass.replace('language-', '')
         } else {
           // S'il n'y a pas de classe de langage, on l'ajoute
           codeElement.classList.add(`language-${language}`)
         }
-        
+
         // Vérifie que le langage est supporté par Prism
         if (Prism.languages[language]) {
           const code = codeElement.textContent || ''
           codeElement.innerHTML = Prism.highlight(code, Prism.languages[language], language)
         }
-        
+
         // Ajoute une classe pour les styles personnalisés
         const parentPre = codeElement.parentElement
         if (parentPre && parentPre.tagName === 'PRE') {
           parentPre.classList.add('syntax-highlighted', 'prism-code')
         }
       })
-      
+
       // Retourne le HTML modifié
       return tempDiv.innerHTML
     }

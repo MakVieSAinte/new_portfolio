@@ -3,10 +3,10 @@
     <!-- Work Experience -->
     <div class="mt-10 sm:mt-14">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
-        {{texts?.works?.title}}
+        {{ texts?.works?.title }}
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        {{texts?.works?.intro}}
+        {{ texts?.works?.intro }}
       </p>
 
       <!-- Timeline -->
@@ -26,38 +26,38 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              {{texts?.works?.ayokai?.date}}
+              {{ texts?.works?.ayokai?.date }}
             </h3>
 
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              {{texts?.works?.ayokai?.role}}
+              {{ texts?.works?.ayokai?.role }}
             </p>
 
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              {{texts?.works?.ayokai?.description}}
+              {{ texts?.works?.ayokai?.description }}
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                {{texts?.works?.ayokai?.bullets?.[0]}}
+                {{ texts?.works?.ayokai?.bullets?.[0] }}
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                {{texts?.works?.ayokai?.bullets?.[1]}}
+                {{ texts?.works?.ayokai?.bullets?.[1] }}
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                {{texts?.works?.ayokai?.bullets?.[2]}}
+                {{ texts?.works?.ayokai?.bullets?.[2] }}
               </li>
               <li class="ps-1 text-sm text-gray-700 dark:text-slate-200">
-                {{texts?.works?.ayokai?.bullets?.[3]}}
+                {{ texts?.works?.ayokai?.bullets?.[3] }}
               </li>
             </ul>
             <!-- Section QA chez Ayokai -->
-            <div class="mt-3 p-4 rounded-lg bg-primary/5">
+            <div class="mt-3 p-4 rounded-lg">
               <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">
-                {{texts?.works?.ayokai?.qa?.title}}
+                {{ texts?.works?.ayokai?.qa?.title }}
               </h4>
               <p class="text-sm text-gray-700 dark:text-slate-200">
-                {{texts?.works?.ayokai?.qa?.description}}
+                {{ texts?.works?.ayokai?.qa?.description }}
               </p>
             </div>
             <div class="mt-3">
@@ -71,10 +71,10 @@
                   <div class="grow p-4 ms-32 sm:ms-48">
                     <div class="min-h-24 flex flex-col justify-center">
                       <h3 class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
-                        {{texts?.works?.ayokai?.card?.title}}
+                        {{ texts?.works?.ayokai?.card?.title }}
                       </h3>
                       <p class="mt-1 font-normal text-sm text-gray-500 dark:text-neutral-400">
-                        {{texts?.works?.ayokai?.card?.description}}
+                        {{ texts?.works?.ayokai?.card?.description }}
                       </p>
                     </div>
                   </div>
@@ -102,14 +102,14 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              {{texts?.works?.possacode?.date}}
+              {{ texts?.works?.possacode?.date }}
             </h3>
             <p class="font-semibold text-sm text-gray-800 dark:text-white mt-6">
-              {{texts?.works?.possacode?.role}}
+              {{ texts?.works?.possacode?.role }}
             </p>
-            
+
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              {{texts?.works?.possacode?.description}}
+              {{ texts?.works?.possacode?.description }}
             </p>
 
             <ul class="list-disc ms-6 mt-3 space-y-1.5">
@@ -124,14 +124,15 @@
             </ul>
 
             <!-- Section Lead -->
-            <div class="mt-5 p-2 rounded-lg bg-primary/5">
-              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">{{texts?.works?.possacode?.lead?.title}}
+            <div class="mt-5 p-2 rounded-lg">
+              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">
+                {{ texts?.works?.possacode?.lead?.title }}
                 <span class="mb-1 text-xs font-light text-gray-700 dark:text-slate-200">
-                  {{texts?.works?.possacode?.lead?.date}}
+                  {{ texts?.works?.possacode?.lead?.date }}
                 </span>
               </h4>
               <p class="text-sm text-gray-700 dark:text-slate-200">
-                {{texts?.works?.possacode?.lead?.description}}
+                {{ texts?.works?.possacode?.lead?.description }}
               </p>
             </div>
           </div>
@@ -160,15 +161,15 @@
           <!-- Right Content -->
           <div class="grow pb-8 group-last:pb-0">
             <h3 class="mb-1 text-xs text-gray-700 dark:text-slate-200">
-              {{texts?.works?.freelance?.date}}
+              {{ texts?.works?.freelance?.date }}
             </h3>
-            
+
             <p class="font-semibold text-sm text-gray-800 dark:text-white">
-              {{texts?.works?.freelance?.role}}
+              {{ texts?.works?.freelance?.role }}
             </p>
-            
+
             <p class="mt-1 text-sm text-gray-700 dark:text-slate-200">
-              {{texts?.works?.freelance?.description}}
+              {{ texts?.works?.freelance?.description }}
             </p>
           </div>
           <!-- End Right Content -->
@@ -197,7 +198,7 @@ export default defineComponent({
 
   mounted() { },
 
-   setup() {
+  setup() {
     const { texts, locale } = useI18n('home')
 
     return {

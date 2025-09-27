@@ -3,14 +3,8 @@
     <p v-if="projects.length === 0" class="text-center text-gray-500">
       Aucun projet trouvé
     </p>
-    <CodePlayground
-      v-for="(project, index) in projects"
-      :key="index"
-      :html="project.html"
-      :css="project.css"
-      :js="project.js"
-      :meta="project.meta"
-    />
+    <CodePlayground v-for="(project, index) in projects" :key="index" :html="project.html" :css="project.css"
+      :js="project.js" :meta="project.meta" />
   </div>
 </template>
 
@@ -35,7 +29,7 @@ export default defineComponent({
   },
 
   async mounted() {
-    const folderNames = ['1', '2', 'fre'] // ← Tes vrais dossiers
+    const folderNames = ['1', '2', '3', '4', '5'] // ← Tes vrais dossiers
 
     const allProjects = await Promise.all(
       folderNames.map(async folder => {

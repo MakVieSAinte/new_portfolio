@@ -87,7 +87,7 @@
 
       <div
         v-else-if="activeTab === 'Preview'"
-        class="border rounded-md overflow-hidden h-64"
+        class="border rounded-md overflow-hidden h-40"
       >
         <iframe
           :srcdoc="previewContent"
