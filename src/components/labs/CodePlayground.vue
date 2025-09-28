@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 v-if="meta.title"
-      class="!mt-24 text-2xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-2">
+      class="!mt-12 text-xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-1">
       {{ meta.title }}
     </h1>
     <p v-if="meta.description" class="text-md font-light text-gray-800 dark:text-neutral-400 !p-0 !m-0">
@@ -9,8 +9,8 @@
     </p>
 
     <div
-      class="group w-full max-w-4xl mx-auto !mt-4 bg-slate-100/50 dark:bg-neutral-950 border border-slate-100/50 dark:border-neutral-800/90 rounded-md">
-      <div class="flex space-x-2 px-1 pt-1 pb-0">
+      class="group w-full max-w-4xl mx-auto !mt-4 bg-slate-100/50 dark:bg-neutral-950 border border-slate-100/50 dark:border-neutral-800/90 rounded-md overflow-hidden">
+      <div class="flex flex-wrap gap-2 px-1 pt-1 pb-0 overflow-x-auto whitespace-nowrap">
         <button v-for="tab in tabs" :key="tab" :class="[
           'px-1 pt-2 pb-3 focus:outline-none outline-none border-0 transition-all duration-300',
           activeTab === tab
@@ -37,12 +37,13 @@
             <path d="M20 6L9 17l-5-5" />
           </svg>
         </button>
-        <pre class="bg-slate-100/50 dark:bg-neutral-800/30 text-white rounded p-4 overflow-auto text-sm h-72">
-          <code :class="'language-' + activeTab.toLowerCase()" v-html="highlightedCode" />
+        <pre
+          class="bg-slate-100/50 dark:bg-neutral-800/30 text-white rounded p-4 overflow-x-auto text-sm min-h-[200px] max-h-[400px] sm:h-72 w-full relative">
+          <code :class="['language-' + activeTab.toLowerCase(), 'block w-full break-words whitespace-pre-wrap']" v-html="highlightedCode" />
         </pre>
       </div>
 
-      <div v-else-if="activeTab === 'Preview'" class="border rounded-md overflow-hidden h-40">
+      <div v-else-if="activeTab === 'Preview'" class="border rounded-md overflow-hidden h-[100px] sm:h-48">
         <iframe :srcdoc="previewContent" class="w-full h-full border-0"
           sandbox="allow-scripts allow-same-origin"></iframe>
       </div>
@@ -166,5 +167,50 @@ pre::-webkit-scrollbar-track {
 pre {
   scrollbar-width: thin;
   scrollbar-color: #404040 transparent;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+}
+
+/* Styles responsives pour le code */
+@media (max-width: 640px) {
+  pre {
+    font-size: 12px;
+    /* Taille de police légèrement plus petite sur mobile */
+    padding: 0.75rem !important;
+    /* Padding réduit sur mobile */
+  }
+
+  button span {
+    font-size: 11px;
+    /* Taille des boutons d'onglets réduite */
+    padding: 4px 8px;
+  }
+}
+
+/* Assurer que le code ne déborde pas horizontalement */
+pre code {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Style spécifique pour le HTML */
+.language-html {
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+/* Ajustements pour le texte dans les balises */
+.language-html .token.tag {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Forcer le wrapping sur les très longs mots */
+pre {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 </style>
