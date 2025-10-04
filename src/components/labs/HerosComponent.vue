@@ -12,7 +12,7 @@
     <!-- End Profile -->
 
     <!-- About -->
-    <div class="mt-8 mb-12">
+    <div class="mt-8 mb-12">  
       <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
         Un espace où je bricole avec le code. Animations, transitions, effets visuels… Ce labo est mon terrain de jeu
         pour tester et apprendre. Rien de trop sérieux, juste de la curiosité et beaucoup de fun.

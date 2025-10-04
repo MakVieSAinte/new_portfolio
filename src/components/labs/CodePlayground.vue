@@ -19,7 +19,7 @@
         ]" @click="activeTab = tab">
           <span class="py-[5px] px-3 text-xs font-medium rounded-md focus:outline-none hover:bg-neutral-800">
             {{ tab }}
-          </span>
+          </span>  
         </button>
       </div>
 

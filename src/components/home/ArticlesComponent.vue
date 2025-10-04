@@ -3,14 +3,14 @@
     <!-- Articles -->
     <div class="my-10 sm:my-14 relative">
       <h1 class="mb-2 text-3xl font-medium text-primary font-familjen_grotesk">
-        {{texts?.articles?.title}}
+        {{ texts?.articles?.title }}
       </h1>
       <p class="text-md font-light text-gray-800 dark:text-neutral-400">
-        {{texts?.articles?.description}}
+        {{ texts?.articles?.description }}
       </p>
 
       <ul class="space-y-10 mt-8" v-if="!loading && posts.length">
-        <li v-for="post in posts" :key="post.id">
+        <li v-for="post in posts.slice(0, 4)" :key="post.id">
           <p class="mb-2 text-sm text-gray-500 dark:text-neutral-300">
             {{ formatDate(post.publishedAt) }}
           </p>
@@ -21,23 +21,17 @@
             {{ post.brief }}
           </p>
           <p class="mt-1">
-            <!-- <a class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              @click.prevent="$emit('article-selected', post.slug)" target="_blank" rel="noopener noreferrer">
-              Continue reading
-            </a> -->
-
             <router-link
               class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              :to="`/article/${post.slug}`"
-            >
-              {{texts?.articles?.readMore}}
+              :to="`/article/${post.slug}`">
+              {{ texts?.articles?.readMore }}
             </router-link>
           </p>
         </li>
       </ul>
 
       <p v-if="loading" class="text-gray-500">
-        {{texts?.articles?.loading}}
+        {{ texts?.articles?.loading }}
       </p>
       <p v-if="error" class="text-red-500">{{ error }}</p>
     </div>
@@ -137,7 +131,7 @@ export default {
     },
   },
 
-   setup() {
+  setup() {
     const { texts, locale } = useI18n('home')
 
     return {
