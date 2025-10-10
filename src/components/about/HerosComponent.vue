@@ -14,7 +14,7 @@
       <!-- Texte à droite -->
       <div class="flex-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-5">
-          About Me
+          À propos
         </h1>
         <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
           Hi, je suis <span class="font-semibold text-gray-800 dark:text-neutral-200">MakVieSAinte</span>, Software
