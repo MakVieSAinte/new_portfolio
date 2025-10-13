@@ -17,7 +17,7 @@ module.exports = {
           DEFAULT: '#005FB8',
           secondary: '#60CDFF',
         },
-      },
+      },   
       fontFamily: {
         familjen_grotesk: ['Familjen Grotesk'],
       },
