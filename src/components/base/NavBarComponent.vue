@@ -139,7 +139,7 @@
     <!-- EndLang -->
   </div>
 </template>
- 
+
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
 import { useI18n } from '@/composables'
