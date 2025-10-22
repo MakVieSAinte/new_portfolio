@@ -185,7 +185,7 @@ export default defineComponent({
           headers: {
             'Content-Type': 'application/json',
           },
-        },
+        }
       )
 
       const post = res.data?.data?.publication?.post
@@ -212,16 +212,15 @@ export default defineComponent({
       const tempDiv = document.createElement('div')
       tempDiv.innerHTML = html
 
-      // Trouve tous les blocs de code <pre><code>
-      const codeBlocks = tempDiv.querySelectorAll('pre code')
+      const codeBlocks = document.querySelectorAll<HTMLElement>('pre code')
 
-      codeBlocks.forEach((codeElement: HTMLElement) => {
+      codeBlocks.forEach(codeElement => {
         // Détecte le langage depuis la classe ou utilise 'javascript' par défaut
         let language = 'javascript'
 
         // Recherche des classes comme 'language-javascript', 'language-css', etc.
-        const languageClass = Array.from(codeElement.classList).find(className =>
-          className.startsWith('language-')
+        const languageClass = Array.from(codeElement.classList).find(
+          className => className.startsWith('language-')
         )
 
         if (languageClass) {
@@ -234,7 +233,11 @@ export default defineComponent({
         // Vérifie que le langage est supporté par Prism
         if (Prism.languages[language]) {
           const code = codeElement.textContent || ''
-          codeElement.innerHTML = Prism.highlight(code, Prism.languages[language], language)
+          codeElement.innerHTML = Prism.highlight(
+            code,
+            Prism.languages[language],
+            language
+          )
         }
 
         // Ajoute une classe pour les styles personnalisés
@@ -246,7 +249,7 @@ export default defineComponent({
 
       // Retourne le HTML modifié
       return tempDiv.innerHTML
-    }
+    },
   },
 })
 </script>
@@ -379,7 +382,8 @@ body {
 }
 
 .prose pre code {
-  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
   font-size: 0.9rem;
   line-height: 1.5;
   padding: 0;

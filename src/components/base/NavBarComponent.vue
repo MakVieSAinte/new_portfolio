@@ -155,7 +155,7 @@ export default defineComponent({
     // Chargement des traductions pour la navbar et home
     const { locale, setLocale, texts } = useI18n('navbar,home')
 
-    // 🔁 Active page par rapport à la route
+    // 🔁 Active page par rapport à la route  
     const updateActivePage = () => {
       const pathMap: Record<string, string> = {
         '/': 'home',
