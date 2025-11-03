@@ -11,6 +11,7 @@
       Back to Blog
     </router-link>
 
+    
     <h1 v-if="article" class="text-4xl font-bold mt-8 mb-6 text-gray-800 dark:text-white">
       {{ article.title }}
     </h1>
