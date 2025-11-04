@@ -4,7 +4,7 @@
     <div class="flex items-center gap-x-3">
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          Blog Playground
+         {{ texts?.pageBlog?.title }}
         </h1>
       </div>
     </div>
@@ -13,8 +13,7 @@
     <!-- About -->
     <div class="mt-8 mb-12">
       <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
-        Je publie ici mes découvertes, mes tests et mes réflexions. Des posts courts et simples, faits pour partager, et
-        parfois, sur ma
+        {{ texts?.pageBlog?.description }}
 
         <a href="https://github.com/MakVieSAinte"
           class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 pt-[6px] pb-[7px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150">
@@ -31,8 +30,8 @@
             </svg>
             <span class="group-hover:underline underline-offset-2 transition-all duration-200">Chaîne WhatsApp</span>
           </span>
-        </a>,
-        je partage aussi d’autres articles et idées.
+        </a>
+        {{ texts?.pageBlog?.description2 }}
       </p>
 
 
@@ -42,6 +41,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
 
 export default defineComponent({
   name: 'HerosComponent',
@@ -69,6 +69,15 @@ export default defineComponent({
       script.setAttribute('data-font-color', '#000000')
       script.setAttribute('data-coffee-color', '#ffffff')
       document.getElementById('bmc-button-container')?.appendChild(script)
+    }
+  },
+
+  setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
     }
   },
 })

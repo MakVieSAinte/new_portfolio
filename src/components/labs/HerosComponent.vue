@@ -4,18 +4,17 @@
     <div class="flex items-center gap-x-3">
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
-          Mon Playground <br />
-          for UI Experiments
+          {{ texts?.pageLabs?.title }} <br />
+          {{ texts?.pageLabs?.title2 }}
         </h1>
       </div>
     </div>
     <!-- End Profile -->
 
     <!-- About -->
-    <div class="mt-8 mb-12">  
+    <div class="mt-8 mb-12">
       <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
-        Un espace où je bricole avec le code. Animations, transitions, effets visuels… Ce labo est mon terrain de jeu
-        pour tester et apprendre. Rien de trop sérieux, juste de la curiosité et beaucoup de fun.
+        {{ texts?.pageLabs?.description }}
       </p>
     </div>
   </div>
@@ -23,6 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
 
 export default defineComponent({
   name: 'HerosComponent',
@@ -50,6 +50,15 @@ export default defineComponent({
       script.setAttribute('data-font-color', '#000000')
       script.setAttribute('data-coffee-color', '#ffffff')
       document.getElementById('bmc-button-container')?.appendChild(script)
+    }
+  },
+
+  setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
     }
   },
 })

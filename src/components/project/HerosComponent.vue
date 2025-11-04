@@ -5,7 +5,7 @@
       <div class="grow ml-1">
         <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
           <!-- Designing Interfaces, <br /> -->
-          Je conçois des expériences digitales impactantes.
+           {{ texts?.pageProjects?.title }}
         </h1>
       </div>
     </div>
@@ -15,9 +15,7 @@
     <div class="mt-8 mb-12">
 
       <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
-        Transformer une idée en produit digital fonctionnel est ma motivation. Au fil des années, j’ai réalisé de
-        nombreux projets illustrant mon parcours, de l’inspiration à l’exécution, toujours guidés par l’expérience
-        utilisateur. Plusieurs sont open source, que vous pouvez découvrir sur
+        {{ texts?.pageProjects?.description }}
 
         <a href="https://github.com/MakVieSAinte"
           class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 pt-[4px] pb-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150">
@@ -35,7 +33,7 @@
           </span>
         </a>
 
-        reflétant mon travail, mes expérimentations et ma passion.
+        {{ texts?.pageProjects?.description2 }}
       </p>
 
 

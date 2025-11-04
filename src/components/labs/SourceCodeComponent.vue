@@ -7,12 +7,12 @@
         <div class="absolute inset-0 flex items-center justify-center">
         </div>
       </div>
-      <span class="ml-4 text-gray-600 dark:text-gray-300">Chargement des projets...</span>
+      <span class="ml-4 text-gray-600 dark:text-gray-300">{{ texts?.pageLabs?.loading }}</span>
     </div>
 
     <!-- No Projects Found -->
     <p v-else-if="!isLoading && projects.length === 0" class="text-center text-gray-500 dark:text-gray-400 py-12">
-      Aucun projet trouvé
+      {{ texts?.pageLabs?.notProject }}
     </p>
 
     <!-- Projects List -->
@@ -25,6 +25,7 @@
 import { defineComponent } from 'vue'
 import { supabase } from './supabase'
 import CodePlayground from './CodePlayground.vue'
+import { useI18n } from '../../composables'
 
 export default defineComponent({
   name: 'AllProjects',
@@ -89,6 +90,15 @@ export default defineComponent({
 
       return await data.text()
     },
+  },
+
+  setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
   },
 })
 </script>

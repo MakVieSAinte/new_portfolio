@@ -181,5 +181,22 @@
   },
   "footer": {
     "reserved": "Tous droits réservés."
+  },
+  "pageProjects": {
+    "title": "Je conçois des expériences",
+    "description": "Transformer une idée en produit digital fonctionnel est ma motivation. Au fil des années, j’ai réalisé de nombreux projets illustrant mon parcours, de l’inspiration à l’exécution, toujours guidés par l’expérience utilisateur. Plusieurs sont open source, que vous pouvez découvrir sur",
+    "description2": "reflétant mon travail, mes expérimentations et ma passion."
+  },
+  "pageLabs": {
+    "title": "Mon Playground",
+    "title2": "for UI Experiments",
+    "description": "Un espace où je bricole avec le code. Animations, transitions, effets visuels… Ce labo est mon terrain de jeu pour tester et apprendre. Rien de trop sérieux, juste de la curiosité et beaucoup de fun.",
+    "notProject": "Aucun projet trouvé",
+    "loading": "Chargement des projets..."
+  },
+  "pageBlog": {
+    "title": "Blog Playground",
+    "description": "Je publie ici mes découvertes, mes tests et mes réflexions. Des posts courts et simples, faits pour partager, et parfois, sur ma",
+    "description2": ", je partage aussi d’autres articles et idées."
   }
 }
