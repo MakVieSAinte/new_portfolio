@@ -198,5 +198,26 @@
     "title": "Blog Playground",
     "description": "Je publie ici mes découvertes, mes tests et mes réflexions. Des posts courts et simples, faits pour partager, et parfois, sur ma",
     "description2": ", je partage aussi d’autres articles et idées."
+  },
+  "pageAbout": {
+    "title": "À propos",
+    "intro": {
+      "prefix": "Hi, je suis ",
+      "afterName": ", Software Developer et Web Designer basé à Brazzaville. Je conçois et développe des ",
+      "highlight_applications": "applications web modernes",
+      "suffix": " en utilisant JavaScript, React, Vue.js et Node.js, avec un souci constant de performance et d’expérience utilisateur."
+    },
+    "section2": {
+      "prefix": "Qu’il s’agisse de collaborer avec des équipes ou de diriger des projets de conception, mon sens du détail et mon engagement envers l’excellence m’ont permis de bâtir une ",
+      "highlight_reputation": "réputation fondée",
+      "suffix": " sur la qualité et la fiabilité."
+    },
+    "section3": {
+      "prefix": "Actuellement ",
+      "highlight_status": "étudiant en 3ᵉ année d’informatique",
+      "mid": " à l’Institut IEPA de Brazzaville, spécialité ",
+      "highlight_specialty": "analyse et programmation",
+      "suffix": ", je me prépare à obtenir mon diplôme et à entamer la prochaine étape de mon parcours professionnel."
+    }
   }
 }
