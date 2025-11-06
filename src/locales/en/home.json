@@ -183,23 +183,23 @@
     "reserved": "All rights reserved."
   },
   "pageProjects": {
-  "title": "I design experiences",
-  "description": "Turning an idea into a functional digital product is what drives me. Over the years, I’ve completed many projects that showcase my journey—from inspiration to execution—always guided by user experience. Several are open source, which you can explore on",
-  "description2": "reflecting my work, my experiments, and my passion."
-},
-"pageLabs": {
-  "title": "My Playground",
-  "title2": "for UI Experiments",
-  "description": "A space where I tinker with code. Animations, transitions, visual effects... This lab is my playground to test and learn. Nothing too serious—just curiosity and a lot of fun.",
-  "notProject": "No project found",
-  "loading": "Loading projects..."
-},
-"pageBlog": {
-  "title": "Blog Playground",
-  "description": "Here, I share my discoveries, experiments, and thoughts. Short and simple posts made to share—and sometimes, on my",
-  "description2": ", I also share other articles and ideas."
-},
- "pageAbout": {
+    "title": "I design experiences",
+    "description": "Turning an idea into a functional digital product is what drives me. Over the years, I’ve completed many projects that showcase my journey—from inspiration to execution—always guided by user experience. Several are open source, which you can explore on",
+    "description2": "reflecting my work, my experiments, and my passion."
+  },
+  "pageLabs": {
+    "title": "My Playground",
+    "title2": "for UI Experiments",
+    "description": "A space where I tinker with code. Animations, transitions, visual effects... This lab is my playground to test and learn. Nothing too serious—just curiosity and a lot of fun.",
+    "notProject": "No project found",
+    "loading": "Loading projects..."
+  },
+  "pageBlog": {
+    "title": "Blog Playground",
+    "description": "Here, I share my discoveries, experiments, and thoughts. Short and simple posts made to share—and sometimes, on my",
+    "description2": ", I also share other articles and ideas."
+  },
+  "pageAbout": {
     "title": "About",
     "intro": {
       "prefix": "Hi, I'm ",
@@ -221,5 +221,4 @@
       "suffix": ", I’m preparing to earn my degree and take the next step in my professional journey."
     }
   }
-
 }
