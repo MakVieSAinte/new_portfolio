@@ -34,9 +34,10 @@
 
 <p align="right">
   <img 
-    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=800&color=3B82F6&center=false&vCenter=true&multiline=true&repeat=true&width=400&height=80&lines=Full+Stack+Developer+💻;React+|+Next.js+|+Node.js;Building+Cool+Stuff+🚀" 
+    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=800&color=3B82F6&center=false&vCenter=true&multiline=true&repeat=true&width=400&height=80&lines=Full+Stack+Developer+💻;Reajjct+|+Next.js+|+Node.js;Building+Cool+Stuff+🚀" 
     alt="Typing SVG"
-  />
+  />     
+  
 </p>
 
 <p align="right">
