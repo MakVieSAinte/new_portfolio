@@ -9,7 +9,7 @@
         {{ texts?.works?.intro }}
       </p>
 
-      <!-- Timeline -->
+      <!-- Timeline. -->
       <div>
         <!-- Item -->
         <div class="group relative flex gap-x-5 mt-8">

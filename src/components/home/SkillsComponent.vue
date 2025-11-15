@@ -1088,7 +1088,7 @@
                     ></path>
                   </g>
                 </svg>
-                GraphQL
+                GraphQL        
               </li>
               <li
                 class="me-4 mb-6 after:content-[','] inline-flex items-center text-md font-light text-gray-800 dark:text-neutral-300"
