@@ -108,9 +108,9 @@
     <!-- End NavBar -->
 
     <!-- Lang -->
-    <div class="fixed max-md:relative md:top-12 max-md:top-4 max-md:right-4 right-10 text-center z-50">
+    <div class="fixed max-md:relative max-md:left-0 md:top-12 text-center z-50">
       <div
-        class="inline-block backdrop-blur-sm md:bg-white/90 max-md:bg-white/95 rounded-md py-2 max-md:py-0 px-3 max-md:px-1 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-800/20 z-50">
+        class="inline-block backdrop-blur-sm md:bg-white/90 max-md:bg-white/95 rounded-md py-2 max-md:py-2 px-3 max-md:px-2 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-800/20 z-50">
         <div class="flex items-center gap-x-3 max-md:gap-x-1">
           <!-- Bouton EN -->
           <div class="hs-tooltip inline-block">
@@ -155,7 +155,7 @@ export default defineComponent({
     // Chargement des traductions pour la navbar et home
     const { locale, setLocale, texts } = useI18n('navbar,home')
 
-    // 🔁 Active page par rapport à la route  
+    // Active page par rapport à la route
     const updateActivePage = () => {
       const pathMap: Record<string, string> = {
         '/': 'home',

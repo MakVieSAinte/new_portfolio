@@ -8,10 +8,10 @@
       </div>
 
       <div class="grow ml-1">
-        <h1 class="text-4xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
+        <h1 class="text-2xl md:text-4xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
           MakVieSAinte
         </h1>
-        <p class="text-writter relative text-md font-light text-gray-900 dark:text-neutral-400 mt-[2px]">
+        <p class="text-writter relative text-sm md:text-md font-light text-gray-900 dark:text-neutral-400 mt-[2px]">
           {{ texts?.hero?.role }}
         </p>
       </div>

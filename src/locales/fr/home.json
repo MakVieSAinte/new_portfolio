@@ -126,7 +126,7 @@
       "Outils de développement",
       "Développement",
       "Collaboration",
-      "Teste",
+      "Test Logiciel",
       "Autres",
       "Soft Skills"
     ],
@@ -144,7 +144,7 @@
     "ayokai": {
       "date": "Juin 2024 - Présent",
       "role": "Développeur Full-Stack – Ayokai Congo",
-      "description": "Ayokai est une société de développement et de test logiciel. Au sein d'une petite équipe agile et orientée hyper-programmation, je contribue à la conception et à la mise en œuvre d'applications web évolutives et sécurisées.",
+      "description": "Ayokai est une société de développement et de test logiciel. Au sein d'une petite équipe agile et orientée hyper-programming, je contribue à la conception et à la mise en œuvre d'applications web évolutives et sécurisées.",
       "bullets": [
         "Intégration d'interfaces web en approche mobile-first avec Vue.js, HTML/CSS et TailwindCSS.",
         "Création d'API robustes et sécurisées avec Express.js, protégées par un middleware JWT et structurées en architecture modulaire.",

@@ -3295,6 +3295,10 @@ html::-webkit-scrollbar {
     top: 1rem;
   }
 
+  .max-md\:left-0 {
+    left: 0px;
+  }
+
   .max-md\:gap-x-1 {
     -moz-column-gap: 0.25rem;
          column-gap: 0.25rem;
@@ -3312,6 +3316,16 @@ html::-webkit-scrollbar {
   .max-md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .max-md\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .max-md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .max-md\:pb-20 {
@@ -3513,9 +3527,19 @@ html::-webkit-scrollbar {
     padding-bottom: 2.5rem;
   }
 
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:dark\:bg-neutral-800\/50:is(.dark *) {
