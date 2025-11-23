@@ -27,7 +27,14 @@ export const projects: Project[] = [
     videoSrc: 'src/assets/videos/dbs.mp4',
     url: '',
     description: 'Platgorme de monetisation des dons en ligne',
-    technologies: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Shadcn UI', 'Supabase'],
+    technologies: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'TailwindCSS',
+      'Shadcn UI',
+      'Supabase',
+    ],
   },
   {
     id: 4,
@@ -63,7 +70,13 @@ export const projects: Project[] = [
     videoSrc: 'src/assets/videos/mvuama-app.mp4',
     url: '',
     description: 'Application la gestion de flotte automobile',
-    technologies: ['Vue.js', 'TypeScript', 'Supabase', 'Shadcn UI', 'TanStack Query'],
+    technologies: [
+      'Vue.js',
+      'TypeScript',
+      'Supabase',
+      'Shadcn UI',
+      'TanStack Query',
+    ],
   },
   {
     id: 8,
@@ -99,7 +112,7 @@ export const projects: Project[] = [
     videoSrc: 'src/assets/videos/robbie-lens.mp4',
     url: 'https://fluffy-granita-e128f4.netlify.app/',
     description: 'Portfolio en ligne pour un photographe professionnel',
-    technologies: ['HTML', 'CSS', 'JS', "AOS"],
+    technologies: ['HTML', 'CSS', 'JS', 'AOS'],
   },
   {
     id: 12,
