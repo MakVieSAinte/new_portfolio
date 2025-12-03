@@ -6,7 +6,7 @@
         <div class="flex flex-wrap justify-between items-center gap-2 md:pb-1 max-md:pb-5">
           <!-- Copyright -->
           <div class="relative inline-flex mt-2 text-sm text-gray-800 dark:text-neutral-300">
-            © 2025, MakVieSAinte - {{ texts?.footer?.reserved }}
+            © {{new Date().getFullYear()}}, MakVieSAinte - {{ texts?.footer?.reserved }} {{ linked.in }}
           </div>
           <!-- End Copyright -->
 
@@ -61,13 +61,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from '../../composables'
+import link from "@/data/link"
 
 
 export default defineComponent({
   name: 'FooterComponent',
 
   data() {
-    return {}
+    return {
+      linked: link || [],
+    }
   },
 
   methods: {},

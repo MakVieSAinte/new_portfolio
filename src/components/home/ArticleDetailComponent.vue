@@ -11,7 +11,7 @@
       Back to Blog
     </router-link>
 
-    
+
     <h1 v-if="article" class="text-4xl font-bold mt-8 mb-6 text-gray-800 dark:text-white">
       {{ article.title }}
     </h1>
@@ -45,7 +45,7 @@
 
           <div class="block h-3 border-e border-gray-300 mx-3 dark:border-neutral-600"></div>
 
-          <!-- Button -->
+          <!-- Button --> 
           <div class="hs-tooltip inline-block">
             <button type="button"
               class="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200">

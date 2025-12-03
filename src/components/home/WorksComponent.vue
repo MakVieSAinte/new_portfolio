@@ -65,10 +65,10 @@
               <a class="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-800"
                 href="https://ayokai.com/" target="_blank">
                 <div class="relative flex items-center overflow-hidden">
-                  <img class="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
+                  <img class="hidden sm:block w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
                     src="@/assets/images/ayokai.png" alt="Blog Image" />
 
-                  <div class="grow p-4 ms-32 sm:ms-48">
+                  <div class="grow p-4 sm:ms-48 ms-0">
                     <div class="min-h-24 flex flex-col justify-center">
                       <h3 class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
                         {{ texts?.works?.ayokai?.card?.title }}

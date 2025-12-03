@@ -33,7 +33,7 @@
       <p v-if="loading" class="text-gray-500">
         {{ texts?.articles?.loading }}
       </p>
-      <p v-if="error" class="text-red-500">{{ error }}</p>
+      <p v-if="error" class="text-red-500 text-center my-10">{{ error }}</p>
     </div>
   </div>
   <!-- End Articles -->

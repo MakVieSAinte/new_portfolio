@@ -26,10 +26,10 @@
           <p class="text-neutral-100 dark:text-white text-sm font-medium">
             {{ title }}
           </p>
-          <!-- Ajout des technologies (visible au survol) -->
+
           <div class="hidden group-hover:flex mt-1 gap-1 flex-wrap transsition-all duration-500">
             <span v-for="(tech, index) in technologies" :key="index"
-              class="py-0.5 text-[10px] bg-gray-800/50 dark:bg-neutral-700/50 text-white rounded-sm transition-all duration-300">
+              class="py-0.0 text-[10px] leading-none bg-gray-800/50 dark:bg-neutral-700/50 text-white rounded-sm transition-all duration-300">
               {{ tech }}
             </span>
           </div>
@@ -49,7 +49,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'ProjectCard',
@@ -83,7 +83,7 @@ export default defineComponent({
 
   setup() {
     // Logique de vidéo désactivée temporairement
-    /*
+
     const isHovering = ref(false);
     const videoPlayer = ref<HTMLVideoElement | null>(null);
 
@@ -104,16 +104,16 @@ export default defineComponent({
         videoPlayer.value.currentTime = 0;
       }
     };
-    */
+
 
     // Nous n'avons pas besoin de retourner ces valeurs car nous utilisons seulement
     // l'effet de zoom CSS au survol
     return {
       // Fonctions et variables désactivées temporairement
-      // isHovering,
-      // videoPlayer,
-      // playVideo,
-      // stopVideo
+      isHovering,
+      videoPlayer,
+      playVideo,
+      stopVideo
     }
   }
 })

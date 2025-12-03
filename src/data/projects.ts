@@ -26,7 +26,7 @@ export const projects: Project[] = [
     imageSrc: 'src/assets/images/projets/dbs.png',
     videoSrc: 'src/assets/videos/dbs.mp4',
     url: '',
-    description: 'Platgorme de monetisation des dons en ligne',
+    description: 'Platforme de monetisation des dons en ligne',
     technologies: [
       'React',
       'Next.js',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     imageSrc: 'src/assets/images/projets/raft.png',
     videoSrc: 'src/assets/videos/raft-bank.mp4',
     url: 'https://raft-template-pro.vercel.app/',
-    description: 'Plateforme bancaire avec interface moderne',
+    description: 'landing page bancaire avec interface moderne',
     technologies: ['Vue.js', 'TypeScript', 'TailwindCSS'],
   },
   {
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     imageSrc: 'src/assets/images/projets/dbs.png',
     videoSrc: 'src/assets/videos/dbs.mp4',
     url: 'https://dbs-projet-web.vercel.app/',
-    description: 'Application bancaire pour la gestion de comptes',
+    description: 'Application pour affichage des resultats pour étudiants',
     technologies: ['HTML', 'Pagedone UI'],
   },
   {
