@@ -198,7 +198,8 @@
   "pageBlog": {
     "title": "Blog Playground",
     "description": "Je publie ici mes découvertes, mes tests et mes réflexions. Des posts courts et simples, faits pour partager, et parfois, sur ma",
-    "description2": ", je partage aussi d’autres articles et idées."
+    "description2": ", je partage aussi d’autres articles et idées.",
+    "plateforme": "Chaîne WhatsApp"
   },
   "pageAbout": {
     "title": "À propos",
@@ -206,7 +207,7 @@
       "prefix": "Hi, je suis ",
       "afterName": ", Software Developer et Web Designer basé à Brazzaville. Je conçois et développe des ",
       "highlight_applications": "applications web modernes",
-      "suffix": " en utilisant JavaScript, React, Vue.js et Node.js, avec un souci constant de performance et d’expérience utilisateur."
+      "suffix": " en utilisant JavaScript, Vue.js et Node.js, avec un souci constant de performance et d’expérience utilisateur."
     },
     "section2": {
       "prefix": "Qu’il s’agisse de collaborer avec des équipes ou de diriger des projets de conception, mon sens du détail et mon engagement envers l’excellence m’ont permis de bâtir une ",

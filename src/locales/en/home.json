@@ -198,7 +198,8 @@
   "pageBlog": {
     "title": "Blog Playground",
     "description": "Here, I share my discoveries, experiments, and thoughts. Short and simple posts made to share—and sometimes, on my",
-    "description2": ", I also share other articles and ideas."
+    "description2": ", I also share other articles and ideas.",
+    "plateforme": "WhatsApp chanel"
   },
   "pageAbout": {
     "title": "About",
@@ -207,7 +208,7 @@
       "name": "MakVieSAinte",
       "afterName": ", a Software Developer and Web Designer based in Brazzaville. I design and build ",
       "highlight_applications": "modern web applications",
-      "suffix": " using JavaScript, React, Vue.js, and Node.js, with a constant focus on performance and user experience."
+      "suffix": " using JavaScript, Vue.js, and Node.js, with a constant focus on performance and user experience."
     },
     "section2": {
       "prefix": "Whether it’s collaborating with teams or leading design projects, my attention to detail and commitment to excellence have helped me build a ",
