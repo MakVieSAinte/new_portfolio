@@ -6,7 +6,7 @@
         <div class="flex flex-wrap justify-between items-center gap-2 md:pb-1 max-md:pb-5">
           <!-- Copyright -->
           <div class="relative inline-flex mt-2 text-sm text-gray-800 dark:text-neutral-300">
-            © {{new Date().getFullYear()}}, MakVieSAinte - {{ texts?.footer?.reserved }} {{ linked.in }}
+            © {{ new Date().getFullYear() }}, MakVieSAinte - {{ texts?.footer?.reserved }}
           </div>
           <!-- End Copyright -->
 
@@ -26,7 +26,7 @@
             </li>
             <li
               class="list-none inline-block relative pe-5 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 dark:text-neutral-500 dark:before:bg-neutral-600">
-              <a href="https://github.com/MakVieSAinte">
+              <a :href="mylinks.github">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
                   class="bi bi-github max-md:text-md md:text-sm text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white transition-colors duration-150"
                   viewBox="0 0 16 16">
@@ -36,7 +36,7 @@
               </a>
             </li>
             <li class="list-none inline-block pe-5 text-xs">
-              <a href="https://cg.linkedin.com/in/viesainte-mak">
+              <a :href="mylinks.linkedin">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                   class="bi bi-linkedin max-md:text-md md:text-sm text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-white transition-colors duration-150"
                   viewBox="0 0 16 16">
@@ -46,7 +46,7 @@
               </a>
             </li>
 
-            <a href="https://www.buymeacoffee.com/MakVieSAinte" target="_blank"><img
+            <a :href="mylinks.bymeCoffeeURL" target="_blank"><img
                 src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Achetez-moi un café"
                 style="width: 100px !important" /></a>
           </ul>
@@ -69,7 +69,7 @@ export default defineComponent({
 
   data() {
     return {
-      linked: link || [],
+      mylinks: link || [],
     }
   },
 
