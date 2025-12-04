@@ -1,6 +1,6 @@
 <template>
-  <div
-    class="group flex flex-col bg-slate-100/50 border border-neutral-200 rounded-lg dark:bg-neutral-800/30 dark:border-neutral-800 overflow-hidden h-[266px] p-[7px] relative">
+  <button @click="openModal"
+    class="group flex flex-col bg-slate-100/50 border border-neutral-200 rounded-lg dark:bg-neutral-800/30 dark:border-neutral-800 overflow-hidden h-[266px] p-[7px] relative hover:shadow-lg hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-300 w-full text-left">
     <div class="w-full h-max flex items-center justify-start gap-1 mb-[2px] pl-[3px]">
       <span
         class="block w-[8px] h-[8px] !bg-neutral-200 border-neutral-100 dark:!bg-neutral-700 rounded-full group-hover:!bg-red-600 transition-all duration-300 z-50"></span>
@@ -11,10 +11,6 @@
     </div>
 
     <div class="group w-full h-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden rounded-md mt-2">
-      <!-- Vidéo désactivée temporairement
-      <video v-if="isHovering" ref="videoPlayer" :src="videoSrc" class="w-full h-full object-cover" height="800px"
-        muted></video>
-      -->
       <img :src="imageSrc" :alt="title"
         class="group-hover:scale-150 object-cover w-full h-full transition-all duration-500 transform-origin-center" />
     </div>
@@ -36,20 +32,19 @@
         </div>
         <div
           class="p-1 border border-transparent group-hover:border-neutral-100/30 dark:group-hover:border-white rounded-full transition-all duration-300">
-          <a :href="url" target="_blank" class="text-neutral-100 dark:text-white text-sm font-medium hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-3 group-hover:-rotate-45 transition-all duration-[1s]">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
+            class="size-3 text-neutral-100 dark:text-white group-hover:-rotate-45 transition-all duration-[1s]">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
         </div>
       </div>
     </div>
-  </div>
+  </button>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'ProjectCard',
@@ -57,65 +52,41 @@ export default defineComponent({
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     imageSrc: {
-      type: String,
-      required: true
+      type: [String, Array],
+      required: true,
     },
     videoSrc: {
       type: String,
-      default: ''
+      default: '',
     },
     url: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     technologies: {
       type: Array as () => string[],
-      default: () => []
-    }
+      default: () => [],
+    },
   },
 
-  setup() {
-    // Logique de vidéo désactivée temporairement
+  emits: ['openModal'],
 
-    const isHovering = ref(false);
-    const videoPlayer = ref<HTMLVideoElement | null>(null);
-
-    const playVideo = () => {
-      isHovering.value = true;
-      // Attendre que la vidéo soit affichée avant de lancer la lecture
-      setTimeout(() => {
-        if (videoPlayer.value) {
-          videoPlayer.value.play();
-        }
-      }, 0);
-    };
-
-    const stopVideo = () => {
-      isHovering.value = false;
-      if (videoPlayer.value) {
-        videoPlayer.value.pause();
-        videoPlayer.value.currentTime = 0;
-      }
-    };
-
-
-    // Nous n'avons pas besoin de retourner ces valeurs car nous utilisons seulement
-    // l'effet de zoom CSS au survol
-    return {
-      // Fonctions et variables désactivées temporairement
-      isHovering,
-      videoPlayer,
-      playVideo,
-      stopVideo
+  setup(props, { emit }) {
+    const openModal = () => {
+      emit('openModal')
     }
-  }
+
+    return {
+      openModal,
+    }
+  },
 })
 </script>
 

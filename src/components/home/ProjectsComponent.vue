@@ -15,7 +15,7 @@
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           <ProjectCard v-for="project in limitedProjects" :key="project.id" :title="project.title"
             :image-src="project.imageSrc" :video-src="project.videoSrc" :url="project.url"
-            :description="project.description" :technologies="project.technologies"></ProjectCard>
+            :description="project.description" :technologies="project.technologies" @openModal="openModal(project)" />
         </div>
         <!-- End Grid -->
 
@@ -33,6 +33,9 @@
       </div>
       <!-- End Card Blog -->
     </div>
+
+    <!-- Project Modal -->
+    <ProjectModal :project="selectedProject" :is-open="isModalOpen" @close="closeModal" />
   </div>
 </template>
 
@@ -40,6 +43,7 @@
 import { defineComponent, ref, computed } from 'vue'
 import { useI18n } from '../../composables'
 import ProjectCard from './ProjectCard.vue'
+import ProjectModal from '../ProjectModal.vue'
 import type { Project } from '../../types/project'
 import { projects as projectsList } from '../../data/projects'
 
@@ -48,19 +52,35 @@ export default defineComponent({
 
   components: {
     ProjectCard,
+    ProjectModal,
   },
 
   setup() {
     const { texts, locale } = useI18n('home')
     const projects = ref<Project[]>(projectsList)
+    const isModalOpen = ref(false)
+    const selectedProject = ref<Project>(projectsList[0])
 
     // Compute only first 6 projects
     const limitedProjects = computed(() => projects.value.slice(0, 6))
+
+    const openModal = (project: Project) => {
+      selectedProject.value = project
+      isModalOpen.value = true
+    }
+
+    const closeModal = () => {
+      isModalOpen.value = false
+    }
 
     return {
       texts,
       locale,
       limitedProjects,
+      isModalOpen,
+      selectedProject,
+      openModal,
+      closeModal,
     }
   },
 })

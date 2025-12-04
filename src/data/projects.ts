@@ -10,6 +10,10 @@ export const projects: Project[] = [
     description:
       "Site web de présentation pour une entreprise de plantes d'intérieur",
     technologies: ['HTML', 'CSS', 'JS'],
+    year: 2023,
+    category: 'Web Design',
+    details:
+      "Un site vitrine moderne et responsive pour une entreprise de plantes d'intérieur avec galerie produits.",
   },
   {
     id: 2,
@@ -19,6 +23,10 @@ export const projects: Project[] = [
     url: 'https://kolor-app-pro.vercel.app/',
     description: 'Application de génération de palettes de couleurs',
     technologies: ['Vue.js', 'TailwindCSS', 'TypeScript'],
+    year: 2023,
+    category: 'Application Web',
+    details:
+      'Outil puissant pour générer, exporter et gérer des palettes de couleurs personnalisées.',
   },
   {
     id: 3,
@@ -35,6 +43,10 @@ export const projects: Project[] = [
       'Shadcn UI',
       'Supabase',
     ],
+    year: 2024,
+    category: 'Plateforme SaaS',
+    details:
+      'Plateforme complète pour monétiser et gérer les dons en ligne avec intégration de paiements.',
   },
   {
     id: 4,
@@ -44,6 +56,10 @@ export const projects: Project[] = [
     url: 'https://raft-template-pro.vercel.app/',
     description: 'landing page bancaire avec interface moderne',
     technologies: ['Vue.js', 'TypeScript', 'TailwindCSS'],
+    year: 2023,
+    category: 'Landing Page',
+    details:
+      'Template bancaire premium avec design moderne et animations fluides.',
   },
   {
     id: 5,
@@ -53,6 +69,10 @@ export const projects: Project[] = [
     url: 'https://dbs-projet-web.vercel.app/',
     description: 'Application pour affichage des resultats pour étudiants',
     technologies: ['HTML', 'Pagedone UI'],
+    year: 2023,
+    category: 'Application Éducation',
+    details:
+      'Plateforme de consultation des résultats académiques pour étudiants.',
   },
   {
     id: 6,
@@ -62,6 +82,10 @@ export const projects: Project[] = [
     url: 'https://my-currency-converts.vercel.app/',
     description: 'Convertisseur de devises en temps réel',
     technologies: ['Vue.js', 'Exchangerate-API', 'TailwindCSS'],
+    year: 2023,
+    category: 'Utilitaire',
+    details:
+      'Convertisseur de devises en temps réel avec taux à jour via API externe.',
   },
   {
     id: 7,
@@ -77,6 +101,10 @@ export const projects: Project[] = [
       'Shadcn UI',
       'TanStack Query',
     ],
+    year: 2024,
+    category: 'Application Métier',
+    details:
+      'Solution complète de gestion de flotte automobile avec suivi en temps réel.',
   },
   {
     id: 8,
@@ -86,6 +114,10 @@ export const projects: Project[] = [
     url: 'https://nature-emoi.vercel.app/',
     description: 'Site web de présentation pour une organisation caritative',
     technologies: ['HTML', 'CSS', 'JS'],
+    year: 2023,
+    category: 'ONG/Caritatif',
+    details:
+      "Site vitrine pour une organisation caritative dédiée à l'aide aux enfants.",
   },
   {
     id: 9,
@@ -95,6 +127,10 @@ export const projects: Project[] = [
     url: '',
     description: 'Plateforme de e-commerce adapté pour les africains',
     technologies: ['Vue.js', 'TypeScript', 'Supabase', 'Stripe'],
+    year: 2024,
+    category: 'E-commerce',
+    details:
+      'Plateforme e-commerce africaine avec intégration paiements Stripe et Supabase.',
   },
   {
     id: 10,
@@ -104,6 +140,10 @@ export const projects: Project[] = [
     url: '',
     description: 'Plateforme de e-learning pour les étudiants africains',
     technologies: ['Vue.js', 'TypeScript', 'Express.js', 'MongoDB'],
+    year: 2024,
+    category: 'E-learning',
+    details:
+      "Plateforme d'apprentissage en ligne complète pour étudiants africains.",
   },
   {
     id: 11,
@@ -113,6 +153,9 @@ export const projects: Project[] = [
     url: 'https://fluffy-granita-e128f4.netlify.app/',
     description: 'Portfolio en ligne pour un photographe professionnel',
     technologies: ['HTML', 'CSS', 'JS', 'AOS'],
+    year: 2023,
+    category: 'Portfolio',
+    details: 'Portfolio photographique professionnel avec galerie interactive.',
   },
   {
     id: 12,
@@ -122,6 +165,10 @@ export const projects: Project[] = [
     url: 'https://cookingn.netlify.app/',
     description: 'Site vitrine pour un service de livraison de repas',
     technologies: ['HTML', 'CSS', 'JS'],
+    year: 2023,
+    category: 'Restaurant/Livraison',
+    details:
+      'Site vitrine pour service de livraison de repas avec menu interactif.',
   },
   {
     id: 13,
@@ -131,5 +178,9 @@ export const projects: Project[] = [
     url: 'https://windowspro11.vercel.app/',
     description: 'Un petit clone de Windows 11 en ligne sur navigateur',
     technologies: ['Vue.js', 'TypeScript', 'TailwindCSS'],
+    year: 2024,
+    category: 'Projet Personnel',
+    details:
+      'Clone fonctionnel de Windows 11 avec interface desktop interactive.',
   },
 ]
