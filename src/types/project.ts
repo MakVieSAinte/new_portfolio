@@ -4,6 +4,7 @@ export interface Project {
   imageSrc: string | string[]
   videoSrc?: string
   url: string
+  gitHubUrl?: string
   description?: string
   technologies?: string[]
   year?: number

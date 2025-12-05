@@ -4,6 +4,21 @@ import type { Project } from '../types/project'
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'Nature Emoi JE suis la encore',
+    imageSrc: 'src/assets/images/projets/nature-moi.png',
+    videoSrc: 'src/assets/videos/nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    gitHubUrl: 'kik',
+    description:
+      "Site web de présentation pour une entreprise de plantes d'intérieur",
+    technologies: ['HTML', 'CSS', 'JS'],
+    year: 2023,
+    category: 'Web Design/UX and UI',
+    details:
+      "Un site vitrine moderne et responsive pour une entreprise de plantes d'intérieur avec galerie produits. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 1,
     title: 'Nature Emoi',
     imageSrc: 'src/assets/images/projets/nature-moi.png',
     videoSrc: 'src/assets/videos/nature-moi.mp4',
@@ -168,7 +183,7 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JS'],
     year: 2023,
     category: 'Restaurant/Livraison',
-    details: 
+    details:
       'Site vitrine pour service de livraison de repas avec menu interactif.',
   },
   {
