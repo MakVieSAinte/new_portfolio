@@ -4,8 +4,8 @@
    <div class="absolute inset-0 bg-black/50" @click="onClose"></div>
 
    <div
-    class="relative z-10 max-w-4xl w-full mx-4 sm:mx-6 bg-white dark:bg-neutral-900 rounded-lg shadow-lg overflow-hidden">
-    <div class="flex justify-between items-start p-4 border-b border-neutral-200 dark:border-neutral-800">
+    class="relative z-10 max-w-lg w-full bg-white dark:bg-neutral-900 rounded-lg shadow-lg overflow-hidden">
+    <div class="fixed max-w-lg w-full h-20 flex justify-between items-start p-4 bg-white dark:bg-neutral-900 rounded-t-lg border-b border-neutral-200 dark:border-neutral-800">
      <div>
       <h3 class="text-lg font-semibold text-neutral-900 dark:text-white">{{ project.title }}</h3>
       <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1 flex gap-3">
@@ -23,12 +23,12 @@
      </button>
     </div>
 
-    <div class="p-4">
+    <div class="p-4 pt-24 max-h-[80vh] overflow-y-auto">
      <!-- Media area -->
      <div>
       <template v-if="project.videoSrc">
        <video :src="project.videoSrc" controls playsinline autoplay muted
-        class="w-full h-64 md:h-96 object-cover rounded-md bg-black">
+        class="w-full h-52 md:h-64 object-cover rounded-md bg-black">
         Your browser does not support the video tag.
        </video>
       </template>
@@ -48,7 +48,7 @@
      </div>
 
      <!-- Details -->
-     <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="mt-4 flex flex-col gap-4">
       <div>
        <p class="text-neutral-700 dark:text-neutral-200">{{ project.description }}</p>
        <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-2">{{ project.details }}</p>

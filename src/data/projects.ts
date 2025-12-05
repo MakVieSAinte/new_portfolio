@@ -80,7 +80,7 @@ export const projects: Project[] = [
     title: 'Convert currency',
     imageSrc: 'src/assets/images/projets/convert.png',
     videoSrc: 'src/assets/videos/convert-currency.mp4',
-    url: 'https://my-currency-converts.vercel.app/',    
+    url: 'https://my-currency-converts.vercel.app/',
     description: 'Convertisseur de devises en temps réel',
     technologies: ['Vue.js', 'Exchangerate-API', 'TailwindCSS'],
     year: 2023,
@@ -168,7 +168,7 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JS'],
     year: 2023,
     category: 'Restaurant/Livraison',
-    details:
+    details: 
       'Site vitrine pour service de livraison de repas avec menu interactif.',
   },
   {
