@@ -11,7 +11,7 @@
 
       <div
         class="relative z-10 max-w-lg w-full max-h-[80vh] bg-white dark:bg-neutral-900 rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 transform scale-100"
-      >
+      >   
         <!-- Header -->
         <div
           class="sticky top-0 z-20 !h-16 flex justify-between items-center p-5 bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800"
