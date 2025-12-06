@@ -1,6 +1,5 @@
 import type { Project } from '../types/project'
 
-
 export const projects: Project[] = [
   {
     id: 1,
@@ -8,7 +7,7 @@ export const projects: Project[] = [
     imageSrc: 'src/assets/images/projets/nature-moi.png',
     videoSrc: 'src/assets/videos/nature-moi.mp4',
     url: 'https://nature-emoi.vercel.app/',
-    gitHubUrl: 'kik',
+    gitHubUrl: 'https://github.com/MakVieSAinte/Nature_emoi',
     description:
       "Site web de présentation pour une entreprise de plantes d'intérieur",
     technologies: ['HTML', 'CSS', 'JS'],
