@@ -8,6 +8,15 @@ import './output.css'
 import './assets/css/preline.css'
 import './assets/js/preline.js'
 
+// Import Vercel Analytics - loads client-side only
+if (typeof window !== 'undefined') {
+  import('@vercel/analytics').then(({ inject }) => {
+    inject()
+  }).catch(err => {
+    console.warn('Vercel Analytics not available:', err)
+  })
+}
+
 const app = createApp(App)
 
 const savedTheme = localStorage.getItem('theme') || 'dark'
