@@ -29,6 +29,7 @@ vercel --version
 ## 🔗 Étape 3: Connecter votre projet à Vercel
 
 ### Option A: Via GitHub (RECOMMANDÉ - Automatique)
+
 1. Allez sur [vercel.com](https://vercel.com)
 2. Cliquez **"New Project"**
 3. Sélectionnez votre repo GitHub **@DEV - CODE/PORTFOLIO**
@@ -40,6 +41,7 @@ vercel --version
 6. Cliquez **"Deploy"** ✅
 
 ### Option B: Via Vercel CLI (Manuel)
+
 ```bash
 # Se connecter à Vercel
 vercel login
@@ -59,6 +61,7 @@ vercel
 ## 🎯 Étape 4: Activer Vercel Analytics
 
 ### 📊 Web Analytics (Gratuit - Page Views)
+
 1. Allez sur **[vercel.com/dashboard](https://vercel.com/dashboard)**
 2. Sélectionnez votre projet **portfolio**
 3. Allez dans l'onglet **Analytics** → **Web Analytics**
@@ -67,6 +70,7 @@ vercel
 6. Le script se charge automatiquement via `/_vercel/insights/script.js`
 
 ### 📈 Speed Insights (Gratuit - Core Web Vitals)
+
 1. Dans le même menu **Analytics**
 2. Allez à l'onglet **Speed Insights**
 3. Cliquez **"Enable Speed Insights"** ✅
@@ -75,6 +79,7 @@ vercel
 ## 🔍 Étape 5: Vérifier que les Analytics fonctionnent
 
 ### Vérification en temps réel:
+
 1. Allez sur votre site Vercel: `https://portfolio-xxxx.vercel.app`
 2. Visitez plusieurs pages et interagissez
 3. Allez sur le dashboard **Analytics** → **Web Analytics**
@@ -87,6 +92,7 @@ vercel
    - **Devices**: Types d'appareils
 
 ### Vérification dans la console:
+
 ```javascript
 // Ouvrez DevTools (F12) → Console
 // Vercel Analytics a injecté `window.va`
@@ -123,6 +129,7 @@ const trackClick = () => {
 ## 📱 Dashboard Vercel - Ce que vous verrez
 
 ### Onglet "Analytics" → "Web Analytics":
+
 - **Real Time**: Visiteurs en direct
 - **Page Views**: Graphique des visites (24h, 7j, 30j)
 - **Top Pages**: Pages les plus populaires
@@ -133,6 +140,7 @@ const trackClick = () => {
 - **OS**: Systèmes d'exploitation
 
 ### Onglet "Analytics" → "Speed Insights":
+
 - **Core Web Vitals**: FCP, LCP, CLS
 - **Interactions**: TTI (Time to Interactive)
 - **Next.js Metrics**: (spécifique Next.js)
@@ -140,12 +148,13 @@ const trackClick = () => {
 ## 🔧 Configuration avancée
 
 ### Ignorer certaines pages (optionnel):
+
 ```typescript
 // Dans src/main.ts ou composable
 if ((window as any).va) {
   // Ignorer les pages d'admin ou test
   if (!location.pathname.includes('/admin')) {
-    (window as any).va('pageview', {
+    ;(window as any).va('pageview', {
       page: location.pathname,
     })
   }
@@ -153,6 +162,7 @@ if ((window as any).va) {
 ```
 
 ### Custom Events Tracking:
+
 ```typescript
 // Exemple: Tracker les clics sur liens externes
 const trackExternalLink = (url: string) => {
@@ -179,6 +189,7 @@ const trackExternalLink = (url: string) => {
 ## 🌍 URL de votre site déployé
 
 Après déploiement, Vercel vous donnera une URL comme:
+
 ```
 https://portfolio-[unique-id].vercel.app
 ```
@@ -188,6 +199,7 @@ Elle apparaîtra aussi sur votre dashboard Vercel.
 ## 🔄 Déploiements automatiques
 
 Une fois connecté à GitHub:
+
 - **Chaque push sur `main`** → Déploiement auto en production
 - **Chaque PR** → Déploiement preview automatique
 - **Erreurs de build** → Email de notification
