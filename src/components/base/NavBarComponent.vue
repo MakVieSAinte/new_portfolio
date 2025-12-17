@@ -157,6 +157,12 @@ export default defineComponent({
 
     // Active page par rapport à la route
     const updateActivePage = () => {
+      // If we're on an article detail page, highlight Blog
+      if (route.name === 'ArticleDetail' || route.path.startsWith('/article')) {
+        activePage.value = 'blog'
+        return
+      }
+
       const pathMap: Record<string, string> = {
         '/': 'home',
         '/projects': 'project',

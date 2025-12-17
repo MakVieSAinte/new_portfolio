@@ -7,15 +7,18 @@ body {
   font-weight: 200;
   color: #f9f9f9;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
   background-color: #4dffb5;
   color: #035e38;
 }
+
 html {
   overflow: scroll;
   overflow: overlay;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -23,15 +26,17 @@ span a {
   font-family: 'Public Sans', 'Inter', sans-serif !important;
 }
 
-/* Pour masquer la barre de défilement sur les navigateurs qui ne supportent pas overflow: overlay */
+/* Hide scrollbar for unsupported browsers */
 html::-webkit-scrollbar {
   display: none;
 }
 
+/* Container optimization */
 .box-main {
   width: 55rem !important;
   padding-left: 85px !important;
   padding-right: 85px !important;
+  contain: layout style paint; /* Optimize rendering performance */
 }
 
 @media (max-width: 55rem) {
@@ -39,5 +44,15 @@ html::-webkit-scrollbar {
     width: 100% !important;
     padding-left: 30px !important;
     padding-right: 30px !important;
+  }
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
