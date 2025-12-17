@@ -158,7 +158,7 @@
               <p
                 class="text-md text-neutral-600 dark:text-neutral-400 mt-0 italic"
               >
-                {{ truncateText(project.details, 185) }}
+                {{ truncateText(project.details || '', 185) }}
               </p>
             </div>
 
@@ -263,7 +263,12 @@
 <script lang="ts">
 import { defineComponent, computed, ref, watch } from 'vue'
 import type { Project } from '../types/project'
-import { truncate } from 'fs'
+
+// Utility function to truncate text
+const truncate = (text: string, maxLength: number = 50): string => {
+  if (text.length <= maxLength) return text
+  return text.slice(0, maxLength) + '...'
+}
 
 // --- PALETTES COHERENTES (texte + bg harmonisés) ---
 const colorPalettes = [

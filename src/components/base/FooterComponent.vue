@@ -46,7 +46,7 @@
               </a>
             </li>
 
-            <a :href="mylinks.bymeCoffeeURL" target="_blank"><img
+            <a :href="mylinks.buymeCoffee" target="_blank"><img
                 src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Achetez-moi un café"
                 style="width: 100px !important" /></a>
           </ul>
@@ -61,7 +61,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from '../../composables'
-import link from "@/data/link"
+import link from "@/data/link.json"
 
 
 export default defineComponent({

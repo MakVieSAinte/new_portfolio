@@ -26,6 +26,7 @@ export default defineConfig({
     cssMinify: true,
     // Code splitting optimization
     rollupOptions: {
+      external: ['/_vercel/insights/script.js'],
       output: {
         manualChunks: {
           'vue-router': ['vue-router'],
@@ -35,6 +36,9 @@ export default defineConfig({
         chunkFileNames: 'js/[name].[hash].js',
         entryFileNames: 'js/[name].[hash].js',
         assetFileNames: assetInfo => {
+          if (!assetInfo.name) {
+            return 'assets/[name].[hash][extname]'
+          }
           const info = assetInfo.name.split('.')
           const ext = info[info.length - 1]
           if (/png|jpe?g|gif|svg/.test(ext)) {

@@ -55,7 +55,7 @@ export default defineComponent({
       required: true,
     },
     imageSrc: {
-      type: [String, Array],
+      type: [String, Array] as any,
       required: true,
     },
     videoSrc: {
