@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MakVieSAinte - Full Stack Developer Portfolio showcasing projects and blog"
+    />
     <title>MakVieSAinte | Portfolio</title>
-    <!-- Preconnect only once for each domain (batch font requests) -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./src/output.css" as="style" />
+    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- DNS prefetch for 3rd party domains -->
     <link rel="dns-prefetch" href="https://i.pravatar.cc" />
     <link rel="dns-prefetch" href="https://flagcdn.com" />
     <link rel="dns-prefetch" href="https://skillicons.dev" />
@@ -21,19 +28,17 @@
       href="https://github-readme-streak-stats.herokuapp.com"
     />
     <link rel="dns-prefetch" href="https://github-profile-trophy.vercel.app" />
-    <!-- Combined font request with all weights -->
+    <!-- Combined font request with display=swap for FOUT (avoid FOIT) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/output.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body
     class="flex items-center justify-center bg-white dark:bg-neutral-900 transition-colors duration-300 !leading-snug"
   >
     <div id="app"></div>
-
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

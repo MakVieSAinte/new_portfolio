@@ -2,10 +2,11 @@
   <div
     class="box-main mx-auto pt-20 md:pt-32 pb-10 px-6 sm:px-5 md:px-8 lg:px-12 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
     <router-link
-      class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary"
-      to="/">
+      class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary min-h-10 px-3 py-2 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+      to="/" aria-label="Back to blog home">
       <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
         <path d="m15 18-6-6 6-6" />
       </svg>
       Back to Blog
@@ -28,17 +29,19 @@
           <!-- Button -->
           <div class="hs-tooltip inline-block">
             <button type="button"
-              class="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200">
+              class="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200 min-h-10 px-2 py-1 rounded transition-colors"
+              aria-label="Like this article">
               <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
                 <path
                   d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
               </svg>
-              {{ article.reactionCount }}
+              <span>{{ article.reactionCount }} Likes</span>
               <span
                 class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
                 role="tooltip">
-                Like
+                Like this article
               </span>
             </button>
           </div>
@@ -49,16 +52,18 @@
           <!-- Button -->
           <div class="hs-tooltip inline-block">
             <button type="button"
-              class="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200">
+              class="hs-tooltip-toggle flex items-center gap-x-2 text-sm text-gray-500 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200 min-h-10 px-2 py-1 rounded transition-colors"
+              aria-label="View article comments">
               <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
                 <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
               </svg>
-              {{ article.replyCount }}
+              <span>{{ article.replyCount }} Comments</span>
               <span
                 class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-black"
                 role="tooltip">
-                Comment
+                View article comments
               </span>
             </button>
           </div>
@@ -195,16 +200,29 @@ export default defineComponent({
   },
   methods: {
     optimizeHTML(html: string): string {
-      return html
+      let optimized = html
         .replace(/<ul/g, '<ul class="list-disc my-4 pl-10"')
         .replace(/<ol/g, '<ol class="list-decimal pl-6"')
-        .replace(/<h1/g, '<h1 class="text-2xl mt-8 mb-2 font-bold"')
-        .replace(/<h2/g, '<h2 class="text-2xl mt-8 mb-4 font-bold"')
-        .replace(/<h3/g, '<h3 class="text-xl mt-6 mb-3 font-semibold"')
+        // Fix heading order: h2 becomes h2 after h1
+        .replace(/<h1/g, '<h2 class="text-3xl mt-8 mb-2 font-bold"')
+        .replace(/<h2/g, '<h3 class="text-2xl mt-8 mb-4 font-bold"')
+        .replace(/<h3/g, '<h4 class="text-xl mt-6 mb-3 font-semibold"')
         .replace(/<p/, '<p class="my-5"')
         .replace(/<p(?=\s*><code)/g, '<p class="mt-5 code-paragraph mb-8"')
         .replace(/<pre(?=\s*><code)/g, '<pre class="mt-8 code-paragraph mb-8"')
-        .replace(/<img\s+src="([^"]+)"([^>]*)>/g, '<img src="$1"$2 loading="lazy" width="800" height="400" />')
+
+      // Add alt text and lazy loading to images
+      optimized = optimized.replace(/<img\s+src="([^"]+)"([^>]*)>/g, (match, src, attrs) => {
+        // Check if alt already exists
+        if (attrs.includes('alt=')) {
+          return `<img src="${src}"${attrs} loading="lazy" width="800" height="400" />`
+        }
+        // Generate alt text from src if needed
+        const altText = src.split('/').pop()?.split('.')[0] || 'Article image'
+        return `<img src="${src}" alt="${altText}"${attrs} loading="lazy" width="800" height="400" />`
+      })
+
+      return optimized
     },
   },
 })
@@ -219,7 +237,10 @@ body {
 
 p,
 span,
-h1 {
+h1,
+h2,
+h3,
+h4 {
   background-color: transparent !important;
   word-wrap: break-word !important;
   overflow-wrap: break-word !important;
@@ -266,11 +287,33 @@ p code {
   overflow-wrap: break-word !important;
 }
 
-/* Image optimization - prevent CLS */
+/* Image optimization - prevent CLS and improve LCP */
 .prose img {
   max-width: 100%;
   height: auto;
   display: block;
+  aspect-ratio: 2;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+/* Optimize animations - use will-change sparingly */
+button {
+  will-change: auto;
+}
+
+button:hover {
+  will-change: background-color, color;
+}
+
+/* Reduce CLS with GPU-accelerated transforms */
+.transition-colors {
+  will-change: background-color, color;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fix sticky element position to prevent layout shift */
+.sticky {
+  contain: layout;
 }
 
 /* Mobile optimization */

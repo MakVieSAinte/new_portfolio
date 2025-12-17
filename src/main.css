@@ -21,6 +21,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Font optimization for LCP */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter') format('woff2');
+  font-display: optional;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 p,
 span a {
   font-family: 'Public Sans', 'Inter', sans-serif !important;

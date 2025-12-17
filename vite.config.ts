@@ -12,14 +12,18 @@ export default defineConfig({
     },
   },
   build: {
-    // Minification
+    // Minification for both JS and CSS
     minify: 'terser',
     terserOptions: {
       compress: {
-        drop_console: true, // Remove console.log in production
+        drop_console: true,
         drop_debugger: true,
+        passes: 2, // Multiple passes for better compression
       },
+      mangle: true,
     },
+    // CSS minification
+    cssMinify: true,
     // Code splitting optimization
     rollupOptions: {
       output: {
@@ -27,11 +31,38 @@ export default defineConfig({
           'vue-router': ['vue-router'],
           axios: ['axios'],
         },
+        // Optimize chunk naming
+        chunkFileNames: 'js/[name].[hash].js',
+        entryFileNames: 'js/[name].[hash].js',
+        assetFileNames: assetInfo => {
+          const info = assetInfo.name.split('.')
+          const ext = info[info.length - 1]
+          if (/png|jpe?g|gif|svg/.test(ext)) {
+            return 'img/[name].[hash][extname]'
+          } else if (/woff|woff2|eot|ttf|otf/.test(ext)) {
+            return 'fonts/[name].[hash][extname]'
+          } else if (ext === 'css') {
+            return 'css/[name].[hash][extname]'
+          }
+          return 'assets/[name].[hash][extname]'
+        },
       },
     },
-    // Target modern browsers to reduce bundle size
+    // Target modern browsers
     target: 'es2020',
-    // Reduce unused code
+    // CSS code splitting
     cssCodeSplit: true,
+    // Reduce chunk size warnings
+    chunkSizeWarningLimit: 1000,
+    // Sourcemaps for production debugging (optional)
+    sourcemap: false,
+    // Optimize dependencies
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+  // Optimize dependencies pre-bundling
+  optimizeDeps: {
+    include: ['vue', 'vue-router', 'axios'],
   },
 })
