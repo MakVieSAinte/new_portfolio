@@ -1,9 +1,10 @@
 <template>
-  <transition name="fade">
-    <div
-      v-if="isOpen && project"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4"
-    >
+  <teleport to="body">
+    <transition name="fade">
+      <div
+        v-if="isOpen && project"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4"
+      >
       <div
         class="absolute inset-0 bg-black/70 backdrop-blur-sm"
         @click="onClose"
@@ -248,7 +249,7 @@
               v-else
               @click="onClose"
               :class="[
-                'flex-1 py-2 px-4 border border-neutral-300 dark:border-neutral-700 rounded-lg text-neutral-700 text-sm  dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-200',
+                'flex-1 py-2 px-4 border border-neutral-300 dark:border-neutral-700 rounded-lg text-neutral-700 text-sm dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-200',
                 { 'w-full': !project.url },
               ]"
             >
@@ -258,8 +259,9 @@
         </div>
       </div>
     </div>
-  </transition>
-</template>
+    </transition>
+  </teleport>
+</template>  
 
 <script lang="ts">
 import { defineComponent, computed, ref, watch } from 'vue'

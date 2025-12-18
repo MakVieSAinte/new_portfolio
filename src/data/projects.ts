@@ -8,8 +8,6 @@ export const projects: Project[] = [
     videoSrc: 'src/assets/videos/nature-moi.mp4',
     url: 'https://nature-emoi.vercel.app/',
     gitHubUrl: 'https://github.com/MakVieSAinte/Nature_emoi',
-    description:
-      "Site web de présentation pour une entreprise de plantes d'intérieur",
     technologies: ['HTML', 'CSS', 'JS'],
     year: 2023,
     category: 'Web Design/UX and UI',
