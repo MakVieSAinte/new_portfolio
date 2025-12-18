@@ -13,7 +13,7 @@
     "readMore": "Read more",
     "loading": "Loading articles...",
     "noArticles": "No articles found.",
-    "date": {
+    "date": {  
       "today": "Today",
       "yesterday": "Yesterday",
       "daysAgo": "{n} days ago"

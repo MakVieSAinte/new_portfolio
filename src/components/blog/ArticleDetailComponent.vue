@@ -1,9 +1,9 @@
 <template>
   <div
-    class="box-main mx-auto pt-20 md:pt-32 pb-10 px-6 sm:px-5 md:px-8 lg:px-12 border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800">
+    class="box-main relative pt-32 max-md:pt-24 pb-0 lg:px-20 md:px-12 sm:px-10 px-10 border-x bg-white dark:bg-neutral-900/60 border-neutral-200/40 dark:border-neutral-800">
     <router-link
-      class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary min-h-10 px-3 py-2 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-      to="/" aria-label="Back to blog home">
+      class="inline-flex items-center gap-x-1.5 text-sm text-neutral-500 decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-primary min-h-10 px-3 py-2 rounded transition-colors"
+      to="/blog" aria-label="Back to blog home">
       <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         aria-hidden="true">

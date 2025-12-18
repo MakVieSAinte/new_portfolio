@@ -68,9 +68,9 @@
             <template v-else>
               <img :src="currentImage" :alt="project.title"
                 class="w-full h-64 md:h-80 object-cover rounded-lg bg-neutral-200 dark:bg-neutral-800 shadow-md" />
-
+ 
               <div v-if="images.length > 1" class="mt-4 flex gap-3 overflow-x-auto pb-1">
-                <button v-for="(img, idx) in images" :key="idx" @click="currentIndex = idx" :class="[
+                <button v-for="(img, idx) in images" :key="idx"  @click="currentIndex = idx" :class="[
                   'flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all duration-200',
                   currentIndex === idx
                     ? 'ring-2 ring-primary-500 border-primary-500'

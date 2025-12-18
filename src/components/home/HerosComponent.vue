@@ -3,11 +3,11 @@
     <!-- Profile -->
     <div class="flex items-center gap-x-3">
       <div class="shrink-0 border border-gray-300 dark:border-neutral-800 rounded-full p-[2.5px]">
-        <img 
-          class="shrink-0 size-24 rounded-full object-cover object-center" 
+        <img
+          class="shrink-0 size-24 rounded-full object-cover object-center"
           src="@/assets/images/profil.jpg"
-          alt="MakVieSAinte profile picture" 
-          width="96" 
+          alt="MakVieSAinte profile picture"
+          width="96"
           height="96"
           loading="lazy"
           decoding="async" />
@@ -29,8 +29,8 @@
       <p id="about-intro" class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
         {{ texts?.hero?.description }}
 
-        <a 
-          href="https://linkedin.com/in/MakVieSAinte" 
+        <a
+          href="https://linkedin.com/in/MakVieSAinte"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit my LinkedIn profile"
@@ -38,11 +38,11 @@
           class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-200/30 dark:border-neutral-700 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
           <span
             class="flex items-center justify-center gap-[6px] font-medium !text-[16px] text-gray-800 dark:text-neutral-200 dark:group-hover:dark:text-neutral-100 group-hover:dark:text-gray-900 leading-none">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="14" 
-              height="14" 
-              fill="currentColor" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
               class="bi bi-linkedin"
               viewBox="0 0 16 16"
               aria-hidden="true">
@@ -54,26 +54,30 @@
         </a>
 
         {{ texts?.hero?.description2 }}
-        <a 
+        <a
           href="#download-cv"
           aria-label="Download my CV"
           title="Download my curriculum vitae"
           class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 py-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
           <span
             class="flex items-center justify-center gap-[5px] font-medium !text-[16px] text-gray-800 dark:text-neutral-200 dark:group-hover:dark:text-neutral-100 group-hover:dark:text-gray-900 leading-none">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="14" 
-              height="14" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
               fill="currentColor"
-              class="bi bi-file-earmark-text-fill" 
+              class="bi bi-file-earmark-text-fill"
               viewBox="0 0 16 16"
               aria-hidden="true">
               <path
                 d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z" />
             </svg>
             <span
-              class="group-hover:underline underline-offset-2 transition-all duration-200 ps-1">{{ texts?.hero?.downloadCV }}</span>
+              class="group-hover:underline underline-offset-2 transition-all duration-200 ps-1">
+              <a href="/files/CV_MakVieSAinte_dev_web.pdf" download="CV_MakVieSAinte_dev_web.pdf" target="_blank" rel="noopener noreferrer">
+                {{ texts?.hero?.downloadCV }}
+              </a>
+              </span>
           </span>
         </a>
       </p>
