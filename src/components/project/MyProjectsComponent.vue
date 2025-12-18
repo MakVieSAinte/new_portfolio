@@ -4,16 +4,28 @@
     <div class="max-w-[85rem] px-2 py-0 sm:px-4 lg:px-0 lg:py-4 mx-auto">
       <!-- Grid -->
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-        <ProjectCard v-for="project in projects" :key="project.id" :title="project.title" :image-src="project.imageSrc"
-          :video-src="project.videoSrc" :url="project.url" :description="project.description"
-          :technologies="project.technologies" @openModal="openModal(project)" />
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.id"
+          :title="project.title"
+          :image-src="project.imageSrc"
+          :video-src="project.videoSrc"
+          :url="project.url"
+          :description="project.description"
+          :technologies="project.technologies"
+          @openModal="openModal(project)"
+        />
       </div>
       <!-- End Grid -->
     </div>
     <!-- End Card Blog -->
 
     <!-- Project Modal -->
-    <ProjectModal :project="selectedProject" :is-open="isModalOpen" @close="closeModal" />
+    <ProjectModal
+      :project="selectedProject"
+      :is-open="isModalOpen"
+      @close="closeModal"
+    />
   </div>
 </template>
 

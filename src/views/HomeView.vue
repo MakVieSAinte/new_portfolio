@@ -7,4 +7,3 @@ import TheHomeComponent from '../components/home/HomeComponent.vue'
     <TheHomeComponent />
   </main>
 </template>
-  

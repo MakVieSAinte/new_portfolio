@@ -2,8 +2,12 @@
   <section class="w-full mx-auto !px-0 py-6">
     <div class="flex flex-col md:flex-row md:items-start gap-6">
       <!-- Photo -->
-      <div class="flex-shrink-0 flex w-full md:w-auto md:rotate-[-6deg] !rotate-0">
-        <div class="border border-gray-300 dark:border-neutral-800 rounded-[12px] p-[4px] bg-white dark:bg-neutral-900 shadow-lg">
+      <div
+        class="flex-shrink-0 flex w-full md:w-auto md:rotate-[-6deg] !rotate-0"
+      >
+        <div
+          class="border border-gray-300 dark:border-neutral-800 rounded-[12px] p-[4px] bg-white dark:bg-neutral-900 shadow-lg"
+        >
           <img
             class="!w-[175px] !h-[175px] md:!w-[148px] md:!h-[148px] rounded-[10px] object-cover object-center"
             src="@/assets/images/profil.jpg"
@@ -14,12 +18,16 @@
 
       <!-- Texte -->
       <div class="flex-1">
-        <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-5">
+        <h1
+          class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-5"
+        >
           {{ texts?.pageAbout?.title }}
         </h1>
 
         <!-- Paragraphe 1 -->
-        <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
+        <p
+          class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl"
+        >
           {{ texts?.pageAbout?.intro?.prefix }}
           <span class="font-semibold text-gray-800 dark:text-neutral-200">
             MakVieSAinte
@@ -32,7 +40,9 @@
         </p>
 
         <!-- Paragraphe 2 -->
-        <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
+        <p
+          class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl"
+        >
           {{ texts?.pageAbout?.section2?.prefix }}
           <span class="font-semibold">
             {{ texts?.pageAbout?.section2?.highlight_reputation }}
@@ -41,7 +51,9 @@
         </p>
 
         <!-- Paragraphe 3 -->
-        <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
+        <p
+          class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl"
+        >
           {{ texts?.pageAbout?.section3?.prefix }}
           <span class="font-semibold">
             {{ texts?.pageAbout?.section3?.highlight_status }}
@@ -63,7 +75,7 @@ import { useI18n } from '../../composables'
 
 export default defineComponent({
   name: 'HerosComponent',
-   setup() {
+  setup() {
     const { texts, locale } = useI18n('home')
 
     return {

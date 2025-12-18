@@ -23,7 +23,8 @@
           <p class="mt-1">
             <router-link
               class="text-sm text-primary underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-primary dark:hover:secondary"
-              :to="`/article/${post.slug}`">
+              :to="`/article/${post.slug}`"
+            >
               {{ texts?.articles?.readMore }}
             </router-link>
           </p>
@@ -42,7 +43,6 @@
 <script lang="ts">
 import axios from 'axios'
 import { useI18n } from '../../composables'
-
 
 export default {
   data() {

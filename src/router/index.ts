@@ -6,8 +6,6 @@ import AboutView from '../views/AboutView.vue'
 import BlogView from '../views/BlogView.vue'
 // import ArticleDetailView from '../views/ArticleDetailView.vue'
 
-
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

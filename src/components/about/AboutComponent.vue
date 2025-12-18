@@ -1,6 +1,7 @@
 <template>
   <div
-    class="box-main relative pt-32 max-md:pt-24 pb-0 lg:px-12 md:px-6 sm:px-4 px-4 border-x bg-white dark:bg-neutral-900/60 border-neutral-200/40 dark:border-neutral-800">
+    class="box-main relative pt-32 max-md:pt-24 pb-0 lg:px-12 md:px-6 sm:px-4 px-4 border-x bg-white dark:bg-neutral-900/60 border-neutral-200/40 dark:border-neutral-800"
+  >
     <!-- ========== MAIN CONTENT ========== -->
     <main class="pt-3">
       <!-- NavBar -->
@@ -38,7 +39,7 @@ export default defineComponent({
 
   methods: {},
 
-  mounted() { },
+  mounted() {},
 })
 </script>
 

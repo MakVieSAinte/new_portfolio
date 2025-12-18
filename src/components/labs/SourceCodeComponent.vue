@@ -3,21 +3,34 @@
     <!-- Loading Spinner -->
     <div v-if="isLoading" class="flex justify-center items-center py-12">
       <div class="relative">
-        <div class="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-        </div>
+        <div
+          class="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"
+        ></div>
+        <div class="absolute inset-0 flex items-center justify-center"></div>
       </div>
-      <span class="ml-4 text-gray-600 dark:text-gray-300">{{ texts?.pageLabs?.loading }}</span>
+      <span class="ml-4 text-gray-600 dark:text-gray-300">{{
+        texts?.pageLabs?.loading
+      }}</span>
     </div>
 
     <!-- No Projects Found -->
-    <p v-else-if="!isLoading && projects.length === 0" class="text-center text-gray-500 dark:text-gray-400 py-12">
+    <p
+      v-else-if="!isLoading && projects.length === 0"
+      class="text-center text-gray-500 dark:text-gray-400 py-12"
+    >
       {{ texts?.pageLabs?.notProject }}
     </p>
 
     <!-- Projects List -->
-    <CodePlayground v-else v-for="(project, index) in projects" :key="index" :html="project.html" :css="project.css"
-      :js="project.js" :meta="project.meta" />
+    <CodePlayground
+      v-else
+      v-for="(project, index) in projects"
+      :key="index"
+      :html="project.html"
+      :css="project.css"
+      :js="project.js"
+      :meta="project.meta"
+    />
   </div>
 </template>
 
@@ -67,8 +80,8 @@ export default defineComponent({
         }),
       )
 
-      this.projects = allProjects.filter(project =>
-        project.html || project.css || project.js // Ne garde que les projets qui ont au moins un fichier
+      this.projects = allProjects.filter(
+        project => project.html || project.css || project.js, // Ne garde que les projets qui ont au moins un fichier
       )
     } catch (error) {
       console.error('Erreur lors du chargement des projets:', error)

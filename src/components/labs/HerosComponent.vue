@@ -3,7 +3,9 @@
     <!-- Profile -->
     <div class="flex items-center gap-x-3">
       <div class="grow ml-1">
-        <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk">
+        <h1
+          class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk"
+        >
           {{ texts?.pageLabs?.title }} <br />
           {{ texts?.pageLabs?.title2 }}
         </h1>
@@ -13,7 +15,9 @@
 
     <!-- About -->
     <div class="mt-8 mb-12">
-      <p class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light">
+      <p
+        class="inline-block text-lg text-gray-800 dark:text-neutral-400 font-light"
+      >
         {{ texts?.pageLabs?.description }}
       </p>
     </div>
