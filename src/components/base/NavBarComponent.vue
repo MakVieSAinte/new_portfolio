@@ -157,17 +157,17 @@
 
       <!-- Lang -->
       <div
-        class="fixed md:left-4 md:top-12 max-md:relative max-md:left-0 text-left z-50"
+        class="max-md:hidden fixed left-4 top-12 text-left z-50"
       >
         <div
-          class="inline-block backdrop-blur-sm md:bg-white/90 max-md:bg-white/95 rounded-md py-2 max-md:py-2 px-3 max-md:px-2 md:dark:bg-neutral-800/50 max-md:dark:bg-neutral-800/60 border border-neutral-200/50 dark:border-neutral-800/20 z-50"
+          class="inline-block backdrop-blur-sm bg-white/90 rounded-md py-2 px-3 dark:bg-neutral-800/50 border border-neutral-200/50 dark:border-neutral-800/20 z-50"
         >
           <div class="flex items-center gap-x-3 max-md:gap-x-1 justify-start">
             <!-- Bouton EN -->
             <div class="hs-tooltip inline-block">
               <button
                 @click="changeLanguage('en')"
-                class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm"
+                class="hs-tooltip-toggle flex items-center gap-x-2 font-medium text-sm"
                 :class="
                   locale === 'en'
                     ? 'text-gray-900 dark:text-white'
@@ -182,7 +182,7 @@
             <div class="hs-tooltip inline-block">
               <button
                 @click="changeLanguage('fr')"
-                class="hs-tooltip-toggle flex items-center gap-x-2 font-medium max-md:text-sm md:text-sm"
+                class="hs-tooltip-toggle flex items-center gap-x-2 font-medium text-sm"
                 :class="
                   locale === 'fr'
                     ? 'text-gray-900 dark:text-white'
@@ -202,7 +202,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
-import { useI18n } from '@/composables'
+import { useI18n } from '../../composables'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({

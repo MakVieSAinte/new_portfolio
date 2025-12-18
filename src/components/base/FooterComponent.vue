@@ -15,6 +15,33 @@
           </div>
           <!-- End Copyright -->
 
+          <!-- Language Switch -->
+          <div class="flex items-center gap-2">
+            <button
+              @click="changeLanguage('en')"
+              :class="[
+                'px-2.5 py-1 text-xs font-medium rounded transition-all duration-200 border',
+                locale === 'en'
+                  ? 'bg-primary text-white border-primary dark:bg-primary/80'
+                  : 'border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+              ]"
+            >
+              EN
+            </button>
+            <button
+              @click="changeLanguage('fr')"
+              :class="[
+                'px-2.5 py-1 text-xs font-medium rounded transition-all duration-200 border',
+                locale === 'fr'
+                  ? 'bg-primary text-white border-primary dark:bg-primary/80'
+                  : 'border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+              ]"
+            >
+              FR
+            </button>
+          </div>
+          <!-- End Language Switch -->
+
           <!-- List -->
           <ul class="flex flex-wrap items-center !list-none">
             <li
@@ -103,7 +130,12 @@ export default defineComponent({
     }
   },
 
-  methods: {},
+  methods: {
+    changeLanguage(lang: string) {
+      localStorage.setItem('lang', lang)
+      window.location.reload()
+    },
+  },
 
   mounted() {},
 

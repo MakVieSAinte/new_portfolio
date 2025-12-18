@@ -11,23 +11,23 @@
       ></div>
 
       <div
-        class="relative z-10 max-w-lg w-full max-h-[80vh] bg-white dark:bg-neutral-900 rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 transform scale-100"
+        class="relative z-10 max-w-lg w-full max-h-[80vh] md:max-w-2xl lg:max-w-3xl bg-white dark:bg-neutral-900 rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all duration-300 transform scale-100"
       >
         <!-- Header -->
         <div
-          class="sticky top-0 z-20 !h-16 flex justify-between items-center p-5 bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800"
+          class="sticky top-0 z-20 flex flex-col max-md:!h-auto md:!h-16 justify-between items-start md:items-center p-3 md:p-5 bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 gap-3 md:gap-0"
         >
-          <div>
-            <div class="flex items-center gap-5 mb-0 pt-2">
+          <div class="w-full">
+            <div class="flex flex-col max-md:gap-2 md:flex-row items-start md:items-center gap-5 mb-0 pt-0 md:pt-2">
               <h3
-                class="text-xl font-bold text-neutral-900 dark:text-white"
+                class="text-lg md:text-xl font-bold text-neutral-900 dark:text-white"
                 :title="project.title"
               >
                 {{ truncateText(project.title, 20) }}
               </h3>
               <!-- year + category -->
               <div
-                class="pt-1 text-xs text-neutral-600 dark:text-neutral-400 flex flex-wrap gap-x-1 gap-y-1"
+                class="pt-0 md:pt-1 text-xs text-neutral-600 dark:text-neutral-400 flex flex-wrap gap-x-1 gap-y-1"
               >
                 <span v-if="project.year" class="flex items-center gap-1">
                   <svg
@@ -82,7 +82,7 @@
           <button
             @click="onClose"
             aria-label="Fermer"
-            class="p-2 rounded-full transition-colors duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+            class="absolute top-3 right-3 md:top-5 md:right-5 p-2 rounded-full transition-colors duration-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,63 +102,163 @@
         </div>
 
         <!-- Content -->
-        <div class="p-5 pt-3 overflow-y-auto custom-scrollbar flex-grow">
+        <div class="p-3 md:p-5 pt-2 md:pt-3 overflow-y-auto custom-scrollbar flex-grow">
           <div>
-            <!-- video -->
-            <template v-if="project.videoSrc">
-              <video
-                :src="project.videoSrc"
-                controls
-                playsinline
-                autoplay
-                muted
-                class="w-full h-52 md:h-64 object-cover rounded-lg bg-black shadow-md"
-              >
-                Votre navigateur ne supporte pas la balise vidéo.
-              </video>
-            </template>
-
-            <!-- images -->
-            <template v-else>
-              <img
-                :src="currentImage"
-                :alt="project.title"
-                class="w-full h-64 md:h-80 object-cover rounded-lg bg-neutral-200 dark:bg-neutral-800 shadow-md"
-              />
-
+            <!-- CAROUSEL MEDIA (Video + Images) -->
+            <div
+              @mouseenter="showCarouselControls = true"
+              @mouseleave="showCarouselControls = false"
+              class="relative w-full"
+            >
+              <!-- Media Container with Fixed Ratio -->
               <div
-                v-if="images.length > 1"
-                class="mt-4 flex gap-3 overflow-x-auto pb-1"
+                class="relative w-full overflow-hidden rounded-lg bg-black shadow-md"
+                style="aspect-ratio: 16 / 9"
+              >
+                <!-- Video (if exists and is first) -->
+                <video
+                  v-if="currentMediaIsVideo"
+                  :src="currentMedia"
+                  controls
+                  playsinline
+                  autoplay
+                  muted
+                  class="w-full h-full object-cover"
+                >
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+
+                <!-- Image (if current media is image) -->
+                <img
+                  v-else
+                  :src="currentMedia"
+                  :alt="project.title"
+                  class="w-full h-full object-cover"
+                />
+
+                <!-- Prev Button -->
+                <button
+                  v-if="allMediaItems.length > 1"
+                  @click="goToPrevious"
+                  :class="[
+                    'absolute left-2 md:left-3 top-1/2 -translate-y-1/2 z-20 p-1.5 md:p-2 rounded-full transition-all duration-200 bg-black/60 hover:bg-black/80 text-white',
+                    showCarouselControls ? 'opacity-100' : 'max-md:opacity-70 md:opacity-0 md:hover:opacity-100',
+                  ]"
+                  aria-label="Précédent"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 md:w-5 md:h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Next Button -->
+                <button
+                  v-if="allMediaItems.length > 1"
+                  @click="goToNext"
+                  :class="[
+                    'absolute right-2 md:right-3 top-1/2 -translate-y-1/2 z-20 p-1.5 md:p-2 rounded-full transition-all duration-200 bg-black/60 hover:bg-black/80 text-white',
+                    showCarouselControls ? 'opacity-100' : 'max-md:opacity-70 md:opacity-0 md:hover:opacity-100',
+                  ]"
+                  aria-label="Suivant"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Media Indicators -->
+                <div
+                  v-if="allMediaItems.length > 1"
+                  class="absolute bottom-2 md:bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-10"
+                >
+                  <button
+                    v-for="(_, idx) in allMediaItems"
+                    :key="idx"
+                    @click="currentMediaIndex = idx"
+                    :class="[
+                      'w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-200',
+                      currentMediaIndex === idx
+                        ? 'bg-white w-4 md:w-6'
+                        : 'bg-white/60 hover:bg-white/80',
+                    ]"
+                    :aria-label="`Média ${idx + 1}`"
+                  />
+                </div>
+              </div>
+
+              <!-- Media Thumbnails -->
+              <div
+                v-if="allMediaItems.length > 1"
+                class="mt-2 md:mt-4 flex gap-2 md:gap-3 overflow-x-auto pb-1"
               >
                 <button
-                  v-for="(img, idx) in images"
+                  v-for="(item, idx) in allMediaItems"
                   :key="idx"
-                  @click="currentIndex = idx"
+                  @click="currentMediaIndex = idx"
                   :class="[
                     'flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all duration-200',
-                    currentIndex === idx
+                    currentMediaIndex === idx
                       ? 'ring-2 ring-primary-500 border-primary-500'
                       : 'border-transparent hover:border-neutral-300 dark:hover:border-neutral-700',
                   ]"
                 >
-                  <img
-                    :src="img"
-                    :alt="project.title + ' - ' + (idx + 1)"
-                    class="w-24 h-16 object-cover"
-                  />
+                  <!-- Thumbnail: Video or Image -->
+                  <template v-if="item.type === 'video'">
+                    <div
+                      class="w-20 h-12 md:w-24 md:h-16 bg-black flex items-center justify-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 md:w-6 md:h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </template>
+                  <template v-else>
+                    <img
+                      :src="item.src"
+                      :alt="project.title + ' - ' + (idx + 1)"
+                      class="w-20 h-12 md:w-24 md:h-16 object-cover"
+                    />
+                  </template>
                 </button>
               </div>
-            </template>
+            </div>
           </div>
 
           <!-- Description -->
-          <div class="mt-4 flex flex-col gap-4">
+          <div class="mt-3 md:mt-4 flex flex-col gap-3 md:gap-4">
             <div>
               <!-- <p class="text-lg text-neutral-700 dark:text-neutral-200 leading-relaxed">
                 {{ project.description }}
               </p> -->
               <p
-                class="text-md text-neutral-600 dark:text-neutral-400 mt-0 italic"
+                class="text-sm md:text-md text-neutral-600 dark:text-neutral-400 mt-0 italic"
               >
                 {{ truncateText(project.details || '', 185) }}
               </p>
@@ -166,12 +266,12 @@
 
             <!-- TECHNOLOGIES - VERSION FINALE !important -->
             <div v-if="project.technologies?.length">
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-1.5 md:gap-2">
                 <span
                   v-for="(t, i) in project.technologies"
                   :key="i"
                   :class="[
-                    'text-xs font-medium px-3 py-1 rounded-full shadow-sm border border-transparent transition-colors duration-200',
+                    'text-xs md:text-xs font-medium px-2 md:px-3 py-0.5 md:py-1 rounded-full shadow-sm border border-transparent transition-colors duration-200',
                     getColorClasses(t),
                   ]"
                   :style="getBgStyle(t)"
@@ -195,19 +295,19 @@
               :href="project.url"
               target="_blank"
               rel="noopener"
-              class="flex-1 gap-2 inline-flex items-center justify-center py-2 px-4 bg-primary dark:bg-primary/50 border border-primary/80 dark:border-primary/80 hover:bg-primary/90 dark:hover:bg-primary/90 !hover:border-primary text-white text-sm font-semibold rounded-lg dark:shadow-lg transition-colors duration-200"
+              class="flex-1 gap-2 inline-flex items-center justify-center py-2 px-3 md:px-4 bg-primary dark:bg-primary/50 border border-primary/80 dark:border-primary/80 hover:bg-primary/90 dark:hover:bg-primary/90 !hover:border-primary text-white text-xs md:text-sm font-semibold rounded-lg dark:shadow-lg transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-external-link-icon lucide-external-link"
+                class="lucide lucide-external-link-icon lucide-external-link hidden md:inline"
               >
                 <path d="M15 3h6v6" />
                 <path d="M10 14 21 3" />
@@ -223,33 +323,33 @@
               :href="project.gitHubUrl"
               target="_blank"
               rel="noopener"
-              class="flex-1 gap-2 inline-flex items-center justify-center py-2 px-4 bg-slate-800/80 dark:bg-neutral-800/70 border border-neutral-200/30 dark:border-neutral-800 hover:bg-slate-700/90 dark:hover:bg-slate-100/20 !hover:border-primary text-white text-sm font-medium rounded-lg dark:shadow-lg hover:bg-primary-700 transition-colors duration-200"
+              class="flex-1 gap-2 inline-flex items-center justify-center py-2 px-3 md:px-4 bg-slate-800/80 dark:bg-neutral-800/70 border border-neutral-200/30 dark:border-neutral-800 hover:bg-slate-700/90 dark:hover:bg-slate-100/20 !hover:border-primary text-white text-xs md:text-sm font-medium rounded-lg dark:shadow-lg hover:bg-primary-700 transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-github-icon lucide-github"
+                class="lucide lucide-github-icon lucide-github hidden md:inline"
               >
                 <path
                   d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
                 />
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
-              Voir le projet
+              GitHub
             </a>
 
             <button
               v-else
               @click="onClose"
               :class="[
-                'flex-1 py-2 px-4 border border-neutral-300 dark:border-neutral-700 rounded-lg text-neutral-700 text-sm dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-200',
+                'flex-1 py-2 px-3 md:px-4 border border-neutral-300 dark:border-neutral-700 rounded-lg text-neutral-700 text-xs md:text-sm dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-200',
                 { 'w-full': !project.url },
               ]"
             >
@@ -258,20 +358,14 @@
           </div>
         </div>
       </div>
-    </div>
+      </div>
     </transition>
   </teleport>
-</template>  
+</template>
 
 <script lang="ts">
 import { defineComponent, computed, ref, watch } from 'vue'
 import type { Project } from '../types/project'
-
-// Utility function to truncate text
-const truncate = (text: string, maxLength: number = 50): string => {
-  if (text.length <= maxLength) return text
-  return text.slice(0, maxLength) + '...'
-}
 
 // --- PALETTES COHERENTES (texte + bg harmonisés) ---
 const colorPalettes = [
@@ -349,36 +443,70 @@ export default defineComponent({
   },
 
   setup(props, { emit }) {
-    const currentIndex = ref(0)
+    const currentMediaIndex = ref(0)
+    const showCarouselControls = ref(false)
 
-    const images = computed(() => {
+    // Build all media items array (video first, then images)
+    const allMediaItems = computed(() => {
       if (!props.project) return []
-      const src = props.project.imageSrc
-      return Array.isArray(src) ? src : src ? [src] : []
+
+      const items: Array<{ type: 'video' | 'image'; src: string }> = []
+
+      // Add video first if it exists
+      if (props.project.videoSrc) {
+        items.push({ type: 'video', src: props.project.videoSrc })
+      }
+
+      // Add images
+      const imageSrc = props.project.imageSrc
+      const imageArray = Array.isArray(imageSrc) ? imageSrc : imageSrc ? [imageSrc] : []
+      imageArray.forEach((src) => {
+        items.push({ type: 'image', src })
+      })
+
+      return items
     })
 
-    const currentImage = computed(() => images.value[currentIndex.value] || '')
+    const currentMedia = computed(
+      () => allMediaItems.value[currentMediaIndex.value]?.src || '',
+    )
 
-    const categoryColorClasses = computed(() => {
-      if (!props.project?.category) return ''
-      return getColorClasses(props.project.category)
-    })
+    const currentMediaIsVideo = computed(
+      () => allMediaItems.value[currentMediaIndex.value]?.type === 'video',
+    )
+
+    const goToNext = () => {
+      if (allMediaItems.value.length === 0) return
+      currentMediaIndex.value =
+        (currentMediaIndex.value + 1) % allMediaItems.value.length
+    }
+
+    const goToPrevious = () => {
+      if (allMediaItems.value.length === 0) return
+      currentMediaIndex.value =
+        currentMediaIndex.value === 0
+          ? allMediaItems.value.length - 1
+          : currentMediaIndex.value - 1
+    }
 
     watch(
       () => props.project,
-      () => (currentIndex.value = 0),
+      () => (currentMediaIndex.value = 0),
     )
 
     const onClose = () => emit('close')
 
     return {
-      currentIndex,
-      images,
-      currentImage,
+      currentMediaIndex,
+      allMediaItems,
+      currentMedia,
+      currentMediaIsVideo,
+      goToNext,
+      goToPrevious,
+      showCarouselControls,
       onClose,
       getColorClasses,
       getBgStyle,
-      categoryColorClasses,
     }
   },
 })
