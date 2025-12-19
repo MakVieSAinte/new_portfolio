@@ -117,8 +117,8 @@
               >
                 <!-- Video (if exists and is first) -->
                 <video
-                  v-if="currentMediaIsVideo && mediaUrl"
-                  :src="mediaUrl"
+                  v-if="currentMediaIsVideo && currentMediaUrl"
+                  :src="currentMediaUrl"
                   controls
                   playsinline
                   autoplay
@@ -131,8 +131,8 @@
                 <!-- Image (if current media is image) -->
                 <img
                   v-else
-                  v-if="mediaUrl"
-                  :src="mediaUrl"
+                  v-if="currentMediaUrl"
+                  :src="currentMediaUrl"
                   :alt="project.title"
                   class="w-full h-full object-cover"
                 />
@@ -242,14 +242,14 @@
                   </template>
                   <template v-else>
                     <img
-                      :src="resolveAssetUrl('images/projets', item.src)"
-                      v-if="resolveAssetUrl('images/projets', item.src)"
+                      :src="getMediaUrl(item.type, item.src)"
+                      v-if="getMediaUrl(item.type, item.src)"
                       :alt="project.title + ' - ' + (idx + 1)"
                       class="w-16 h-10 md:w-20 md:h-12 object-cover"
                     />
                   </template>
                 </button>
-              </div>
+              </div>  
             </div>
           </div>
 
@@ -448,18 +448,18 @@ export default defineComponent({
     const currentMediaIndex = ref(0)
     const showCarouselControls = ref(false)
 
-    // Build all media items array (video first, then images)
+    // Build all media items array (video first, then images) — store raw filenames
     const allMediaItems = computed(() => {
       if (!props.project) return []
 
       const items: Array<{ type: 'video' | 'image'; src: string }> = []
 
-      // Add video first if it exists
+      // Add video first if it exists (raw filename)
       if (props.project.videoSrc) {
         items.push({ type: 'video', src: props.project.videoSrc })
       }
 
-      // Add images
+      // Add images (raw filenames)
       const imageSrc = props.project.imageSrc
       const imageArray = Array.isArray(imageSrc) ? imageSrc : imageSrc ? [imageSrc] : []
       imageArray.forEach((src) => {
@@ -477,25 +477,23 @@ export default defineComponent({
       () => allMediaItems.value[currentMediaIndex.value]?.type === 'video',
     )
 
-    // Resolve asset URL: images are served from public, videos remain resolved via import.meta
-    const resolveAssetUrl = (type: 'videos' | 'images/projets', filename: string) => {
+    // Resolve media URL: images from public, videos try bundle then public fallback
+    const getMediaUrl = (type: 'video' | 'image', filename: string) => {
       if (!filename) return ''
-      if (type === 'images/projets') {
-        return `/images/projets/${filename}`
-      }
+      if (filename.startsWith('/') || filename.startsWith('http')) return filename
+      if (type === 'image') return `/images/projets/${filename}`
       try {
-        return new URL(`../../assets/${type}/${filename}`, import.meta.url).href
+        return new URL(`../assets/videos/${filename}`, import.meta.url).href
       } catch (e) {
-        return ''
+        return `/videos/${filename}`
       }
     }
 
-    const mediaUrl = computed(() => {
+    const currentMediaUrl = computed(() => {
       const src = currentMedia.value
       if (!src) return ''
-      return currentMediaIsVideo.value
-        ? resolveAssetUrl('videos', src)
-        : resolveAssetUrl('images/projets', src)
+      const type = allMediaItems.value[currentMediaIndex.value]?.type || 'image'
+      return getMediaUrl(type, src)
     })
 
     const goToNext = () => {
@@ -523,9 +521,9 @@ export default defineComponent({
       currentMediaIndex,
       allMediaItems,
       currentMedia,
+      currentMediaUrl,
       currentMediaIsVideo,
-      mediaUrl,
-      resolveAssetUrl,
+      getMediaUrl,
       goToNext,
       goToPrevious,
       showCarouselControls,

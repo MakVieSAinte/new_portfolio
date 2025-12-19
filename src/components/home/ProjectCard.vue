@@ -50,7 +50,7 @@
             </span>
           </div>
         </div>
-        
+
         <div
           class="p-1 border border-transparent group-hover:border-neutral-100/30 dark:group-hover:border-white rounded-full transition-all duration-300"
         >
@@ -116,15 +116,10 @@ export default defineComponent({
       return img || ''
     })
 
-    // Construct full image path using Vite's import.meta.glob
+    // Use public folder images (public/images/projets)
     const imageUrl = computed(() => {
       if (!firstImage.value) return ''
-      try {
-        return new URL(`../assets/images/projets/${firstImage.value}`, import.meta.url).href
-      } catch (e) {
-        console.error('Erreur chemin image:', e)
-        return ''
-      }
+      return `/images/projets/${firstImage.value}`
     })
 
     const openModal = () => {
