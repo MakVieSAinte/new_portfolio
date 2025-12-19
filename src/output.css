@@ -4943,10 +4943,6 @@ html::-webkit-scrollbar {
     width: auto;
   }
 
-  .md\:max-w-2xl {
-    max-width: 42rem;
-  }
-
   .md\:rotate-\[-6deg\] {
     --tw-rotate: -6deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5076,10 +5072,6 @@ html::-webkit-scrollbar {
 }
 
 @media (min-width: 1024px) {
-  .lg\:max-w-3xl {
-    max-width: 48rem;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
