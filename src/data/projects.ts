@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: 'Pay4You',
-    imageSrc: ['src/assets/images/projets/dbs.png'],
+    imageSrc: ['src/assets/images/projets/pay4you.jpeg'],
     videoSrc: 'src/assets/videos/dbs.mp4',
     url: '',
     gitHubUrl: '',
@@ -147,7 +147,7 @@ export const projects: Project[] = [
   {
     id: 11,
     title: 'Robbie Lens',
-    imageSrc: ['src/assets/images/projets/windows.png'],
+    imageSrc: ['src/assets/images/projets/robbie.png'],
     videoSrc: 'src/assets/videos/robbie-lens.mp4',
     url: 'https://fluffy-granita-e128f4.netlify.app/',
     gitHubUrl: '',
@@ -160,7 +160,7 @@ export const projects: Project[] = [
   {
     id: 12,
     title: "N'gourmet Cooking",
-    imageSrc: ['src/assets/images/projets/windows.png'],
+    imageSrc: ['src/assets/images/projets/ngourmet.png'],
     videoSrc: 'src/assets/videos/n-gourmet-cooking.mp4',
     url: 'https://cookingn.netlify.app/',
     gitHubUrl: '',
