@@ -8,11 +8,7 @@
   "env": {
     "VITE_APP_TITLE": "MakVieSAinte Portfolio"
   },
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
+
   "headers": [
     {
       "source": "/assets/(.*)",

@@ -4,7 +4,7 @@
     <div class="flex items-center gap-x-3">
       <div
         class="shrink-0 border border-gray-300 dark:border-neutral-800 rounded-full p-[2.5px]"
-      >
+      >  
         <img
           class="shrink-0 size-24 rounded-full object-cover object-center"
           src="@/assets/images/profil.jpg"
