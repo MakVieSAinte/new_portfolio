@@ -21,7 +21,7 @@
       class="group w-full h-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden rounded-md mt-2"
     >
       <img
-        :src="'./src/assets/images/projets/'+imageSrc"
+        :src="imageUrl"
         :alt="title"
         class="group-hover:scale-150 object-cover w-full h-full transition-all duration-500 transform-origin-center"
       />
@@ -74,7 +74,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 
 export default defineComponent({
   name: 'ProjectCard',
@@ -109,12 +109,30 @@ export default defineComponent({
   emits: ['openModal'],
 
   setup(props, { emit }) {
+    // Get first image from array or string
+    const firstImage = computed(() => {
+      const img = Array.isArray(props.imageSrc) ? props.imageSrc[0] : props.imageSrc
+      return img || ''
+    })
+
+    // Construct full image path using Vite's import.meta.glob
+    const imageUrl = computed(() => {
+      if (!firstImage.value) return ''
+      try {
+        return new URL(`../assets/images/projets/${firstImage.value}`, import.meta.url).href
+      } catch (e) {
+        console.error('Erreur chemin image:', e)
+        return ''
+      }
+    })
+
     const openModal = () => {
       emit('openModal')
     }
 
     return {
       openModal,
+      imageUrl,
     }
   },
 })
