@@ -67,7 +67,7 @@
 import { defineComponent, ref, computed } from 'vue'
 import { useI18n } from '../../composables'
 import ProjectCard from './ProjectCard.vue'
-import ProjectModal from '../ProjectModal.vue'
+import ProjectModal from '../project/ProjectModal.vue'
 import type { Project } from '../../types/project'
 import { projects as projectsList } from '../../data/projects'
 

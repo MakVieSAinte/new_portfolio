@@ -32,7 +32,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import ProjectCard from '../home/ProjectCard.vue'
-import ProjectModal from '../ProjectModal.vue'
+import ProjectModal from './ProjectModal.vue'
 import { projects as projectsList } from '../../data/projects'
 import type { Project } from '../../types/project'
 

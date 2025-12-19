@@ -118,7 +118,7 @@
                 <!-- Video (if exists and is first) -->
                 <video
                   v-if="currentMediaIsVideo"
-                  :src="currentMedia"
+                  :src="'./src/assets/videos/' + currentMedia"
                   controls
                   playsinline
                   autoplay
@@ -131,7 +131,7 @@
                 <!-- Image (if current media is image) -->
                 <img
                   v-else
-                  :src="currentMedia"
+                  :src="'./src/assets/images/projets/' + currentMedia"
                   :alt="project.title"
                   class="w-full h-full object-cover"
                 />
@@ -241,7 +241,7 @@
                   </template>
                   <template v-else>
                     <img
-                      :src="item.src"
+                      :src="'./src/assets/images/projets/' + item.src"
                       :alt="project.title + ' - ' + (idx + 1)"
                       class="w-16 h-10 md:w-20 md:h-12 object-cover"
                     />
@@ -365,7 +365,7 @@
 
 <script lang="ts">
 import { defineComponent, computed, ref, watch } from 'vue'
-import type { Project } from '../types/project'
+import type { Project } from '../../types/project'
 
 // --- PALETTES COHERENTES (texte + bg harmonisés) ---
 const colorPalettes = [

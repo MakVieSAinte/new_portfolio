@@ -21,7 +21,7 @@
       class="group w-full h-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden rounded-md mt-2"
     >
       <img
-        :src="imageSrc"
+        :src="'./src/assets/images/projets/'+imageSrc"
         :alt="title"
         class="group-hover:scale-150 object-cover w-full h-full transition-all duration-500 transform-origin-center"
       />
