@@ -1,6 +1,6 @@
 <template>
   <teleport to="body">
-    <div>
+    <div class="relative">
       <!-- NavBar -->
       <div class="fixed md:top-10 max-md:bottom-5 inset-x-0 text-center z-50">
         <div
@@ -154,10 +154,10 @@
         </div>
       </div>
       <!-- End NavBar -->
-
+  
       <!-- Lang -->
       <div
-        class="max-md:hidden fixed left-4 top-12 text-left z-50"
+        class="fixed max-md:hidden max-md:relative md:top-12 max-md:top-4 max-md:right-4 left-36 text-left z-50"
       >
         <div
           class="inline-block backdrop-blur-sm bg-white/90 rounded-md py-2 px-3 dark:bg-neutral-800/50 border border-neutral-200/50 dark:border-neutral-800/20 z-50"
