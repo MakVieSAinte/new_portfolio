@@ -1,0 +1,227 @@
+{
+  "hero": {
+    "name": "MakVieSAinte",
+    "role": "Software Developer and Web Designer",
+    "description": "I am a developer passionate about creating accessible and perfectly optimized user interfaces, combining refined design with robust front-end and back-end engineering. I strive to build experiences that are aesthetic, intuitive, and high-performing, and I regularly share my discoveries and projects on",
+    "description2": "you can also",
+    "downloadCV": "Download CV",
+    "availableForOpportunities": "Available for new opportunities"
+  },
+  "articles": {
+    "title": "Recent Articles",
+    "description": "I regularly share my discoveries, reflections, and projects about web development and new technologies.",
+    "readMore": "Read more",
+    "loading": "Loading articles...",
+    "noArticles": "No articles found.",
+    "date": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "daysAgo": "{n} days ago"
+    }
+  },
+  "articleDetail": {
+    "back": "Back to Blog",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "shareTwitter": "Share on Twitter",
+    "shareFacebook": "Share on Facebook",
+    "shareLinkedIn": "Share on LinkedIn",
+    "loading": "Loading...",
+    "notFound": "Article not found.",
+    "loadError": "Error loading the article."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "An idea, a project, a professional opportunity, or simply a question? Leave me your email and I will get back to you quickly.",
+    "description2": "or click here.",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "Enter your email",
+    "submit": "Send",
+    "hiddenSubject": "MakVieSAinte a new client 😁"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Find here the answers to the most common questions.",
+    "tabs": {
+      "services": "Services & Process",
+      "pricing": "Pricing & Deadlines",
+      "about": "About Me"
+    },
+    "qns": {
+      "typesProjects": {
+        "q": "What types of projects do you work on?",
+        "a": "I develop interactive websites, front-end and back-end applications, as well as complete full-stack solutions",
+        "a2": "tailored to my clients’ needs."
+      },
+      "technologies": {
+        "q": "Which languages and technologies do you master?",
+        "a": "I mainly work with JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, TailwindCSS, and Git,",
+        "a2": "while staying open to exploring new technologies depending on the project."
+      },
+      "process": {
+        "q": "How does your work process go?",
+        "a": "My process includes five steps: needs discovery, design, development, review and feedback,",
+        "a2": "then delivery and support if necessary."
+      },
+      "testsBeforeDelivery": {
+        "q": "Do you run tests before delivery?",
+        "a": "Yes, I test all features and the user experience to ensure",
+        "a2": "performance and reliability."
+      },
+      "priceFix": {
+        "q": "How do you set the price of a project?",
+        "a": "The price depends on complexity, estimated time, and requested features,",
+        "a2": "I always provide a detailed quote before starting."
+      },
+      "hourlyOrFixed": {
+        "q": "Do you work hourly or on a fixed-price basis?",
+        "a": "I can adapt to both:",
+        "a2": "fixed-price for a full project or hourly rate for one-off tasks or adjustments."
+      },
+      "deadlines": {
+        "q": "What are your average delivery times?",
+        "a": "Deadlines depend on the project complexity. Generally, a simple website",
+        "a2": "can be delivered in 2 to 4 weeks",
+        "a3": "while a full application",
+        "a4": "requires more time."
+      },
+      "delays": {
+        "q": "What happens if the project takes longer than expected?",
+        "a": "I immediately communicate any delay and propose solutions to meet your priorities while maintaining quality."
+      },
+      "whoAreYou": {
+        "q": "Who are you and what is your background?",
+        "a": "I am MakVieSainte, software developer and web designer.",
+        "a2": "Passionate about coding for several years, I started programming in high school before continuing my studies at university. In my second year, I did an internship that ended the same year with a fixed-term contract (CDD). This experience strengthened my skills and confirmed my commitment to the web development field."
+      },
+      "frontOrBack": {
+        "q": "Are you more front-end or back-end oriented?",
+        "a": "I master both, but I have a strong passion for creating accessible and high-performing user interfaces, so I lean more towards front-end."
+      },
+      "hobbies": {
+        "q": "What are your passions outside of development?",
+        "a": "Outside of development, I am very interested in psychology and enjoy immersing myself in documentaries to learn more. I am also passionate about graphic design and football."
+      },
+      "skillToDevelop": {
+        "q": "What skill would you like to develop this year?",
+        "a": "This year, I am trying to broaden my skill set beyond pure development. I am particularly interested in DevOps, to better understand deployment, continuous integration, and environment automation. At the same time, I am also exploring the basics of LLMs (Large Language Models) in artificial intelligence. Finally, I am learning automated testing with UiPath to strengthen the quality and reliability of the projects I work on."
+      }
+    }
+  },
+  "favorite": {
+    "title": "Favorite Technologies",
+    "description": "For me, these tools are more than just languages or frameworks: they are partners to transform ideas into concrete and engaging experiences."
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "My projects reflect my passion for design and engineering. Each creation is designed to combine aesthetics, performance, and user experience.",
+    "viewAllButton": "View all projects"
+  },
+  "skills": {
+    "title": "Skills and Tools",
+    "description": "From front-end to back-end, including design and software testing, I master various technologies and tools.",
+    "section": [
+      "Design Tools",
+      "Development Tools",
+      "Development",
+      "Collaboration",
+      "Testing",
+      "Others",
+      "Soft Skills"
+    ],
+    "softSkills": [
+      "Excellent communication",
+      "Fast learning ability",
+      "Receptive to feedback",
+      "Creativity",
+      "Adaptability"
+    ]
+  },
+  "works": {
+    "title": "Professional Experiences",
+    "intro": "Each mission strengthened my passion for design, front-end and back-end development, as well as creative problem-solving.",
+    "ayokai": {
+      "date": "June 2024 - Present",
+      "role": "Full-Stack Developer – Ayokai Congo",
+      "description": "Ayokai is a software development and testing company. Within a small agile team oriented toward hyper-programming, I contribute to designing and implementing scalable and secure web applications.",
+      "bullets": [
+        "Integration of mobile-first web interfaces with Vue.js, HTML/CSS, and TailwindCSS.",
+        "Creation of robust and secure APIs with Express.js, protected by JWT middleware and structured with a modular architecture.",
+        "Data modeling with Mongoose ORM to ensure consistency across services.",
+        "Close collaboration with QA/testers to deliver regression-free features through cross-testing practices."
+      ],
+      "qa": {
+        "title": "QA / Software Tester",
+        "description": "In addition to development, I am part of the QA team where I contribute to writing test plans, executing scenarios, and automating tests."
+      },
+      "card": {
+        "title": "Ayokai Congo",
+        "description": "Ayokai is a software testing and development company based in Europe and Africa. We help businesses strengthen their quality processes to speed up delivery."
+      }
+    },
+    "possacode": {
+      "date": "November 2023 - Present",
+      "role": "Junior Software Engineer – PossaCode",
+      "description": "Possacode is a non-profit organization based in the Republic of Congo, committed to empowering and connecting developers through learning and collaboration.",
+      "bullets": [
+        "Participation in a supportive and engaged tech community focused on open knowledge sharing.",
+        "Participation in open-source initiatives and group workshops, with peer mentoring."
+      ],
+      "lead": {
+        "title": "Technical Lead",
+        "date": "August 2025 - Present",
+        "description": "Leading internal projects, managing hands-on workshops, and supporting the community members’ skill growth."
+      }
+    },
+    "freelance": {
+      "date": "June 2022 - October 2023",
+      "role": "Freelance Graphic Designer",
+      "description": "Created tailor-made visuals for various clients and brands: logos, posters, web banners, and social media content."
+    }
+  },
+  "footer": {
+    "reserved": "All rights reserved."
+  },
+  "pageProjects": {
+    "title": "I design experiences",
+    "description": "Turning an idea into a functional digital product is what drives me. Over the years, I’ve completed many projects that showcase my journey—from inspiration to execution—always guided by user experience. Several are open source, which you can explore on",
+    "description2": "reflecting my work, my experiments, and my passion."
+  },
+  "pageLabs": {
+    "title": "My Playground",
+    "title2": "for UI Experiments",
+    "description": "A space where I tinker with code. Animations, transitions, visual effects... This lab is my playground to test and learn. Nothing too serious—just curiosity and a lot of fun.",
+    "notProject": "No project found",
+    "loading": "Loading projects..."
+  },
+  "pageBlog": {
+    "title": "Blog Playground",
+    "description": "Here, I share my discoveries, experiments, and thoughts. Short and simple posts made to share—and sometimes, on my",
+    "description2": ", I also share other articles and ideas.",
+    "plateforme": "WhatsApp chanel"
+  },
+  "pageAbout": {
+    "title": "About",
+    "intro": {
+      "prefix": "Hi, I'm ",
+      "name": "MakVieSAinte",
+      "afterName": ", a Software Developer and Web Designer based in Brazzaville. I design and build ",
+      "highlight_applications": "modern web applications",
+      "suffix": " using JavaScript, Vue.js, and Node.js, with a constant focus on performance and user experience."
+    },
+    "section2": {
+      "prefix": "Whether it’s collaborating with teams or leading design projects, my attention to detail and commitment to excellence have helped me build a ",
+      "highlight_reputation": "solid reputation",
+      "suffix": " based on quality and reliability."
+    },
+    "section3": {
+      "prefix": "Currently a ",
+      "highlight_status": "third-year computer science student",
+      "mid": " at the IEPA Institute in Brazzaville, majoring in ",
+      "highlight_specialty": "analysis and programming",
+      "suffix": ", I’m preparing to earn my degree and take the next step in my professional journey."
+    }
+  }
+}

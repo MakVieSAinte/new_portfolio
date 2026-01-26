@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 38 234 152; /* #008254 - Plus sombre pour le mode clair */
+  }
+
+  .dark { 
+    --color-primary: 77 255 181; /* #4dffb5 - Original pour le mode sombre */
+    /* color: rgb(38, 234, 152); */
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 200;
+  color: #f9f9f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgb(var(--color-primary));
+  color: #035e38;
+}
+
+html {
+  overflow: scroll;
+  overflow: overlay;
+  scroll-behavior: auto;
+}
+
+/* Font optimization for LCP */
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter') format('woff2');
+  font-display: optional;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+p,
+span a {
+  font-family: 'Public Sans', 'Inter', sans-serif !important;
+}
+
+/* Hide scrollbar for unsupported browsers */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container optimization */
+.box-main {
+  width: 55rem !important;
+  padding-left: 85px !important;
+  padding-right: 85px !important;
+  contain: layout style paint; /* Optimize rendering performance */
+}
+
+@media (max-width: 55rem) {
+  .box-main {
+    width: 100% !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

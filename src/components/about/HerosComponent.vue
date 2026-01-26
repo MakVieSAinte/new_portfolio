@@ -1,0 +1,103 @@
+<template>
+  <section class="w-full mx-auto !px-0 py-6">
+    <div class="flex flex-col md:flex-row md:items-start gap-6">
+      <!-- Photo -->
+      <div class="flex-shrink-0 flex w-full md:w-auto md:rotate-[-6deg] !rotate-0">
+        <div :class="[isLoaded ? 'blur-0 scale-100 opacity-100' : 'blur-4xl scale-150 opacity-0']"
+          class="border border-gray-300 dark:border-neutral-800 rounded-[12px] p-[4px] bg-white dark:bg-neutral-900 shadow-lg overflow-hidden">
+          <img
+            class="!w-[175px] !h-[175px] md:!w-[148px] md:!h-[148px] rounded-[10px] object-cover object-center transition-all duration-1000"
+            :class="[isLoaded ? 'blur-0 scale-100 opacity-100' : 'blur-4xl scale-150 opacity-0']"
+            src="/public/images/others/profil.jpg" alt="Avatar" />
+        </div>
+      </div>
+
+      <!-- Texte -->
+      <div class="flex-1">
+        <h1 class="text-5xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-5">
+          {{ texts?.pageAbout?.title }}
+        </h1>
+
+        <!-- Paragraphe 1 -->
+        <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
+          {{ texts?.pageAbout?.intro?.prefix }}
+          <span class="font-semibold text-gray-800 dark:text-neutral-200">
+            MakVieSAinte
+          </span>
+          {{ texts?.pageAbout?.intro?.afterName }}
+          <span class="font-semibold">
+            {{ texts?.pageAbout?.intro?.highlight_applications }}
+          </span>
+          {{ texts?.pageAbout?.intro?.suffix }}
+        </p>
+
+        <!-- Paragraphe 2 -->
+        <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
+          {{ texts?.pageAbout?.section2?.prefix }}
+          <span class="font-semibold">
+            {{ texts?.pageAbout?.section2?.highlight_reputation }}
+          </span>
+          {{ texts?.pageAbout?.section2?.suffix }}
+        </p>
+
+        <!-- Paragraphe 3 -->
+        <p class="text-lg text-gray-800 dark:text-neutral-400 font-light mb-8 max-w-2xl">
+          {{ texts?.pageAbout?.section3?.prefix }}
+          <span class="font-semibold">
+            {{ texts?.pageAbout?.section3?.highlight_status }}
+          </span>
+          {{ texts?.pageAbout?.section3?.mid }}
+          <span class="font-semibold">
+            {{ texts?.pageAbout?.section3?.highlight_specialty }}
+          </span>
+          {{ texts?.pageAbout?.section3?.suffix }}
+        </p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from '../../composables'
+
+export default defineComponent({
+  name: 'HerosComponent',
+  data() {
+    return {
+      isLoaded: false
+    }
+  },
+
+  setup() {
+    const { texts, locale } = useI18n('home')
+
+    return {
+      texts,
+      locale,
+    }
+  },
+  mounted() {
+    // Déclencher l'effet de révélation même si l'image est déjà en cache
+    setTimeout(() => {
+      this.isLoaded = true
+    }, 50)
+  },
+})
+</script>
+
+<style scoped>
+.pulse {
+  animation: pulse-animation 0.95s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 255, 181);
+  }
+
+  100% {
+    box-shadow: 0 0 0 4px rgb(77, 255, 181, 0);
+  }
+}
+</style>

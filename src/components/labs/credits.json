@@ -1,0 +1,6 @@
+{
+  "title": "Animation de chargement",
+  "description": "Une démonstration d'une animation de chargement simple en utilisant CSS.",
+  "technologies": ["HTML", "CSS", "JavaScript"],
+  "credits": "Inspiré par Yommick"
+}

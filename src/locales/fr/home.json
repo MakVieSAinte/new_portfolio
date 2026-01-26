@@ -1,0 +1,226 @@
+{
+  "hero": {
+    "name": "MakVieSAinte",
+    "role": "Software Developer and Web Designer",
+    "description": "Je suis un développeur passionné par la création d'interfaces utilisateur accessibles et parfaitement optimisées, alliant design soigné et ingénierie front-end et backend robuste. je m’efforce de créer des expériences à la fois esthétiques, intuitives et performantes et je partage régulièrement mes découvertes et projets sur",
+    "description2": "vous pouvez également",
+    "downloadCV": "Télécharger CV",
+    "availableForOpportunities": "Disponible pour de nouvelles opportunités"
+  },
+  "articles": {
+    "title": "Articles récents",
+    "description": "Je partage régulièrement mes découvertes, réflexions et projets autour du développement web et des nouvelles technologies.",
+    "readMore": "Lire plus",
+    "loading": "Chargement des articles...",
+    "noArticles": "Aucun article trouvé.",
+    "date": {
+      "today": "Aujourd'hui",
+      "yesterday": "Hier",
+      "daysAgo": "Il y a {n} jours"
+    }
+  },
+  "articleDetail": {
+    "back": "Back to Blog",
+    "like": "Like",
+    "comment": "Comment",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "shareTwitter": "Share on Twitter",
+    "shareFacebook": "Share on Facebook",
+    "shareLinkedIn": "Share on LinkedIn",
+    "loading": "Chargement...",
+    "notFound": "Article introuvable.",
+    "loadError": "Erreur de chargement de l’article."
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Une idée, un projet, une opportunité professionnelle ou simplement une question ? Laissez-moi votre e-mail et je vous recontacterai rapidement",
+    "description2": "ou click ici.",
+    "namePlaceholder": "Votre nom et prénom",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "submit": "Envoyer",
+    "hiddenSubject": "MakVieSAinte un nouveau client 😁"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "intro": "Retrouvez ici les réponses aux questions les plus fréquentes.",
+    "tabs": {
+      "services": "Services & Processus",
+      "pricing": "Tarifs & Délais",
+      "about": "À propos de moi"
+    },
+    "qns": {
+      "typesProjects": {
+        "q": "Quels types de projets réalises-tu ?",
+        "a": "Je développe des sites web interactifs, des applications front-end et back-end, ainsi que des solutions full-stack complètes",
+        "a2": "adaptées aux besoins de mes clients."
+      },
+      "technologies": {
+        "q": "Quels langages et technologies maîtrises-tu ?",
+        "a": "Je travaille principalement avec JavaScript, TypeScript, Vue.js, React, Node.js, MongoDB, TailwindCSS et Git,",
+        "a2": "tout en restant ouvert à explorer de nouvelles technologies selon le projet."
+      },
+      "process": {
+        "q": "Comment se déroule ton processus de travail ?",
+        "a": "Mon processus comprend cinq étapes : découverte des besoins, conception, développement, revue et feedback,",
+        "a2": "puis livraison et support si nécessaire."
+      },
+      "testsBeforeDelivery": {
+        "q": "Fais-tu des tests avant la livraison ?",
+        "a": "Oui, je teste toutes les fonctionnalités et l’expérience utilisateur pour garantir",
+        "a2": "performance et fiabilité."
+      },
+      "priceFix": {
+        "q": "Comment fixes-tu le prix d’un projet ?",
+        "a": "Le prix dépend de la complexité, du temps estimé et des fonctionnalités demandées,",
+        "a2": "Je fournis toujours un devis détaillé avant de commencer."
+      },
+      "hourlyOrFixed": {
+        "q": "Est-ce que tu travailles au tarif horaire ou au forfait ?",
+        "a": "Je peux m’adapter aux deux : ",
+        "a2": "forfait pour un projet complet ou tarif horaire pour des missions ponctuelles ou des ajustements."
+      },
+      "deadlines": {
+        "q": "Quels sont tes délais moyens de réalisation ?",
+        "a": "Les délais dépendent de la complexité du projet. En général, un site simple ",
+        "a2": "peut être livré en 2 à 4 semaines",
+        "a3": "tandis qu’une application complète ",
+        "a4": "nécessite davantage de temps."
+      },
+      "delays": {
+        "q": "Que se passe-t-il si le projet prend plus de temps que prévu ?",
+        "a": "Je communique immédiatement sur tout retard et je propose des solutions pour respecter vos priorités tout en maintenant la qualité."
+      },
+      "whoAreYou": {
+        "q": "Qui es-tu et quel est ton parcours ?",
+        "a": "Je suis MakVieSainte, software developer et web designer. ",
+        "a2": "Passionné par le code depuis plusieurs années, j’ai commencé à programmer au lycée avant de poursuivre mes études à l’université. Dès ma deuxième année universitaire, j’ai effectué un stage qui s’est conclu la même année par un contrat à durée déterminée (CDD). Cette expérience m’a permis de renforcer mes compétences et de confirmer mon engagement dans le domaine du développement web."
+      },
+      "frontOrBack": {
+        "q": "Es-tu plus orienté front-end ou back-end ?",
+        "a": "Je maîtrise les deux, mais j’ai une forte passion pour créer des interfaces utilisateurs accessibles et performantes, donc je m'oriente davantage vers le front-end."
+      },
+      "hobbies": {
+        "q": "Quelles sont tes passions en dehors du développement ?",
+        "a": "En dehors du développement, je m’intéresse beaucoup à la psychologie et j’aime me plonger dans des documentaires pour me cultiver. Je suis également passionné de graphisme et de football."
+      },
+      "skillToDevelop": {
+        "q": "Quelle compétence aimerais-tu développer cette année ?",
+        "a": "Cette année, j’essaie d’élargir mon champ de compétences au-delà du développement pur. Je m’intéresse particulièrement au DevOps, pour mieux comprendre le déploiement, l’intégration continue et l’automatisation des environnements. En parallèle, je découvre aussi les notions de base des LLM (Large Language Models) dans l’intelligence artificielle. Enfin, je me forme au test automatisé avec UiPath, afin de renforcer la qualité et la fiabilité des projets sur lesquels je travaille."
+      }
+    }
+  },
+  "favorite": {
+    "title": "Technologies favorites",
+    "description": "Ces outils sont pour moi bien plus que des langages ou frameworks : ce sont des partenaires pour transformer des idées en expériences concrètes et engageantes."
+  },
+  "projects": {
+    "title": "Mes projets",
+    "description": "Mes projets sont le reflet de ma passion pour le design et l’ingénierie. Chaque réalisation est pensée pour allier esthétique, performance et expérience utilisateur.",
+    "viewAllButton": "Voir tous les projets"
+  },
+  "skills": {
+    "title": "Compétences et outils",
+    "description": "Du front-end au back-end, en passant par le design et le test logiciel, je maîtrise des technologies et outils variés.",
+    "section": [
+      "Outils de design",
+      "Outils de développement",
+      "Développement",
+      "Collaboration",
+      "Test Logiciel",
+      "Autres",
+      "Soft Skills"
+    ],
+    "softSkills": [
+      "Excellente communication",
+      "Capacité d'apprentissage rapide",
+      "Réceptif(ve) aux retours",
+      "Créativité",
+      "Adaptabilité"
+    ]
+  },
+  "works": {
+    "title": "Expériences professionnelles",
+    "intro": "Chaque mission a renforcé ma passion pour le design, le développement front-end et back-end, ainsi que pour la résolution créative de problèmes.",
+    "ayokai": {
+      "date": "Juin 2024 - Présent",
+      "role": "Développeur Full-Stack – Ayokai Congo",
+      "description": "Ayokai est une société de développement et de test logiciel. Au sein d'une petite équipe agile et orientée hyper-programming, je contribue à la conception et à la mise en œuvre d'applications web évolutives et sécurisées.",
+      "bullets": [
+        "Intégration d'interfaces web en approche mobile-first avec Vue.js, HTML/CSS et TailwindCSS.",
+        "Création d'API robustes et sécurisées avec Express.js, protégées par un middleware JWT et structurées en architecture modulaire.",
+        "Modélisation des données avec Mongoose ORM pour garantir la cohérence entre les services.",
+        "Collaboration étroite avec les QA/testeurs pour livrer des fonctionnalités sans régression, via des pratiques de cross-testing."
+      ],
+      "qa": {
+        "title": "QA / Testeur logiciel",
+        "description": "En plus du développement, je fais partie de l’équipe QA où je contribue à la rédaction des plans de test, à l’exécution des scénarios et à l’automatisation des tests."
+      },
+      "card": {
+        "title": "Ayokai Congo",
+        "description": "Ayokai est une société de test et de développement logiciel basée en Europe et en Afrique. Nous aidons les entreprises à renforcer leurs processus qualité pour accélérer leurs livraisons."
+      }
+    },
+    "possacode": {
+      "date": "Novembre 2023 - Présent",
+      "role": "Ingénieur Logiciel Junior – PossaCode",
+      "description": "Possacode est une organisation à but non lucratif basée en République du Congo, engagée à autonomiser et connecter les développeurs par l'apprentissage et la collaboration.",
+      "bullets": [
+        "Participation à une communauté tech solidaire et engagée, axée sur le partage ouvert des connaissances.",
+        "Participation à des initiatives open-source et à des ateliers de groupe, avec mentorat entre pairs."
+      ],
+      "lead": {
+        "title": "Responsable Technique",
+        "date": "Août 2025 - Présent",
+        "description": "Pilotage de projets internes, encadrement d'ateliers pratiques et accompagnement de la montée en compétences des membres de la communauté."
+      }
+    },
+    "freelance": {
+      "date": "Juin 2022 - Octobre 2023",
+      "role": "Graphiste Freelance",
+      "description": "Réalisation de visuels sur-mesure pour divers clients et marques : logos, affiches, bannières web et contenus pour les réseaux sociaux."
+    }
+  },
+  "footer": {
+    "reserved": "Tous droits réservés."
+  },
+  "pageProjects": {
+    "title": "Je conçois des expériences",
+    "description": "Transformer une idée en produit digital fonctionnel est ma motivation. Au fil des années, j’ai réalisé de nombreux projets illustrant mon parcours, de l’inspiration à l’exécution, toujours guidés par l’expérience utilisateur. Plusieurs sont open source, que vous pouvez découvrir sur",
+    "description2": "reflétant mon travail, mes expérimentations et ma passion."
+  },
+  "pageLabs": {
+    "title": "Mon Playground",
+    "title2": "for UI Experiments",
+    "description": "Un espace où je bricole avec le code. Animations, transitions, effets visuels… Ce labo est mon terrain de jeu pour tester et apprendre. Rien de trop sérieux, juste de la curiosité et beaucoup de fun.",
+    "notProject": "Aucun projet trouvé",
+    "loading": "Chargement des projets..."
+  },
+  "pageBlog": {
+    "title": "Blog Playground",
+    "description": "Je publie ici mes découvertes, mes tests et mes réflexions. Des posts courts et simples, faits pour partager, et parfois, sur ma",
+    "description2": ", je partage aussi d’autres articles et idées.",
+    "plateforme": "Chaîne WhatsApp"
+  },
+  "pageAbout": {
+    "title": "À propos",
+    "intro": {
+      "prefix": "Hi, je suis ",
+      "afterName": ", Software Developer et Web Designer basé à Brazzaville. Je conçois et développe des ",
+      "highlight_applications": "applications web modernes",
+      "suffix": " en utilisant JavaScript, Vue.js et Node.js, avec un souci constant de performance et d’expérience utilisateur."
+    },
+    "section2": {
+      "prefix": "Qu’il s’agisse de collaborer avec des équipes ou de diriger des projets de conception, mon sens du détail et mon engagement envers l’excellence m’ont permis de bâtir une ",
+      "highlight_reputation": "réputation fondée",
+      "suffix": " sur la qualité et la fiabilité."
+    },
+    "section3": {
+      "prefix": "Actuellement ",
+      "highlight_status": "étudiant en 3ᵉ année d’informatique",
+      "mid": " à l’Institut IEPA de Brazzaville, spécialité ",
+      "highlight_specialty": "analyse et programmation",
+      "suffix": ", je me prépare à obtenir mon diplôme et à entamer la prochaine étape de mon parcours professionnel."
+    }
+  }
+}
