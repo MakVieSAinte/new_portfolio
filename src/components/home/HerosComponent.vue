@@ -1,6 +1,6 @@
 <template>
   <div role="main" aria-label="Hero section with profile information">
-    <!-- Profile -->
+    <!-- Profile -->    
     <div class="flex items-center gap-x-3">
       <div class="shrink-0 border border-gray-300 dark:border-neutral-800 rounded-full p-[2.5px] overflow-hidden">
         <img class="shrink-0 size-24 rounded-full object-cover object-center transition-all duration-1000"
