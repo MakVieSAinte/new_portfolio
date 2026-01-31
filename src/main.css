@@ -7,7 +7,7 @@
     --color-primary: 38 234 152; /* #008254 - Plus sombre pour le mode clair */
   }
 
-  .dark { 
+  .dark {
     --color-primary: 77 255 181; /* #4dffb5 - Original pour le mode sombre */
     /* color: rgb(38, 234, 152); */
   }

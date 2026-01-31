@@ -38,12 +38,12 @@ if (typeof window !== 'undefined') {
     import('lenis')
       .then(({ default: Lenis }) => {
         const lenis = new Lenis({
-          duration: 2.0,
+          duration: 1.5,
           smoothWheel: true,
           smoothTouch: false,
-          easing: (t: number) => Math.min(5, 1.001 - Math.pow(2, -10 * t)),
+          easing: (t: number) => Math.min(2, 1.001 - Math.pow(2, -10 * t)),
           lerp: 0.05,
-          wheelMultiplier: 0.3,
+          wheelMultiplier: 0.2,
           touchMultiplier: 1.0,
         })
         ;(window as any).lenis = lenis

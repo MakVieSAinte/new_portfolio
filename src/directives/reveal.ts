@@ -21,18 +21,22 @@ const RevealDirective = {
 
     applyInitial(el)
 
-    const rootMargin = (binding?.value?.rootMargin as string) || '0px 0px -7% 0px'
+    const rootMargin =
+      (binding?.value?.rootMargin as string) || '0px 0px -7% 0px'
     const threshold = (binding?.value?.threshold as number) || 0.07
 
-    const io = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          reveal(el)
-          io.disconnect()
-          break
+    const io = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            reveal(el)
+            io.disconnect()
+            break
+          }
         }
-      }
-    }, { root: null, rootMargin, threshold })
+      },
+      { root: null, rootMargin, threshold },
+    )
 
     io.observe(el)
     ;(el as any).__revealObserver = io
