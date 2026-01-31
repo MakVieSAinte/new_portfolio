@@ -42,8 +42,8 @@ if (typeof window !== 'undefined') {
           smoothWheel: true,
           smoothTouch: false,
           easing: (t: number) => Math.min(5, 1.001 - Math.pow(2, -10 * t)),
-          lerp: 0.05, 
-          wheelMultiplier: 0.3, 
+          lerp: 0.05,
+          wheelMultiplier: 0.3,
           touchMultiplier: 1.0,
         })
         ;(window as any).lenis = lenis

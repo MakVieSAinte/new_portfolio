@@ -21,7 +21,7 @@
         {{ texts?.pageProjects?.description }}
 
         <a
-          href="https://github.com/MakVieSAinte"
+          href="https://github.com/MakVieSAinte" target="_blank"
           class="inline-block group bg-slate-100/50 dark:bg-neutral-800 px-3 pt-[4px] pb-[6px] rounded-[3px] hover:bg-slate-100/50 dark:hover:bg-neutral-700/50 border-neutral-300 dark:border-neutral-700 transition-all duration-150"
         >
           <span
