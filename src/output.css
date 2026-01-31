@@ -1824,10 +1824,6 @@ video {
   height: 2.5rem;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .h-2 {
   height: 0.5rem;
 }
@@ -2441,11 +2437,6 @@ video {
   border-color: transparent;
 }
 
-.border-t-blue-500 {
-  --tw-border-opacity: 1;
-  border-top-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
-}
-
 .border-t-transparent {
   border-top-color: transparent;
 }
@@ -2839,6 +2830,10 @@ video {
   font-family: Familjen Grotesk;
 }
 
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .\!text-\[16px\] {
   font-size: 16px !important;
 }
@@ -2966,6 +2961,11 @@ video {
 .text-cyan-700 {
   --tw-text-opacity: 1;
   color: rgb(14 116 144 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-500 {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-400 {
@@ -4466,11 +4466,6 @@ html::-webkit-scrollbar {
 
 .dark\:border-transparent:is(.dark *) {
   border-color: transparent;
-}
-
-.dark\:border-t-blue-400:is(.dark *) {
-  --tw-border-opacity: 1;
-  border-top-color: rgb(96 165 250 / var(--tw-border-opacity, 1));
 }
 
 .dark\:\!bg-neutral-700:is(.dark *) {

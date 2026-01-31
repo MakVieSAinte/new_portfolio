@@ -5,7 +5,7 @@ import LoadingScreen from './components/LoadingScreen.vue'
 
 <template>
   <div>
-    <LoadingScreen />
+    <LoadingScreen style="z-index: 999999999999999999999999999px !important" />
     <RouterView />
   </div>
 </template>
