@@ -35,8 +35,8 @@ export default defineComponent({
     }
   },
   mounted() {
-    // Afficher le loader pendant au minimum 1.5 secondes
-    const minimumLoadTime = 1500
+    // Afficher le loader pendant au minimum 1.7 secondes
+    const minimumLoadTime = 1700
 
     // Vérifier si la page est complètement chargée
     const hideLoaderWhenReady = () => {
