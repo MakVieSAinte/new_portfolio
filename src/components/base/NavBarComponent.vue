@@ -257,8 +257,9 @@ export default defineComponent({
     if (savedTheme) {
       setTheme(savedTheme, false)
     } else {
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
+      const systemPrefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches
       setTheme(systemPrefersDark ? 'dark' : 'light', false)
     }
 

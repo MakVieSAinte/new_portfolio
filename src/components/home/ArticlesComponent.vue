@@ -34,10 +34,14 @@
       <!-- Loading Spinner -->
       <div v-if="loading" class="flex justify-center items-center py-12">
         <div class="relative">
-          <div class="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div>
+          <div
+            class="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"
+          ></div>
           <div class="absolute inset-0 flex items-center justify-center"></div>
         </div>
-        <span class="ml-4 text-gray-600 dark:text-gray-300">{{ texts?.articles?.loading }}</span>
+        <span class="ml-4 text-gray-600 dark:text-gray-300">{{
+          texts?.articles?.loading
+        }}</span>
       </div>
       <p v-if="error" class="text-red-500 text-center my-10">{{ error }}</p>
     </div>
@@ -103,11 +107,14 @@ export default {
         if (Array.isArray(edges)) {
           this.posts = edges.map((edge: any) => edge.node)
         } else {
-          this.error = this.texts?.articles?.noArticles || 'Aucun article trouvé.'
+          this.error =
+            this.texts?.articles?.noArticles || 'Aucun article trouvé.'
           this.posts = []
         }
       } catch (err: any) {
-        this.error = this.texts?.articles?.error || 'Erreur lors du chargement des articles.'
+        this.error =
+          this.texts?.articles?.error ||
+          'Erreur lors du chargement des articles.'
         console.error(err)
       } finally {
         this.loading = false
@@ -124,10 +131,9 @@ export default {
       if (diff === 0) return this.texts?.articles?.date?.today || "Aujourd'hui"
       if (diff === 1) return this.texts?.articles?.date?.yesterday || 'Hier'
       if (diff < 7) {
-        return (this.texts?.articles?.date?.daysAgo || 'Il y a {n} jours').replace(
-          '{n}',
-          diff.toString(),
-        )
+        return (
+          this.texts?.articles?.date?.daysAgo || 'Il y a {n} jours'
+        ).replace('{n}', diff.toString())
       }
 
       return date.toLocaleDateString(this.locale === 'fr' ? 'fr-FR' : 'en-US', {

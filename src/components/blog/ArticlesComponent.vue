@@ -110,11 +110,14 @@ export default {
         if (Array.isArray(edges)) {
           this.posts = edges.map((edge: any) => edge.node)
         } else {
-          this.error = this.texts?.articles?.noArticles || 'Aucun article trouvé.'
+          this.error =
+            this.texts?.articles?.noArticles || 'Aucun article trouvé.'
           this.posts = []
         }
       } catch (err: any) {
-        this.error = this.texts?.articles?.error || 'Erreur lors du chargement des articles.'
+        this.error =
+          this.texts?.articles?.error ||
+          'Erreur lors du chargement des articles.'
         console.error(err)
       } finally {
         this.loading = false
@@ -131,10 +134,9 @@ export default {
       if (diff === 0) return this.texts?.articles?.date?.today || "Aujourd'hui"
       if (diff === 1) return this.texts?.articles?.date?.yesterday || 'Hier'
       if (diff < 7) {
-        return (this.texts?.articles?.date?.daysAgo || 'Il y a {n} jours').replace(
-          '{n}',
-          diff.toString(),
-        )
+        return (
+          this.texts?.articles?.date?.daysAgo || 'Il y a {n} jours'
+        ).replace('{n}', diff.toString())
       }
 
       return date.toLocaleDateString(this.locale === 'fr' ? 'fr-FR' : 'en-US', {

@@ -1,54 +1,107 @@
 <template>
   <div>
-    <h1 v-if="meta.title"
-      class="!mt-12 text-xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-1">
+    <h1
+      v-if="meta.title"
+      class="!mt-12 text-xl font-medium text-gray-800 dark:text-neutral-200 font-familjen_grotesk mb-1"
+    >
       {{ meta.title }}
     </h1>
-    <p v-if="meta.description" class="text-md font-light text-gray-800 dark:text-neutral-400 !p-0 !m-0">
+    <p
+      v-if="meta.description"
+      class="text-md font-light text-gray-800 dark:text-neutral-400 !p-0 !m-0"
+    >
       {{ meta.description }}
     </p>
 
     <div
-      class="group w-full max-w-4xl mx-auto !mt-4 bg-slate-100/50 dark:bg-neutral-950 border border-slate-100/50 dark:border-neutral-800/90 rounded-md overflow-hidden">
-      <div class="flex flex-wrap gap-2 px-1 pt-1 pb-0 overflow-x-auto whitespace-nowrap">
-        <button v-for="tab in tabs" :key="tab" :class="[
-          'px-1 pt-2 pb-3 focus:outline-none outline-none border-0 transition-all duration-300',
-          activeTab === tab
-            ? 'text-gray-800 dark:text-neutral-200 border-b-2 border-primary'
-            : 'text-gray-800 dark:text-neutral-300',
-        ]" @click="activeTab = tab">
-          <span class="py-[5px] px-3 text-xs font-medium rounded-md focus:outline-none hover:bg-neutral-800">
+      class="group w-full max-w-4xl mx-auto !mt-4 bg-slate-100/50 dark:bg-neutral-950 border border-slate-100/50 dark:border-neutral-800/90 rounded-md overflow-hidden"
+    >
+      <div
+        class="flex flex-wrap gap-2 px-1 pt-1 pb-0 overflow-x-auto whitespace-nowrap"
+      >
+        <button
+          v-for="tab in tabs"
+          :key="tab"
+          :class="[
+            'px-1 pt-2 pb-3 focus:outline-none outline-none border-0 transition-all duration-300',
+            activeTab === tab
+              ? 'text-gray-800 dark:text-neutral-200 border-b-2 border-primary'
+              : 'text-gray-800 dark:text-neutral-300',
+          ]"
+          @click="activeTab = tab"
+        >
+          <span
+            class="py-[5px] px-3 text-xs font-medium rounded-md focus:outline-none hover:bg-neutral-800"
+          >
             {{ tab }}
           </span>
         </button>
       </div>
 
-      <div v-if="activeTab !== 'Preview' && activeTab !== 'Credits'" class="relative">
+      <div
+        v-if="activeTab !== 'Preview' && activeTab !== 'Credits'"
+        class="relative"
+      >
         <button
           class="absolute top-2 right-4 text-neutral-500 dark:bg-neutral-900 bg-slate-200/50 dark:hover:bg-neutral-900/50 dark:hover:text-neutral-400 px-2 py-2 text-xs rounded hidden group-hover:inline-block transition-all duration-600"
-          @click="copyToClipboard(code[activeTab.toLowerCase()])" title="Copie le code">
-          <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          @click="copyToClipboard(code[activeTab.toLowerCase()])"
+          title="Copie le code"
+        >
+          <svg
+            v-if="!copied"
+            xmlns="http://www.w3.org/2000/svg"
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+            <path
+              d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+            />
           </svg>
-          <svg v-else xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+          <svg
+            v-else
+            xmlns="http://www.w3.org/2000/svg"
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-primary"
+          >
             <path d="M20 6L9 17l-5-5" />
           </svg>
         </button>
         <pre
-          class="bg-slate-100/50 dark:bg-neutral-800/30 text-white rounded p-4 overflow-x-auto text-sm min-h-[200px] max-h-[400px] sm:h-72 w-full relative whitespace-pre-wrap sm:whitespace-pre">
+          class="bg-slate-100/50 dark:bg-neutral-800/30 text-white rounded p-4 overflow-x-auto text-sm min-h-[200px] max-h-[400px] sm:h-72 w-full relative whitespace-pre-wrap sm:whitespace-pre"
+        >
           <code :class="['language-' + activeTab.toLowerCase(), 'block w-full break-all sm:break-words whitespace-pre-wrap']" v-html="highlightedCode" />
         </pre>
       </div>
 
-      <div v-else-if="activeTab === 'Preview'" class="border rounded-md overflow-hidden h-[100px] sm:h-48">
-        <iframe :srcdoc="previewContent" class="w-full h-full border-0"
-          sandbox="allow-scripts allow-same-origin"></iframe>
+      <div
+        v-else-if="activeTab === 'Preview'"
+        class="border rounded-md overflow-hidden h-[100px] sm:h-48"
+      >
+        <iframe
+          :srcdoc="previewContent"
+          class="w-full h-full border-0"
+          sandbox="allow-scripts allow-same-origin"
+        ></iframe>
       </div>
 
-      <div v-else-if="activeTab === 'Credits' && meta.credits" class="p-4 text-sm text-gray-700 dark:text-neutral-300">
+      <div
+        v-else-if="activeTab === 'Credits' && meta.credits"
+        class="p-4 text-sm text-gray-700 dark:text-neutral-300"
+      >
         <p>{{ meta.credits }}</p>
       </div>
     </div>
@@ -227,25 +280,25 @@ pre {
 }
 
 /* Surcharges Prism: empêcher white-space: pre de Prism de prendre le dessus */
-:deep(code[class*="language-"]) {
+:deep(code[class*='language-']) {
   white-space: pre-wrap !important;
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
 
-:deep(pre[class*="language-"]) {
+:deep(pre[class*='language-']) {
   white-space: pre-wrap !important;
 }
 
 /* Assurer le wrapping sur tous les tokens Prism */
-:deep(code[class*="language-"] * ) {
+:deep(code[class*='language-'] *) {
   overflow-wrap: anywhere !important;
   word-break: break-word !important;
 }
 
 @media (max-width: 640px) {
-  :deep(code[class*="language-"]),
-  :deep(code[class*="language-"] * ) {
+  :deep(code[class*='language-']),
+  :deep(code[class*='language-'] *) {
     word-break: break-all !important;
   }
 }

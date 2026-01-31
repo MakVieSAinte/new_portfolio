@@ -15,10 +15,14 @@
         <div class="group relative flex gap-x-5 mt-8">
           <!-- Icon -->
           <div
-            class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+            class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+          >
             <div class="relative z-10 size-8 flex justify-center items-center">
-              <img src="/public/images/others/ayokai-logo.webp" class="shrink-0 text-gray-700 dark:text-slate-200"
-                height="62px" />
+              <img
+                src="/public/images/others/ayokai-logo.webp"
+                class="shrink-0 text-gray-700 dark:text-slate-200"
+                height="62px"
+              />
             </div>
           </div>
           <!-- End Icon -->
@@ -53,7 +57,9 @@
             </ul>
             <!-- Section QA chez Ayokai -->
             <div class="mt-3 p-4 rounded-lg">
-              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">
+              <h4
+                class="font-semibold text-sm text-gray-800 dark:text-white mb-1"
+              >
                 {{ texts?.works?.ayokai?.qa?.title }}
               </h4>
               <p class="text-sm text-gray-700 dark:text-slate-200">
@@ -62,18 +68,28 @@
             </div>
             <div class="mt-3">
               <!-- Card -->
-              <a class="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-800"
-                href="https://ayokai.com/" target="_blank">
+              <a
+                class="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-800"
+                href="https://ayokai.com/"
+                target="_blank"
+              >
                 <div class="relative flex items-center overflow-hidden">
-                  <img class="hidden sm:block w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-                    src="/public/images/others/ayokai.png" alt="Blog Image" />
+                  <img
+                    class="hidden sm:block w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
+                    src="/public/images/others/ayokai.png"
+                    alt="Blog Image"
+                  />
 
                   <div class="grow p-4 sm:ms-48 ms-0">
                     <div class="min-h-24 flex flex-col justify-center">
-                      <h3 class="font-semibold text-sm text-gray-800 dark:text-neutral-300">
+                      <h3
+                        class="font-semibold text-sm text-gray-800 dark:text-neutral-300"
+                      >
                         {{ texts?.works?.ayokai?.card?.title }}
                       </h3>
-                      <p class="mt-1 font-normal text-sm text-gray-500 dark:text-neutral-400">
+                      <p
+                        class="mt-1 font-normal text-sm text-gray-500 dark:text-neutral-400"
+                      >
                         {{ texts?.works?.ayokai?.card?.description }}
                       </p>
                     </div>
@@ -91,10 +107,14 @@
         <div class="group relative flex gap-x-5">
           <!-- Icon -->
           <div
-            class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+            class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+          >
             <div class="relative z-10 size-12 flex justify-center items-center">
-              <img src="/public/images/others/possacode-removebg-preview.png"
-                class="shrink-0 text-gray-700 dark:text-slate-200" height="262px" />
+              <img
+                src="/public/images/others/possacode-removebg-preview.png"
+                class="shrink-0 text-gray-700 dark:text-slate-200"
+                height="262px"
+              />
             </div>
           </div>
           <!-- End Icon -->
@@ -125,9 +145,13 @@
 
             <!-- Section Lead -->
             <div class="mt-5 p-2 rounded-lg">
-              <h4 class="font-semibold text-sm text-gray-800 dark:text-white mb-1">
+              <h4
+                class="font-semibold text-sm text-gray-800 dark:text-white mb-1"
+              >
                 {{ texts?.works?.possacode?.lead?.title }}
-                <span class="mb-1 text-xs font-light text-gray-700 dark:text-slate-200">
+                <span
+                  class="mb-1 text-xs font-light text-gray-700 dark:text-slate-200"
+                >
                   {{ texts?.works?.possacode?.lead?.date }}
                 </span>
               </h4>
@@ -144,11 +168,21 @@
         <div class="group relative flex gap-x-5">
           <!-- Icon -->
           <div
-            class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+            class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+          >
             <div class="relative z-10 size-6 flex justify-center items-center">
-              <svg class="shrink-0 size-6 text-gray-800 dark:text-neutral-300" xmlns="http://www.w3.org/2000/svg"
-                width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                class="shrink-0 size-6 text-gray-800 dark:text-neutral-300"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <path d="M12 12h.01" />
                 <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
                 <path d="M22 13a18.15 18.15 0 0 1-20 0" />
@@ -195,7 +229,7 @@ export default defineComponent({
 
   methods: {},
 
-  mounted() { },
+  mounted() {},
 
   setup() {
     const { texts, locale } = useI18n('home')

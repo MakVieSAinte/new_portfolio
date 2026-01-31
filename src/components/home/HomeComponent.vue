@@ -33,7 +33,8 @@
       <!-- End Articles -->
 
       <!-- ArticleDetails -->
-      <ArticlesDetailsComponent v-reveal
+      <ArticlesDetailsComponent
+        v-reveal
         v-if="selectedSlug"
         :slug="selectedSlug"
         :key="selectedSlug"

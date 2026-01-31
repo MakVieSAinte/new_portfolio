@@ -40,7 +40,7 @@ if (typeof window !== 'undefined') {
         const lenis = new Lenis({
           duration: 1.8,
           smoothWheel: true,
-          smoothTouch: false,
+          // smoothTouch: false,
           easing: (t: number) => Math.min(2, 1.001 - Math.pow(2, -10 * t)),
           lerp: 0.05,
           wheelMultiplier: 0.2,

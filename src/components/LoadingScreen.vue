@@ -1,13 +1,18 @@
 <template>
   <transition name="fade" @enter="onEnter" @leave="onLeave">
-    <div v-if="isLoading" class="fixed inset-0 bg-white dark:bg-neutral-950 z-50 flex items-center justify-center">
+    <div
+      v-if="isLoading"
+      class="fixed inset-0 bg-white dark:bg-neutral-950 z-50 flex items-center justify-center"
+    >
       <div class="flex flex-col items-center gap-6">
         <!-- Animated loader -->
         <div class="relative w-16 h-16">
-          <div class="absolute inset-0 rounded-full border-4 border-neutral-200 dark:border-neutral-800"></div>
           <div
-            class="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 dark:border-t-blue-400 animate-spin">
-          </div>
+            class="absolute inset-0 rounded-full border-4 border-neutral-200 dark:border-neutral-800"
+          ></div>
+          <div
+            class="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 dark:border-t-blue-400 animate-spin"
+          ></div>
         </div>
 
         <!-- Text -->
