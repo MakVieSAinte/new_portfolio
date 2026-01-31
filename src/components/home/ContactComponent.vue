@@ -9,7 +9,7 @@
         {{ texts?.contact?.description }}
         <a href="https://cal.com/makviesainte/appel-decouverte" target="_blank"
           class="underline text-primary hover:text-primary dark:hover:text-white">{{ texts?.contact?.description2 }}</a>
-      </p>  
+      </p>
 
       <!-- Input -->
       <form action="https://formspree.io/f/mldlrryo" method="POST" class="mt-8">

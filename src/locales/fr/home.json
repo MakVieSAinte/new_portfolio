@@ -215,6 +215,15 @@
       "highlight_reputation": "réputation fondée",
       "suffix": " sur la qualité et la fiabilité."
     },
+    "achievement": {
+      "prefix": "🏆 Lauréat ",
+      "osiane": "OSIANE 2025",
+      "osiane_url": "https://osiane.sn/",
+      "challenge": " – Challenge Start-up « Jeunesse Innove », en tant que membre de l'équipe de développement du projet ",
+      "kokamba": "Kokamba",
+      "kokamba_url": "https://kokamba.com",
+      "suffix": ", un ERP 100 % Made in Africa, dédié à la gestion et à la transformation digitale des entreprises locales."
+    },
     "section3": {
       "prefix": "Actuellement ",
       "highlight_status": "étudiant en 3ᵉ année d’informatique",
