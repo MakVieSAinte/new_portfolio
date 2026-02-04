@@ -1,6 +1,7 @@
 <template>
   <transition name="fade" @enter="onEnter" @leave="onLeave">
-    <div v-if="isLoading" class="fixed inset-0 bg-white dark:bg-neutral-950 z-50 flex items-center justify-center" style="z-index: 9999999999999999999999999999999999999px !important">
+    <div v-if="isLoading" class="fixed inset-0 bg-white dark:bg-neutral-950 z-50 flex items-center justify-center"
+      style="z-index: 9999999999999999999999999999999999999px !important">
       <div class="flex flex-col items-center gap-6">
         <!-- Animated loader (bars) -->
         <!-- <div class="loader" aria-hidden="true"></div> -->
@@ -87,8 +88,8 @@ export default defineComponent({
     // start rotation
     timerId = setTimeout(rotate, nextInterval())
 
-    // Afficher le loader pendant au minimum 1.7 secondes
-    const minimumLoadTime = 2000
+    // Afficher le loader pendant au minimum 1.8 secondes
+    const minimumLoadTime = 1800
 
     // Vérifier si la page est complètement chargée
     const hideLoaderWhenReady = () => {
