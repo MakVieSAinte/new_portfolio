@@ -38,7 +38,7 @@ if (typeof window !== 'undefined') {
     import('lenis')
       .then(({ default: Lenis }) => {
         const lenis = new Lenis({
-          duration: 1.8,
+          duration: 1.5,
           smoothWheel: true,
           // smoothTouch: false,
           easing: (t: number) => Math.min(2, 1.001 - Math.pow(2, -10 * t)),

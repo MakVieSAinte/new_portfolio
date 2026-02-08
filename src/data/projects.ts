@@ -68,16 +68,16 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: 'Nature Emoi',
-    imageSrc: ['nature-moi.png', 'nature-moi2.png', 'nature-moi3.png'],
+    title: 'Habit Stack',
+    imageSrc: ['habit.png', 'habit2.png', 'habit3.png'],
     videoSrc: 'nature-moi.mp4',
-    url: 'https://nature-emoi.vercel.app/',
-    gitHubUrl: 'https://github.com/MakVieSAinte/Nature_emoi',
-    technologies: ['HTML', 'CSS', 'JS'],
-    year: 2023,
-    category: 'Web Design/UX and UI',
+    url: 'https://v0-habit-stack.vercel.app/',
+    gitHubUrl: 'https://github.com/MakVieSAinte/habit-stack',
+    technologies: ['REACT', 'NEXT.js', 'TAIlWINDCSS', 'NEON'],
+    year: 2026,
+    category: 'Application Productivité',
     details:
-      "Site vitrine moderne et responsive pour une entreprise spécialisée dans la vente de plantes d'intérieur. Le projet présente une galerie produits interactive, un design épuré et une navigation intuitive. Développé avec du HTML, CSS et JavaScript vanilla pour une légèreté optimale.",
+      "Un tracker d'habitudes où chaque habitude complétée devient un bloc physique qui s'empile dans votre 'tour de vie'. Plus vous maintenez vos streaks, plus votre tour grandit et devient visuellement impressionnante. Si vous cassez une streak, votre tour vacille et peut perdre des étages.",
   },
   {
     id: 5,
@@ -91,6 +91,19 @@ export const projects: Project[] = [
     category: 'Application Éducation',
     details:
       'Plateforme de consultation des résultats académiques pour étudiants. Application simple mais efficace permettant aux étudiants de vérifier leurs notes, relevé et moyennes. Interface claire et responsive avec Pagedone UI pour un design cohérent.',
+  },
+  {
+    id: 14,
+    title: 'Nature Emoi',
+    imageSrc: ['nature-moi.png', 'nature-moi2.png', 'nature-moi3.png'],
+    videoSrc: 'nature-moi.mp4',
+    url: 'https://nature-emoi.vercel.app/',
+    gitHubUrl: 'https://github.com/MakVieSAinte/Nature_emoi',
+    technologies: ['HTML', 'CSS', 'JS'],
+    year: 2023,
+    category: 'Web Design/UX and UI',
+    details:
+      "Site vitrine moderne et responsive pour une entreprise spécialisée dans la vente de plantes d'intérieur. Le projet présente une galerie produits interactive, un design épuré et une navigation intuitive. Développé avec du HTML, CSS et JavaScript vanilla pour une légèreté optimale.",
   },
   {
     id: 6,

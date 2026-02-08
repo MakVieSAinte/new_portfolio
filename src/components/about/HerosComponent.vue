@@ -132,13 +132,6 @@
             />
           </a>
 
-          <!-- Rank Badge -->
-          <img
-            src="https://img.shields.io/badge/Dev-Rank%20A+-brightgreen"
-            alt="Rank A+"
-            class="h-auto"
-          />
-
           <!-- Hire Badge -->
           <img
             src="https://img.shields.io/badge/Available%20for-Hire-success"
