@@ -23,7 +23,14 @@ if (typeof window !== 'undefined') {
 const app = createApp(App)
 
 const savedTheme = localStorage.getItem('theme') || 'dark'
-document.documentElement.classList.toggle('light', savedTheme === 'light')
+// Apply dark or light theme class to document root for consistent theming across all components
+if (savedTheme === 'dark') {
+  document.documentElement.classList.add('dark')
+  document.documentElement.classList.remove('light')
+} else {
+  document.documentElement.classList.remove('dark')
+  document.documentElement.classList.add('light')
+}
 
 app.use(createPinia())
 app.use(router)

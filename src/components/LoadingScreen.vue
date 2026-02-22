@@ -8,10 +8,10 @@
 
         <!-- Dynamic messages -->
         <div class="text-center">
-          <p class="text-sm font-mono text-emerald-500">
+          <p class="text-sm font-mono text-emerald-500 dark:text-emerald-400">
             {{ messages[currentMessage].main }}
           </p>
-          <p class="text-xs text-neutral-500 mt-2">
+          <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-2">
             {{ messages[currentMessage].sub }}
           </p>
         </div>

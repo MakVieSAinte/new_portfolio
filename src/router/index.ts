@@ -4,6 +4,7 @@ import ProjectsView from '../views/ProjectsView.vue'
 import LabsView from '../views/LabsView.vue'
 import AboutView from '../views/AboutView.vue'
 import BlogView from '../views/BlogView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 // import ArticleDetailView from '../views/ArticleDetailView.vue'
 
 const router = createRouter({
@@ -39,6 +40,11 @@ const router = createRouter({
       name: 'ArticleDetail',
       component: () => import('@/views/ArticleDetailView.vue'),
       props: true,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFoundView,
     },
   ],
 })
