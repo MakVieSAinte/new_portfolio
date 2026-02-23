@@ -342,7 +342,10 @@ export default defineComponent({
       if (cloudName && type === 'videos') {
         // Ensure we don't accidentally treat local-relative paths as Cloudinary IDs when they start with './' or '../'
         if (!filename.startsWith('./') && !filename.startsWith('../') && !filename.startsWith('/')) {
-          return `https://res.cloudinary.com/${cloudName}/video/upload/${filename}`
+          const folder = import.meta.env.VITE_CLOUDINARY_VIDEO_FOLDER
+          const resourceType = import.meta.env.VITE_CLOUDINARY_RESOURCE_TYPE || 'video'
+          const path = folder ? `${folder}/${filename}` : filename
+          return `https://res.cloudinary.com/${cloudName}/${resourceType}/upload/${path}`
         }
       }
 

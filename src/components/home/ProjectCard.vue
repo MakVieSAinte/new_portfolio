@@ -49,7 +49,7 @@
               {{ tech }}
             </span>
           </div>
-        </div>
+        </div>  
 
         <div
           class="p-1 border border-transparent group-hover:border-neutral-100/30 dark:group-hover:border-white rounded-full transition-all duration-300"
