@@ -42,7 +42,6 @@ export const projects: Project[] = [
       'mvuama-app2.png',
       'mvuama-app4.png',
       'mvuama-app5.png',
-      'mvuama-app6.png',
     ],
     videoSrc: 'mvuama_echil7',
     url: '',
