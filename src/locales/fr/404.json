@@ -1,0 +1,7 @@
+{
+  "404": {
+    "error": "404 : Cette page n'existe pas 🤷‍♂️",
+    "clicked": "goHome()",
+    "hint": "Clique ici"
+  }
+}
