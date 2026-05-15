@@ -43,6 +43,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/hashnode",
+      "destination": "https://gql.hashnode.com/"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
