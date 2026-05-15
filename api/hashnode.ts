@@ -53,10 +53,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const body =
-    typeof req.body === 'string'
-      ? (JSON.parse(req.body) as { query?: string })
-      : req.body
+  const body = parseRequestBody(req.body)
 
   const query = body?.query?.trim()
   if (!query) {
@@ -92,14 +89,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json(fallbackResponse)
     }
 
-    return res.status(502).json({
-      error: 'Hashnode API unavailable and no fallback is defined for this query',
-    })
+    return res.status(200).json(buildSafeFallbackResponse(query))
   } catch (error) {
     console.error('Hashnode fallback failed:', error)
-    return res.status(502).json({
-      error: 'Unable to load Hashnode content',
-    })
+    return res.status(200).json(buildSafeFallbackResponse(query))
+  }
+}
+
+function parseRequestBody(body: VercelRequest['body']) {
+  if (!body) {
+    return null
+  }
+
+  if (typeof body !== 'string') {
+    return body
+  }
+
+  try {
+    return JSON.parse(body) as { query?: string }
+  } catch (error) {
+    console.error('Unable to parse request body:', error)
+    return null
   }
 }
 
@@ -235,6 +245,49 @@ function isPostListQuery(query: string) {
 
 function isSinglePostQuery(query: string) {
   return query.includes('post(') && query.includes('content')
+}
+
+function buildSafeFallbackResponse(query: string) {
+  if (isPostListQuery(query)) {
+    return {
+      data: {
+        publication: {
+          posts: {
+            edges: [],
+          },
+        },
+      },
+      errors: [
+        {
+          message: 'Hashnode content temporarily unavailable',
+        },
+      ],
+    }
+  }
+
+  if (isSinglePostQuery(query)) {
+    return {
+      data: {
+        publication: {
+          post: null,
+        },
+      },
+      errors: [
+        {
+          message: 'Hashnode content temporarily unavailable',
+        },
+      ],
+    }
+  }
+
+  return {
+    data: null,
+    errors: [
+      {
+        message: 'Hashnode content temporarily unavailable',
+      },
+    ],
+  }
 }
 
 function extractXmlBlocks(xml: string, tagName: string) {
