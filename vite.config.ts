@@ -6,6 +6,15 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    proxy: {
+      '/api/hashnode': {
+        target: 'https://gql.hashnode.com',
+        changeOrigin: true,
+        rewrite: () => '/',
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

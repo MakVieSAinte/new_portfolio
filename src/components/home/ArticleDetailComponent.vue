@@ -244,9 +244,9 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
 import { defineComponent } from 'vue'
 import Prism from 'prismjs'
+import { queryHashnode } from '@/services/hashnode'
 import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-css'
 import 'prismjs/components/prism-javascript'
@@ -290,17 +290,9 @@ export default defineComponent({
     `
 
     try {
-      const res = await axios.post(
-        'https://gql.hashnode.com/',
-        { query },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
-      )
+      const res = await queryHashnode<any>(query)
 
-      const post = res.data?.data?.publication?.post
+      const post = res?.data?.publication?.post
       if (post) {
         // Application de la coloration syntaxique avec Prism
         post.content.html = this.applyPrismSyntaxHighlighting(post.content.html)

@@ -253,8 +253,8 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
 import { defineComponent } from 'vue'
+import { queryHashnode } from '@/services/hashnode'
 
 export default defineComponent({
   props: {
@@ -288,17 +288,9 @@ export default defineComponent({
     `
 
     try {
-      const res = await axios.post(
-        'https://gql.hashnode.com/',
-        { query },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
-      )
+      const res = await queryHashnode<any>(query)
 
-      const post = res.data?.data?.publication?.post
+      const post = res?.data?.publication?.post
       if (post) {
         post.content.html = this.optimizeHTML(post.content.html)
         this.article = post

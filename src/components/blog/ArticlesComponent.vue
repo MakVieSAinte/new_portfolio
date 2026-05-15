@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
+import { queryHashnode } from '@/services/hashnode'
 import { useI18n } from '../../composables'
 
 export default {
@@ -93,19 +93,9 @@ export default {
     `
 
       try {
-        const response = await axios.post(
-          'https://gql.hashnode.com/',
-          {
-            query,
-          },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          },
-        )
+        const response = await queryHashnode<any>(query)
 
-        const edges = response.data?.data?.publication?.posts?.edges
+        const edges = response?.data?.publication?.posts?.edges
 
         if (Array.isArray(edges)) {
           this.posts = edges.map((edge: any) => edge.node)
