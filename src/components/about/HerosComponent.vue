@@ -40,7 +40,7 @@
         >
           {{ texts?.pageAbout?.intro?.prefix }}
           <span class="font-semibold text-gray-800 dark:text-neutral-200">
-            MakVieSAinte
+            Mak VieSAinte
           </span>
           {{ texts?.pageAbout?.intro?.afterName }}
           <span class="font-semibold">
