@@ -293,17 +293,19 @@ export default defineComponent({
       const res = await queryHashnode<any>(query)
 
       const post = res?.data?.publication?.post
-      if (post) {
+      const hasApiError = Array.isArray(res?.errors) && res.errors.length > 0
+
+      if (post && !hasApiError) {
         // Application de la coloration syntaxique avec Prism
         post.content.html = this.applyPrismSyntaxHighlighting(post.content.html)
 
         this.article = post
         // console.log(this.article) // Commenté pour éviter les logs en prod
       } else {
-        this.error = 'Article introuvable.'
+        this.error = 'Erreur lors de la recuperation de l’article.'
       }
     } catch (err) {
-      this.error = 'Erreur de chargement de l’article.'
+      this.error = 'Erreur lors de la recuperation de l’article.'
       console.error(err)
     } finally {
       this.loading = false

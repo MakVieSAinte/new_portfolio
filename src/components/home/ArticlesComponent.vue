@@ -93,12 +93,14 @@ export default {
         const response = await queryHashnode<any>(query)
 
         const edges = response?.data?.publication?.posts?.edges
+        const hasApiError = Array.isArray(response?.errors) && response.errors.length > 0
 
-        if (Array.isArray(edges)) {
+        if (Array.isArray(edges) && edges.length > 0 && !hasApiError) {
           this.posts = edges.map((edge: any) => edge.node)
         } else {
           this.error =
-            this.texts?.articles?.noArticles || 'Aucun article trouvé.'
+            this.texts?.articles?.error ||
+            'Erreur lors du chargement des articles.'
           this.posts = []
         }
       } catch (err: any) {
